@@ -1,0 +1,65 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { useState } from 'react'
+import { ExitModal } from './ExitModal'
+import { Button } from '../Button/Button.tsx'
+import { Modal } from '../Modal/Modal'
+
+export const Template = (args) => <ExitModal {...args} />
+
+<Meta title='Modules/Exit Modal' component={ExitModal} />
+
+# Exit Modal
+
+This module allows CMS users to direct a user's attention to a sale before they close the window by adding copy and imagery of their choice.
+
+## Default
+
+- Click button to see the exit modal (note: on live site, exit modal appears when the position of a user's mouse is outside the boundaries of the site)
+
+<Canvas>
+  <Story
+    name='Exit Modal v1'
+    args={{
+      buttonLabel: 'Keep Shopping',
+      heading: 'Get $75 Off Better Sleep',
+      backgroundImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-9f9690e2d3df805e7e9292db891f6a6376813815-400x734-jpg'
+          }
+        }
+      },
+      pillLabel: 'Sale Extended',
+      subcopy: 'Take $75 off when you spend $600 during offer.',
+      sales: {
+        themeColor: '#c9ded9'
+      }
+    }}
+  >
+    {(args) => {
+      const [showModal, setShowModal] = useState(false)
+      const closeModal = () => setShowModal(false)
+      return (
+        <>
+          <Button
+            label='Exit Modal'
+            variant='solid-rubine'
+            onClick={() => setShowModal(true)}
+          />
+          <Modal
+            showModal={showModal}
+            onClose={closeModal}
+            locale='en'
+            isExitModal={true}
+          >
+            <ExitModal {...args} onButtonClick={closeModal} />
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={ExitModal} />

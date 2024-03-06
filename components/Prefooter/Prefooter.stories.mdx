@@ -1,0 +1,41 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { Prefooter } from './Prefooter'
+import { CtaLink } from '../CtaLink'
+
+export const Template = (args) => <Prefooter {...args} />
+
+<Meta title='Modules/Prefooter' component={Prefooter} />
+
+# Prefooter
+
+This component displays before the footer on the homepage and product pages. It features a heading, CTA link with an option to also add subcopy. The background image is also customizable.
+
+<Canvas>
+  <Story
+    name='Prefooter'
+    args={{
+      heading: 'Take Your Sleep to the Next Level',
+      subcopy: 'Fall in love with sleep again.',
+      backgroundImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-275ea7ac3f171c2793fbb5814253d955fc9e9021-2048x1000-webp'
+          }
+        }
+      },
+      cta: (
+        <CtaLink
+          variant='solid-rubine'
+          url='https://ca.endy.com/'
+          label='Shop Our Collection'
+        />
+      )
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Prefooter Props
+
+<ArgsTable of={Prefooter} />

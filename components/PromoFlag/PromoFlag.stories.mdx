@@ -1,0 +1,55 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { PromoFlag } from './PromoFlag'
+
+export const Template = (args) => {
+  return (
+    <div
+      style={{
+        position: 'relative',
+        height: '100px',
+        border: '1px solid black'
+      }}
+    >
+      <PromoFlag {...args} />
+    </div>
+  )
+}
+
+<Meta title='Components/PromoFlag' component={PromoFlag} />
+
+# PromoFlag
+
+This component shows in the top right corner on a parent that is position relative to display information about promotions. This is an optional child to the Product Card component.
+
+## Variant 1
+
+- [ ] Custom Text Color
+- [ ] Custom Background Color
+
+<Canvas>
+  <Story name='PromoFlag v1' args={{ promoCopy: 'on sale' }}>
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Variant 2
+
+- [x] Custom Text Color
+- [x] Custom Background Color
+
+<Canvas>
+  <Story
+    name='PromoFlag v2'
+    args={{ promoCopy: 'Promo', bgColor: '#f6dcc7', color: '#c40058' }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+# PopularFlag
+
+This component shows in the top right corner on a product's lifestyle image in the site's Navigation (for both desktop and mobile)
+
+## Props
+
+<ArgsTable of={PromoFlag} />

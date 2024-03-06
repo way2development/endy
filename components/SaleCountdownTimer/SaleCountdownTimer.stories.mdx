@@ -1,0 +1,31 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { SaleCountdownTimer } from './SaleCountdownTimer.tsx'
+
+export const Template = (args) => <SaleCountdownTimer {...args} />
+
+<Meta title='Components/Sale Countdown Timer' component={SaleCountdownTimer} />
+
+# Sale Countdown Timer
+
+Sale countdown timer displays the hours, days and minutes to convey urgency site wide for time-sensitive offers.
+
+## Default
+
+<Canvas>
+  <Story
+    name='Default'
+    args={{
+      heading: "Don't Wait",
+      sales: {
+        endDate: 'Tue Apr 29 2022 16:27:32 GMT-0400 (Eastern Daylight Time)'
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Collections Feature Props
+
+<ArgsTable of={SaleCountdownTimer} />

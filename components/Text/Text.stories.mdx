@@ -1,0 +1,900 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { Text } from './Text.tsx'
+
+export const Template = (args) => <Text {...args}>{args.text}</Text>
+
+<Meta title='Components/Text' component={Text} />
+
+# HEADING STYLES
+
+## H1 - Wulkan Semibold
+
+#### gravy
+
+<Canvas>
+  <Story
+    name='H1 - gravy'
+    args={{
+      variant: 'h1',
+      color: 'gravy',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### rubine
+
+<Canvas>
+  <Story
+    name='H1 - rubine'
+    args={{
+      variant: 'h1',
+      color: 'rubine',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### white
+
+<Canvas>
+  <Story
+    name='H1 - white'
+    args={{
+      variant: 'h1',
+      color: 'white',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+    decorators={[
+      (Story) => (
+        <div
+          style={{
+            backgroundColor: '#243746',
+            paddingTop: '0.5rem',
+            paddingLeft: '1rem',
+            paddingRight: '1rem'
+          }}
+        >
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## H2 - Wulkan Semibold
+
+#### gravy
+
+<Canvas>
+  <Story
+    name='H2 - gravy'
+    args={{
+      variant: 'h2',
+      color: 'gravy',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### rubine
+
+<Canvas>
+  <Story
+    name='H2 - rubine'
+    args={{
+      variant: 'h2',
+      color: 'rubine',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### white
+
+<Canvas>
+  <Story
+    name='H2 - white'
+    args={{
+      variant: 'h2',
+      color: 'white',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+    decorators={[
+      (Story) => (
+        <div
+          style={{
+            backgroundColor: '#243746',
+            paddingTop: '0.5rem',
+            paddingLeft: '1rem',
+            paddingRight: '1rem'
+          }}
+        >
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## H3 - Wulkan Bold
+
+#### gravy
+
+<Canvas>
+  <Story
+    name='H3 - gravy'
+    args={{
+      variant: 'h3',
+      color: 'gravy',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+    decorators={[
+      (Story) => (
+        <div style={{ display: 'block' }}>
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+##### rubine
+
+<Canvas>
+  <Story
+    name='H3 - rubine'
+    args={{
+      variant: 'h3',
+      color: 'rubine',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+    decorators={[
+      (Story) => (
+        <div style={{ display: 'block' }}>
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### white
+
+<Canvas>
+  <Story
+    name='H3 - white'
+    args={{
+      variant: 'h3',
+      color: 'white',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+    decorators={[
+      (Story) => (
+        <div
+          style={{
+            backgroundColor: '#243746',
+            paddingTop: '0.5rem',
+            paddingLeft: '1rem',
+            paddingRight: '1rem'
+          }}
+        >
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## H4 - Calibre Semibold
+
+#### gravy
+
+<Canvas>
+  <Story
+    name='H4 - gravy'
+    args={{
+      variant: 'h4',
+      color: 'gravy',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### rubine
+
+<Canvas>
+  <Story
+    name='H4 - rubine'
+    args={{
+      variant: 'h4',
+      color: 'rubine',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### white
+
+<Canvas>
+  <Story
+    name='H4 - white'
+    args={{
+      variant: 'h4',
+      color: 'white',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+    decorators={[
+      (Story) => (
+        <div
+          style={{
+            backgroundColor: '#243746',
+            paddingLeft: '1rem',
+            paddingRight: '1rem'
+          }}
+        >
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## H5 - Calibre Semibold
+
+#### gravy
+
+<Canvas>
+  <Story
+    name='H5 - gravy'
+    args={{
+      variant: 'h5',
+      color: 'gravy',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### rubine
+
+<Canvas>
+  <Story
+    name='H5 - rubine'
+    args={{
+      variant: 'h5',
+      color: 'rubine',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### white
+
+<Canvas>
+  <Story
+    name='H5 - white'
+    args={{
+      variant: 'h5',
+      color: 'white',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+    decorators={[
+      (Story) => (
+        <div
+          style={{
+            backgroundColor: '#243746',
+            paddingLeft: '1rem',
+            paddingRight: '1rem'
+          }}
+        >
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+# DISPLAY STYLES
+
+## Display Sans - Wulkan Semibold
+
+#### gravy
+
+<Canvas>
+  <Story
+    name='Display Sans - gravy'
+    args={{
+      variant: 'displaySans',
+      color: 'gravy',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### rubine
+
+<Canvas>
+  <Story
+    name='Display Sans - rubine'
+    args={{
+      variant: 'displaySans',
+      color: 'rubine',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### white
+
+<Canvas>
+  <Story
+    name='Display Sans - white'
+    args={{
+      variant: 'displaySans',
+      color: 'white',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+    decorators={[
+      (Story) => (
+        <div
+          style={{
+            backgroundColor: '#243746',
+            paddingLeft: '1rem',
+            paddingRight: '1rem'
+          }}
+        >
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Display Serif - Wulkan Semibold
+
+#### gravy
+
+<Canvas>
+  <Story
+    name='Display Serif - gravy'
+    args={{
+      variant: 'displaySerif',
+      color: 'gravy',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### rubine
+
+<Canvas>
+  <Story
+    name='Display Serif - rubine'
+    args={{
+      variant: 'displaySerif',
+      color: 'rubine',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### white
+
+<Canvas>
+  <Story
+    name='Display Serif - white'
+    args={{
+      variant: 'displaySerif',
+      color: 'white',
+      text: 'Take Your Sleep to the Next Level'
+    }}
+    decorators={[
+      (Story) => (
+        <div
+          style={{
+            backgroundColor: '#243746',
+            paddingLeft: '1rem',
+            paddingRight: '1rem'
+          }}
+        >
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+# BODY STYLES
+
+## Large Body - Calibre Regular
+
+#### gravy
+
+<Canvas>
+  <Story
+    name='Large Body - gravy'
+    args={{
+      variant: 'largeBody',
+      color: 'gravy',
+      text: 'You can sleep on the Endy Mattress immediately! Once you have unboxed your Endy Mattress and removed the plastic wrapping, in the span of a few seconds it will expand to its full size. If the mood strikes, hop on and take a nap right away! While the core of the mattress will take a couple of days to stabilize, using it right away will not cause any damage.'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### gravy80
+
+<Canvas>
+  <Story
+    name='Large Body - gravy80'
+    args={{
+      variant: 'largeBody',
+      color: 'gravy80',
+      text: 'You can sleep on the Endy Mattress immediately! Once you have unboxed your Endy Mattress and removed the plastic wrapping, in the span of a few seconds it will expand to its full size. If the mood strikes, hop on and take a nap right away! While the core of the mattress will take a couple of days to stabilize, using it right away will not cause any damage.'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### gravy70
+
+<Canvas>
+  <Story
+    name='Large Body - gravy70'
+    args={{
+      variant: 'largeBody',
+      color: 'gravy70',
+      text: 'You can sleep on the Endy Mattress immediately! Once you have unboxed your Endy Mattress and removed the plastic wrapping, in the span of a few seconds it will expand to its full size. If the mood strikes, hop on and take a nap right away! While the core of the mattress will take a couple of days to stabilize, using it right away will not cause any damage.'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### rubine
+
+<Canvas>
+  <Story
+    name='Large Body - rubine'
+    args={{
+      variant: 'largeBody',
+      color: 'rubine',
+      text: 'You can sleep on the Endy Mattress immediately! Once you have unboxed your Endy Mattress and removed the plastic wrapping, in the span of a few seconds it will expand to its full size. If the mood strikes, hop on and take a nap right away! While the core of the mattress will take a couple of days to stabilize, using it right away will not cause any damage.'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### white
+
+<Canvas>
+  <Story
+    name='Large Body - white'
+    args={{
+      variant: 'largeBody',
+      color: 'white',
+      text: 'You can sleep on the Endy Mattress immediately! Once you have unboxed your Endy Mattress and removed the plastic wrapping, in the span of a few seconds it will expand to its full size. If the mood strikes, hop on and take a nap right away! While the core of the mattress will take a couple of days to stabilize, using it right away will not cause any damage.'
+    }}
+    decorators={[
+      (Story) => (
+        <div
+          style={{
+            backgroundColor: '#243746',
+            paddingLeft: '1rem',
+            paddingRight: '1rem'
+          }}
+        >
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Medium Body - Calibre Regular
+
+#### gravy
+
+<Canvas>
+  <Story
+    name='Medium Body - gravy'
+    args={{
+      variant: 'mediumBody',
+      color: 'gravy',
+      text: 'You can sleep on the Endy Mattress immediately! Once you have unboxed your Endy Mattress and removed the plastic wrapping, in the span of a few seconds it will expand to its full size. If the mood strikes, hop on and take a nap right away! While the core of the mattress will take a couple of days to stabilize, using it right away will not cause any damage.'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### gravy80
+
+<Canvas>
+  <Story
+    name='Medium Body - gravy80'
+    args={{
+      variant: 'mediumBody',
+      color: 'gravy80',
+      text: 'You can sleep on the Endy Mattress immediately! Once you have unboxed your Endy Mattress and removed the plastic wrapping, in the span of a few seconds it will expand to its full size. If the mood strikes, hop on and take a nap right away! While the core of the mattress will take a couple of days to stabilize, using it right away will not cause any damage.'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### gravy70
+
+<Canvas>
+  <Story
+    name='Medium Body - gravy70'
+    args={{
+      variant: 'mediumBody',
+      color: 'gravy70',
+      text: 'You can sleep on the Endy Mattress immediately! Once you have unboxed your Endy Mattress and removed the plastic wrapping, in the span of a few seconds it will expand to its full size. If the mood strikes, hop on and take a nap right away! While the core of the mattress will take a couple of days to stabilize, using it right away will not cause any damage.'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### white
+
+<Canvas>
+  <Story
+    name='Medium Body - white'
+    args={{
+      variant: 'mediumBody',
+      color: 'white',
+      text: 'You can sleep on the Endy Mattress immediately! Once you have unboxed your Endy Mattress and removed the plastic wrapping, in the span of a few seconds it will expand to its full size. If the mood strikes, hop on and take a nap right away! While the core of the mattress will take a couple of days to stabilize, using it right away will not cause any damage.'
+    }}
+    decorators={[
+      (Story) => (
+        <div
+          style={{
+            backgroundColor: '#243746',
+            paddingLeft: '1rem',
+            paddingRight: '1rem'
+          }}
+        >
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Small Body - Calibre Regular
+
+#### gravy
+
+<Canvas>
+  <Story
+    name='Small Body - gravy'
+    args={{
+      variant: 'smallBody',
+      color: 'gravy',
+      text: 'You can sleep on the Endy Mattress immediately! Once you have unboxed your Endy Mattress and removed the plastic wrapping, in the span of a few seconds it will expand to its full size. If the mood strikes, hop on and take a nap right away! While the core of the mattress will take a couple of days to stabilize, using it right away will not cause any damage.'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### gravy80
+
+<Canvas>
+  <Story
+    name='Small Body - gravy80'
+    args={{
+      variant: 'smallBody',
+      color: 'gravy80',
+      text: 'You can sleep on the Endy Mattress immediately! Once you have unboxed your Endy Mattress and removed the plastic wrapping, in the span of a few seconds it will expand to its full size. If the mood strikes, hop on and take a nap right away! While the core of the mattress will take a couple of days to stabilize, using it right away will not cause any damage.'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### gravy70
+
+<Canvas>
+  <Story
+    name='Small Body - gravy70'
+    args={{
+      variant: 'smallBody',
+      color: 'gravy70',
+      text: 'You can sleep on the Endy Mattress immediately! Once you have unboxed your Endy Mattress and removed the plastic wrapping, in the span of a few seconds it will expand to its full size. If the mood strikes, hop on and take a nap right away! While the core of the mattress will take a couple of days to stabilize, using it right away will not cause any damage.'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### white
+
+<Canvas>
+  <Story
+    name='Small Body - white'
+    args={{
+      variant: 'smallBody',
+      color: 'white',
+      text: 'You can sleep on the Endy Mattress immediately! Once you have unboxed your Endy Mattress and removed the plastic wrapping, in the span of a few seconds it will expand to its full size. If the mood strikes, hop on and take a nap right away! While the core of the mattress will take a couple of days to stabilize, using it right away will not cause any damage.'
+    }}
+    decorators={[
+      (Story) => (
+        <div
+          style={{
+            backgroundColor: '#243746',
+            paddingLeft: '1rem',
+            paddingRight: '1rem'
+          }}
+        >
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Micro Body - Calibre Regular
+
+#### gravy
+
+<Canvas>
+  <Story
+    name='Micro - gravy'
+    args={{
+      variant: 'micro',
+      color: 'gravy',
+      text: '*Offer valid until 04/19/2022 at 11:59PM PST'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### gravy80
+
+<Canvas>
+  <Story
+    name='Micro - gravy80'
+    args={{
+      variant: 'micro',
+      color: 'gravy80',
+      text: '*Offer valid until 04/19/2022 at 11:59PM PST'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### gravy70
+
+<Canvas>
+  <Story
+    name='Micro - gravy70'
+    args={{
+      variant: 'micro',
+      color: 'gravy70',
+      text: '*Offer valid until 04/19/2022 at 11:59PM PST'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### white
+
+<Canvas>
+  <Story
+    name='Micro - white'
+    args={{
+      variant: 'micro',
+      color: 'white',
+      text: '*Offer valid until 04/19/2022 at 11:59PM PST'
+    }}
+    decorators={[
+      (Story) => (
+        <div
+          style={{
+            backgroundColor: '#243746',
+            paddingLeft: '1rem',
+            paddingRight: '1rem'
+          }}
+        >
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+# MISCELLANEOUS STYLES
+
+## Price - Calibre Regular
+
+#### gravy
+
+<Canvas>
+  <Story
+    name='Price - gravy'
+    args={{
+      variant: 'price',
+      color: 'gravy',
+      text: '$999'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### rubine
+
+<Canvas>
+  <Story
+    name='Price - rubine'
+    args={{
+      variant: 'price',
+      color: 'rubine',
+      text: '$999'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### white
+
+<Canvas>
+  <Story
+    name='Price - white'
+    args={{
+      variant: 'price',
+      color: 'white',
+      text: '$999'
+    }}
+    decorators={[
+      (Story) => (
+        <div
+          style={{
+            backgroundColor: '#243746',
+            paddingLeft: '1rem',
+            paddingRight: '1rem'
+          }}
+        >
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Price Crossed - Calibre Regular
+
+#### gravy70
+
+<Canvas>
+  <Story
+    name='Price crossed - gravy'
+    args={{
+      variant: 'priceCrossed',
+      color: 'gravy70',
+      text: '$999'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+#### white
+
+<Canvas>
+  <Story
+    name='Price crossed - white'
+    args={{
+      variant: 'priceCrossed',
+      color: 'white',
+      text: '$999'
+    }}
+    decorators={[
+      (Story) => (
+        <div
+          style={{
+            backgroundColor: '#243746',
+            paddingLeft: '1rem',
+            paddingRight: '1rem'
+          }}
+        >
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Inline Text
+
+Inline display renders text in a span rather than a paragraph tag. It is not available for headings.
+
+<Canvas>
+  <Story
+    name='Inline Text'
+    args={{
+      display: 'inline',
+      variant: 'smallBody',
+      color: 'gravy',
+      text: 'This is '
+    }}
+  >
+    {({ text, ...args }) => (
+      <>
+        <Text {...args}>{text}</Text>
+        <Text display='inline' variant='largeBody'>
+          Inline
+        </Text>
+      </>
+    )}
+  </Story>
+</Canvas>
+
+## TextProps
+
+<ArgsTable of={Text} />

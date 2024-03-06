@@ -1,0 +1,143 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+
+import dictionary from '../../dictionary.json'
+
+import { BlogPrefooter } from './BlogPrefooter'
+
+export const Template = (args) => (
+  <div style={{ backgroundColor: '#F6F6F4' }}>
+    <BlogPrefooter {...args} />
+  </div>
+)
+
+<Meta title='Modules/BlogPrefooter' component={BlogPrefooter} />
+
+# Blog Prefooter
+
+- This module allows the author to display different Endy products throughout the blog to advertise to customers
+- On every blog page, the author is able to customize which products they want to display, the accompanying product images and the title of the module
+- Sale touchpoints will also be displayed whenever the products in this module are on sale
+
+## Blog Prefooter v1 - Default
+
+export const blogPrefooterArgs = {
+  prefooter: {
+    primaryProduct: {
+      prefooterImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-02d9950ef28f5d3aeb388b674da3ae13632206b4-1372x642-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-81d6551a55687c074162e864fa7ca464771fbeef-670x290-webp'
+          }
+        },
+        mobileImage: {
+          asset: {
+            _ref: 'image-81d6551a55687c074162e864fa7ca464771fbeef-670x290-webp'
+          }
+        }
+      },
+      product: {
+        priceRange: {
+          maxVariantPrice: 995,
+          minVariantPrice: 675
+        },
+        variants: [
+          {
+            salePrice: 625,
+            color: '',
+            compareAtPrice: 0,
+            id: 1154316248,
+            price: 675
+          }
+        ],
+        slug: 'endy-mattress',
+        id: 583763329057,
+        title: 'The Endy Mattress'
+      }
+    },
+    secondaryProduct: {
+      prefooterImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-06d0265688c6a41ad6bd478557c88f4a520aa0eb-958x642-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-06d0265688c6a41ad6bd478557c88f4a520aa0eb-958x642-webp'
+          }
+        },
+        mobileImage: {
+          asset: {
+            _ref: 'image-06d0265688c6a41ad6bd478557c88f4a520aa0eb-958x642-webp'
+          }
+        }
+      },
+      product: {
+        priceRange: {
+          maxVariantPrice: 145,
+          minVariantPrice: 115
+        },
+        variants: [
+          {
+            salePrice: 100,
+            color: '',
+            compareAtPrice: 0,
+            id: 7418468597793,
+            price: 115
+          }
+        ],
+        slug: 'mattress-protector',
+        id: 583763329057,
+        title: 'The Endy Mattress Protector'
+      }
+    },
+    title: 'Shop Endy Essentials'
+  },
+  locale: 'en'
+}
+
+<Canvas>
+  <Story
+    name='Blog Prefooter v1 - Default'
+    args={{
+      ...blogPrefooterArgs,
+      sales: {}
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Blog Prefooter v2 - On Sale
+
+<Canvas>
+  <Story
+    name='Blog Prefooter v2 - On Sale'
+    args={{
+      ...blogPrefooterArgs,
+      sales: {
+        themeColor: '#f6dcc7',
+        secondaryProductPillLabel: '15% OFF',
+        productPillLabel: 'PROMO',
+        saleType: 'Everything Off',
+        everythingOffProducts: [
+          420850864, 7019419369520, 4433572003888, 3474809349, 6695078821936,
+          4573537697840, 4721316233264, 6540487983152, 4429570408496,
+          4431607627824, 4429603110960, 4429601079344, 583763329057,
+          3830791143472, 6637435355184, 6669610680368, 6911409913904
+        ]
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Blog Prefooter Props
+
+<ArgsTable of={BlogPrefooter} />

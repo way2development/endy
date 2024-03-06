@@ -1,0 +1,221 @@
+function generateSiteMap() {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
+  
+    <url>
+         <loc>https://www.endy.com/</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/reviews/endy-mattress</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/mattress-design</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/endy-mattress</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/duvet</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/organic-cotton-sheets-sateen</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/collection</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/customizable-pillow</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/solid-wood-bed</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/mattress-protector</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/showrooms</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/endy-hybrid-mattress</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/dual-comfort-mattress-topper</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/rv-mattress</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/memory-foam-pillow</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/upholstered-bed</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/platform-bed-frame</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/foam-headboard</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/pillowcases-sateen</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/duvet-cover-sateen</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/weighted-blanket</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/merino-wool-throw-blanket</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/hand-loomed-jute-rug</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/products/grey-geometric-rug</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/reviews/matelas-endy</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/design-du-matelas</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/matelas-endy</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/couette</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/draps-en-coton-biologique-armure-satin</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/collection</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/oreiller-personnalisable</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/lit-en-bois-massif</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/protege-matelas</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/salles-dexposition</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/matelas-hybride-endy</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/surmatelas-double-confort</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/matelas-vr</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/oreiller-en-mousse-memoire</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/lit-rembourre</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/base-de-lit-plateforme</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/tete-de-lit-en-mousse</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/taies-d-oreiller-armure-satin</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/housse-de-couette-armure-satin</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/couverture-lestee</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/jete-en-laine-merinos</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/tapis-de-jute-tisse-a-la-main</loc>
+         <mobile:mobile/>
+    </url>
+    <url>
+         <loc>https://www.endy.com/fr/products/tapis-geometrique-gris</loc>
+         <mobile:mobile/>
+    </url>
+  </urlset>
+ `
+}
+
+function SiteMap() {
+  // getServerSideProps will do the heavy lifting
+}
+
+export async function getServerSideProps({ res }) {
+  // We generate the XML sitemap with the posts data
+  const sitemap = generateSiteMap()
+
+  res.setHeader('Content-Type', 'text/xml')
+  // we send the XML to the browser
+  res.write(sitemap)
+  res.end()
+
+  return {
+    props: {}
+  }
+}
+
+export default SiteMap

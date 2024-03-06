@@ -1,0 +1,52 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+
+import { PhotoGrid } from './PhotoGrid'
+
+export const Template = (args) => (
+  <div style={{ width: '335px' }}>
+    <PhotoGrid {...args} />
+  </div>
+)
+
+<Meta title='Components/Photo Grid' component={PhotoGrid} />
+
+# Photo Grid
+
+## Default
+
+<Canvas>
+  <Story
+    name='Photo Grid'
+    args={{
+      imgUrls: [
+        'https://cdn.sanity.io/images/d0kd7r9c/development/fdeb2287a7c885736dbbaf47513c74166c53fef7-756x488.jpg',
+        'https://cdn.sanity.io/images/d0kd7r9c/development/f3273349967eb9130d801575b0a04eaa023a7c37-756x488.jpg',
+        'https://cdn.sanity.io/images/d0kd7r9c/development/0a68df08e82e810c30656a8f17c185555ee43957-756x488.jpg',
+        'https://cdn.sanity.io/images/d0kd7r9c/development/56e7dbd01463f364c46f351ed27e08ff38acec0e-1534x952.png',
+        'https://cdn.sanity.io/images/d0kd7r9c/development/ffa6751ea5b8303b1adbd286d152b869068dab8b-636x488.jpg',
+        'https://cdn.sanity.io/images/d0kd7r9c/development/e604572354d2e64bd880be875dc21d9a9ef99ee1-1534x822.jpg',
+        'https://cdn.sanity.io/images/d0kd7r9c/development/eb16a0cd06958429f64463fca67f7a1d7fbc2180-474x284.jpg',
+        'https://cdn.sanity.io/images/d0kd7r9c/development/8fd2a94c159bd35d712c29b4ce72e9b940078e1b-1920x1280.jpg'
+      ],
+      review: {
+        id: 435412959,
+        title: 'Money well spent',
+        votes_up: 1,
+        votes_down: 0,
+        created_at: '2023-01-29T14:54:41.000Z',
+        verified_buyer: true,
+        content:
+          'I am amazed at how much better we are sleeping with our Endy mattress, haven’t had such a restful sleep in ages. I strongly recommend this mattress especially if you have back issues. Customer service is awesome too! So glad we made this purchase!!',
+        score: 5,
+        user: { display_name: 'Stacey-Michelle A.' }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={PhotoGrid} />

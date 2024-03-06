@@ -1,0 +1,148 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { useState } from 'react'
+import { WriteAReview } from './WriteAReview.tsx'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+
+export const Template = (args) => <WriteAReview {...args} />
+
+<Meta title='Modules/Write A Review' component={WriteAReview} />
+
+# Write A Review
+
+This module appears on the reviews page and the product detail pages and is used to allow users to submit a review for any product(s) purchased from endy.com. The products are ranked according to the cross sell ranking.
+
+Fields checked off are required:
+
+- [x] Rating
+- [x] Endy Product (title, id and url)
+- [x] Email
+- [x] Review Title
+- [x] Review Content
+- [x] Name
+- [ ] Location
+- [ ] Sleeping Position Preference
+
+<Canvas>
+  <Story
+    name='Write A Review'
+    args={{
+      showReviewForm: true,
+      locale: 'en',
+      productDropdown: [
+        {
+          id: '',
+          label: 'Choose a Product',
+          slug: ''
+        },
+        {
+          id: '420850864',
+          label: 'The Endy Mattress',
+          slug: 'mattresses'
+        },
+        {
+          id: '7019419369520',
+          label: 'The Endy Hybrid Mattress',
+          slug: 'the-endy-hybrid-mattress'
+        },
+        {
+          id: '3474809349',
+          label: 'Customizable Pillow',
+          slug: 'the-customizable-pillow'
+        },
+        {
+          id: '583763329057',
+          label: 'Mattress Protector',
+          slug: 'the-endy-mattress-protector'
+        },
+        {
+          id: '6679391010864',
+          label: 'Luxe Foam Pillow',
+          slug: 'the-luxe-foam-pillow'
+        },
+        {
+          id: '6540487983152',
+          label: 'Upholstered Bed',
+          slug: 'the-upholstered-bed'
+        },
+        {
+          id: '6695078821936',
+          label: 'Solid Wood Bed',
+          slug: 'the-solid-wood-bed'
+        },
+        {
+          id: '4429570408496',
+          label: 'Organic Cotton Sheets',
+          slug: 'the-endy-sheets'
+        },
+        {
+          id: '4429601079344',
+          label: 'Endy Duvet',
+          slug: 'the-endy-duvet'
+        },
+        {
+          id: '4429603110960',
+          label: 'Organic Cotton Duvet Cover',
+          slug: 'the-endy-duvet-cover'
+        },
+        {
+          id: '4573537697840',
+          label: 'Platform Bed Frame',
+          slug: 'the-platform-bed-frame'
+        },
+        {
+          id: '7105543209008',
+          label: 'Merino Wool Throw Blanket',
+          slug: 'endy-merino-wool-throw-blanket'
+        },
+        {
+          id: '3830791143472',
+          label: 'Weighted Blanket',
+          slug: 'endy-weighted-blanket'
+        },
+        {
+          id: '4721316233264',
+          label: 'Endy Foam Headboard',
+          slug: 'the-endy-foam-headboard'
+        },
+        {
+          id: '4433572003888',
+          label: 'Endy RV Mattress',
+          slug: 'rv-mattresses'
+        },
+        {
+          id: '4431607627824',
+          label: 'Organic Cotton Pillowcases',
+          slug: 'pillowcases'
+        },
+        {
+          id: '6637435355184',
+          label: 'Hand-Loomed Jute Rug',
+          slug: 'the-hand-loomed-jute-rug'
+        },
+        {
+          id: '6669610680368',
+          label: 'Grey Geometric Rug',
+          slug: 'the-grey-geometric-rug'
+        },
+        {
+          id: '6911409913904',
+          label: 'The Dual-Comfort Mattress Topper',
+          slug: 'dual-comfort-mattress-topper'
+        }
+      ]
+    }}
+    decorators={[
+      (Story) => (
+        <ThemeProvider theme={createTheme}>
+          <Story />
+        </ThemeProvider>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### WriteAReview Props
+
+<ArgsTable of={WriteAReview} />

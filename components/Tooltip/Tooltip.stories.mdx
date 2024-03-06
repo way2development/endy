@@ -1,0 +1,32 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { Tooltip } from './Tooltip'
+
+export const Template = (args) => (
+  <div style={{ width: '414px', height: '100px' }}>
+    <Tooltip {...args} />
+  </div>
+)
+
+<Meta title='Components/Tooltip' component={Tooltip} />
+
+# Tooltip
+
+This component shows additional information when the user hovers over the icon.
+
+## Variant 1
+
+<Canvas>
+  <Story
+    name='Tooltip v1'
+    args={{
+      icon: '//cdn.shopify.com/s/files/1/0764/8025/t/275/assets/information-circle-gravy-16x16.svg?v=2345049493488783100',
+      text: 'Example tooltip text'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Tooltip} />

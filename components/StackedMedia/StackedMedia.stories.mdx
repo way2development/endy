@@ -1,0 +1,147 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { StackedMedia } from './StackedMedia'
+
+export const Template = (args) => <StackedMedia {...args} />
+
+<Meta title='Modules/Stacked Media' component={StackedMedia} />
+
+# Stacked Media
+
+This module allows CMS users to give customers a visual explanation or setup/guide to choosing Endy and/or the Customizable Pillow.
+
+## Variant 1
+
+- [x] Heading
+- [x] Main image or video
+- [x] Product image
+- [x] Subheading
+- [x] Subcopy
+
+<Canvas>
+  <Story
+    name='StackedMedia v1'
+    args={{
+      heading: 'Foam Adjustment Guide',
+      columnOne: {
+        heading: 'Stomach Sleeper',
+        showOpenedAccordion: true,
+        subcopy:
+          "Remove as much foam as you'd like to make a thinner and softer pillow for optimal comfort. This helps relax the neck from any added pressure.",
+        mainImage: {
+          alt: 'Alt text is important',
+          desktopImage: {
+            asset: {
+              _ref: 'image-144744ca9169c872b94f8877dd1e9b12ff335679-1234x820-jpg'
+            }
+          }
+        },
+        productImage: {
+          alt: 'Alt text is important',
+          desktopImage: {
+            asset: {
+              _ref: 'image-abfe73797de0f243dbe42a8676a9dead6b9400aa-1234x528-png'
+            }
+          }
+        }
+      },
+      columnTwo: {
+        heading: 'Back Sleeper',
+        showOpenedAccordion: false,
+        subcopy:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        mainImage: {
+          alt: 'Alt text is important',
+          desktopImage: {
+            asset: {
+              _ref: 'image-892a817d732d7b1a1fca75b7e0b9461ce8efbc3e-1234x820-jpg'
+            }
+          }
+        },
+        productImage: {
+          alt: 'Alt text is important',
+          desktopImage: {
+            asset: {
+              _ref: 'image-0478e7c3070f9dfb88cb7b9edfe1fe5395088465-1234x528-png'
+            }
+          }
+        }
+      },
+      columnThree: {
+        heading: 'Side Sleeper',
+        showOpenedAccordion: false,
+        subcopy:
+          'Try the pillow with all the foam for the firmest level of support. Make sure to keep your ears, shoulders and knees aligned in order to avoid muscle strain.',
+        mainImage: {
+          alt: 'Alt text is important',
+          desktopImage: {
+            asset: {
+              _ref: 'image-563eeca38df146904ebaee66f5052d3aaca30570-1234x820-jpg'
+            }
+          }
+        },
+        productImage: {
+          alt: 'Alt text is important',
+          desktopImage: {
+            asset: {
+              _ref: 'image-312a3621eb0587f7535edd9a6093e63448a6da33-1234x528-png'
+            }
+          }
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Variant 2
+
+- [x] Heading
+- [x] Main image or video
+- [ ] Product image
+- [x] Subheading
+- [x] Subcopy
+
+<Canvas>
+  <Story
+    name='StackedMedia v2'
+    args={{
+      heading: 'Why Endy?',
+      columnOne: {
+        heading: 'Street art paleo jean shorts',
+        showOpenedAccordion: true,
+        subcopy:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        video: {
+          src: 'https://res.cloudinary.com/rangle/video/upload/v1647524935/rangle.io/msdhfptzvj22eak2njxy.mp4'
+        }
+      },
+      columnTwo: {
+        heading: 'Street art paleo jean shorts',
+        showOpenedAccordion: false,
+        subcopy:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        video: {
+          src: 'https://res.cloudinary.com/rangle/video/upload/v1647524935/rangle.io/msdhfptzvj22eak2njxy.mp4'
+        }
+      },
+      columnThree: {
+        heading: 'Street art paleo jean shorts',
+        showOpenedAccordion: false,
+        subcopy:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        video: {
+          src: 'https://res.cloudinary.com/rangle/video/upload/v1647524935/rangle.io/msdhfptzvj22eak2njxy.mp4'
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={StackedMedia} />

@@ -1,0 +1,26 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { Badge } from './Badge'
+
+export const Template = (args) => (
+  <div style={{ width: '414px', height: '30px', margin: '1rem' }}>
+    <Badge {...args} />
+  </div>
+)
+
+<Meta title='Components/Badge' component={Badge} />
+
+# Badge
+
+This component displays a blue badge in the top left corner on a parent that is position relative. This is currently a child of the ProductCard component.
+
+## Variant 1
+
+<Canvas>
+  <Story name='Badge v1' args={{ text: 'New' }}>
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Badge} />

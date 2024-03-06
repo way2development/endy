@@ -1,0 +1,434 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { Navigation } from './Navigation'
+
+export const Template = (args) => <Navigation {...args} />
+
+<Meta title='Modules/Navigation' component={Navigation} />
+
+# Navigation
+
+This component allows CMS users to customize the navigation categories and sub links in order to showcase the product collections.
+
+## Default
+
+- Desktop navigation is visible from 1025px and above
+- Mobile navigation is visible from 1024px and below
+
+<Canvas>
+  <Story
+    name='Default'
+    args={{
+      links: [
+        {
+          name: 'Reviews',
+          url: '/pages/mattress-reviews',
+          showOnDesktop: false
+        },
+        {
+          name: 'Support',
+          url: 'https://answers.endy.com/',
+          showOnDesktop: true
+        }
+      ],
+      groups: [
+        {
+          name: 'The Mattress',
+          pdpLinks: [
+            {
+              name: 'The Endy Mattress',
+              product: {
+                isNewProduct: false,
+                id: 420850864,
+                name: 'The Endy Mattress',
+                slug: 'mattresses'
+              }
+            },
+            {
+              name: 'RV Mattress',
+              product: {
+                isNewProduct: false,
+                id: 4433572003888,
+                name: 'The Endy RV Mattress',
+                slug: 'rv-mattresses'
+              }
+            }
+          ],
+          navLink: {
+            name: 'Discover the Mattress',
+            url: '/endy-mattresses-design'
+          },
+          features: [
+            {
+              product: {
+                id: 420850864,
+                name: 'The Endy Mattress',
+                priceRange: {
+                  minVariantPrice: 675
+                },
+                isNewProduct: false,
+                isPopularProduct: false,
+                slug: 'mattresses'
+              },
+              image: {
+                desktopImage: {
+                  asset: {
+                    _ref: 'image-ac892d1b7f8ba5bb814d92f6d720ba272e18269e-1034x284-jpg'
+                  }
+                },
+                tabletImage: {
+                  asset: {
+                    _ref: 'image-96e5141d740d8cb4e4c7f860defa75fe79065119-1236x304-jpg'
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          name: 'Pillows',
+          pdpLinks: [
+            {
+              name: 'Customizable Pillow',
+              product: {
+                isNewProduct: false,
+                id: 3474809349,
+                name: 'The Customizable Pillow',
+                slug: 'the-customizable-pillow'
+              }
+            },
+            {
+              name: 'Luxe Foam Pillow',
+              product: {
+                isNewProduct: false,
+                id: 6679391010864,
+                name: 'The Luxe Foam Pillow',
+                slug: 'the-luxe-foam-pillow'
+              }
+            }
+          ],
+          navLink: {
+            name: 'Compare pillows',
+            url: '/pillow-comparison'
+          },
+          features: [
+            {
+              product: {
+                id: 6679391010864,
+                name: 'The Luxe Foam Pillow',
+                priceRange: {
+                  minVariantPrice: 125
+                },
+                isNewProduct: false,
+                isPopularProduct: false,
+                slug: 'the-luxe-foam-pillow'
+              },
+              image: {
+                desktopImage: {
+                  asset: {
+                    _ref: 'image-01eb4d7ec46b509430f99dbf82237c546ed59ee1-474x284-jpg'
+                  }
+                },
+                tabletImage: {
+                  asset: {
+                    _ref: 'image-112c38e146e3448285554d3011b436f78b57ce0b-920x330-jpg'
+                  }
+                }
+              }
+            },
+            {
+              product: {
+                id: 3474809349,
+                name: 'The Customizable Pillow',
+                priceRange: {
+                  minVariantPrice: 85
+                },
+                isNewProduct: false,
+                isPopularProduct: false,
+                slug: 'the-customizable-pillow'
+              },
+              image: {
+                desktopImage: {
+                  asset: {
+                    _ref: 'image-d57f0ab41e2987863bcf97febd3beb1f35272c23-474x284-jpg'
+                  }
+                },
+                tabletImage: {
+                  asset: {
+                    _ref: 'image-db72f99efe0e329b98fb56bd1df87c0e11ebd902-920x330-jpg'
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          name: 'Bed Frames',
+          pdpLinks: [
+            {
+              name: 'Solid Wood Bed',
+              product: {
+                isNewProduct: true,
+                id: 6695078821936,
+                name: 'The Solid Wood Bed',
+                slug: 'the-solid-wood-bed'
+              }
+            },
+            {
+              name: 'Upholstered Bed',
+              product: {
+                isNewProduct: false,
+                id: 6540487983152,
+                name: 'The Upholstered Bed',
+                slug: 'the-upholstered-bed'
+              }
+            },
+            {
+              name: 'Platform Bed Frame',
+              product: {
+                isNewProduct: false,
+                id: 4573537697840,
+                name: 'The Platform Bed Frame',
+                slug: 'the-platform-bed-frame'
+              }
+            }
+          ],
+          navLink: {
+            name: 'View all bed frames',
+            url: '/collections#category-bed-frames'
+          },
+          features: [
+            {
+              product: {
+                id: 6695078821936,
+                name: 'The Solid Wood Bed',
+                priceRange: {
+                  minVariantPrice: 1350
+                },
+                isNewProduct: true,
+                isPopularProduct: false,
+                slug: 'the-solid-wood-bed'
+              },
+              image: {
+                desktopImage: {
+                  asset: {
+                    _ref: 'image-19472a80b012eff0e0107a3332a301751eb3f38d-474x284-jpg'
+                  }
+                },
+                tabletImage: {
+                  asset: {
+                    _ref: 'image-a354345340b6e67680f64d9b8d10820af3ded883-920x330-jpg'
+                  }
+                }
+              }
+            },
+            {
+              product: {
+                id: 6540487983152,
+                name: 'The Upholstered Bed',
+                priceRange: {
+                  minVariantPrice: 795
+                },
+                isNewProduct: false,
+                isPopularProduct: false,
+                slug: 'the-upholstered-bed'
+              },
+              image: {
+                desktopImage: {
+                  asset: {
+                    _ref: 'image-45154a8328962b8d3e5384e9bb8cf06bdbbf1e67-474x284-jpg'
+                  }
+                },
+                tabletImage: {
+                  asset: {
+                    _ref: 'image-2d75fe3aee530d5dc55018d67a03b4c342965df5-920x332-jpg'
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          name: 'Bedding',
+          pdpLinks: [
+            {
+              name: 'Mattress Protector',
+              product: {
+                isNewProduct: false,
+                id: 583763329057,
+                name: 'The Endy Mattress Protector',
+                slug: 'the-endy-mattress-protector'
+              }
+            },
+            {
+              name: 'Sheets',
+              product: {
+                isNewProduct: false,
+                id: 4429570408496,
+                name: 'Organic Cotton Sheets',
+                slug: 'the-endy-sheets'
+              }
+            },
+            {
+              name: 'Pillowcases',
+              product: {
+                isNewProduct: false,
+                id: 4431607627824,
+                name: 'Organic Cotton Pillowcases',
+                slug: 'pillowcases'
+              }
+            },
+            {
+              name: 'Duvet',
+              product: {
+                isNewProduct: false,
+                id: 4429601079344,
+                name: 'The Endy Duvet',
+                slug: 'the-endy-duvet'
+              }
+            },
+            {
+              name: 'Duvet Cover',
+              product: {
+                id: 4429603110960,
+                name: 'Organic Cotton Duvet Cover',
+                slug: 'the-endy-duvet-cover'
+              }
+            },
+            {
+              name: 'Weighted Blanket',
+              product: {
+                id: 3830791143472,
+                name: 'The Endy Weighted Blanket',
+                slug: 'endy-weighted-blanket'
+              }
+            }
+          ],
+          navLink: {
+            name: 'View all bedding',
+            url: '/collections#category-bedding'
+          },
+          features: [
+            {
+              product: {
+                id: 4429570408496,
+                name: 'Organic Cotton Sheets',
+                priceRange: {
+                  minVariantPrice: 105
+                },
+                isNewProduct: false,
+                isPopularProduct: true,
+                slug: 'the-endy-sheets'
+              },
+              image: {
+                desktopImage: {
+                  asset: {
+                    _ref: 'image-3b678beabef102d0a30fbab43f67fb39ae62f642-560x284-jpg'
+                  }
+                },
+                tabletImage: {
+                  asset: {
+                    _ref: 'image-2c4880d5bf2623a27dc38094be8701227960717e-1238x306-jpg'
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          name: 'Rugs',
+          pdpLinks: [
+            {
+              name: 'Hand-Loomed Jute Rug',
+              product: {
+                isNewProduct: true,
+                id: 6637435355184,
+                name: 'The Hand-Loomed Jute Rug',
+                slug: 'the-hand-loomed-jute-rug'
+              }
+            },
+            {
+              name: 'Grey Geometric Rug',
+              product: {
+                isNewProduct: true,
+                id: 6669610680368,
+                name: 'The Grey Geometric Rug',
+                slug: 'the-grey-geometric-rug'
+              }
+            }
+          ],
+          navLink: {
+            name: 'View all rugs',
+            url: '/collections#category-rugs'
+          },
+          features: [
+            {
+              product: {
+                id: 6637435355184,
+                name: 'The Hand-Loomed Jute Rug',
+                priceRange: {
+                  minVariantPrice: 350
+                },
+                isNewProduct: true,
+                isPopularProduct: false,
+                slug: 'the-hand-loomed-jute-rug'
+              },
+              image: {
+                desktopImage: {
+                  asset: {
+                    _ref: 'image-9fe37df0599208c78e32a3bf56ab7f9c8e3a3dc6-474x284-jpg'
+                  }
+                },
+                tabletImage: {
+                  asset: {
+                    _ref: 'image-4000350ffccc0738ff0c758c30559ca744f014f2-920x330-jpg'
+                  }
+                }
+              }
+            },
+            {
+              product: {
+                id: 6669610680368,
+                name: 'The Grey Geometric Rug',
+                priceRange: {
+                  minVariantPrice: 250
+                },
+                isNewProduct: true,
+                isPopularProduct: false,
+                slug: 'the-grey-geometric-rug'
+              },
+              image: {
+                desktopImage: {
+                  asset: {
+                    _ref: 'image-eb16a0cd06958429f64463fca67f7a1d7fbc2180-474x284-jpg'
+                  }
+                },
+                tabletImage: {
+                  asset: {
+                    _ref: 'image-6f81be0c3e634cddc39a169b9384210f3d670528-920x330-jpg'
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ],
+      locale: 'en',
+      sales: {
+        themeColor: '#BF99A6',
+        saleType: 'Percentage',
+        discountPercentage: 10,
+        shopModulePillLabel: 'Sale: 10% off Sitewide',
+        discountPercentageProducts: [420850864, 6695078821936]
+      }
+    }}
+    parameters={{
+      layout: 'fullscreen'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Navigation} />

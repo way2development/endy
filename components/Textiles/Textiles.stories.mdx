@@ -1,0 +1,97 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { Textiles } from './Textiles'
+
+export const Template = (args) => <Textiles {...args} />
+
+<Meta title='Modules/Textiles' component={Textiles} />
+
+# Textiles
+
+## Usage
+
+The Textiles module will display 3 featured products and optional promotions. Each textile is clickable and directs users to shop within that product category.
+
+<Canvas>
+  <Story
+    name='Textiles'
+    args={{
+      heading: 'Featured products shipped to your door',
+      locale: 'en',
+      sales: {
+        productPillLabel: 'Promo',
+        themeColor: '#f6dcc7',
+        saleType: 'Fixed Amount',
+        discountValueProducts: ['1']
+      },
+      primaryProduct: {
+        product: {
+          id: '1',
+          name: 'The Endy Mattress',
+          slug: '/endy-mattress',
+          variants: [
+            {
+              compareAtPrice: 0
+            }
+          ]
+        },
+        lifestyleImage: {
+          desktopImage: {
+            _ref: 'image-6fe11598dab8839c30a82c535b2e555d6e6bc206-1578x824-jpg'
+          },
+          mobileImage: {
+            _ref: 'image-9a5b90951fafcd9633b7dd69e2aab74536cecce4-1760x1048-jpg'
+          },
+          alt: 'Alt text is important'
+        }
+      },
+      secondaryProduct: {
+        product: {
+          id: '2',
+          name: 'The Solid Bedframe',
+          slug: '/endy-mattress',
+          variants: [
+            {
+              compareAtPrice: 0
+            }
+          ]
+        },
+        lifestyleImage: {
+          desktopImage: {
+            _ref: 'image-9c6a6a38bd703e3ba0dfe1be3fb05592485c448f-756x380-jpg'
+          },
+          mobileImage: {
+            _ref: 'image-1526ccde098fc087d21d2d73068c212d5bfe2ca3-966x900-jpg'
+          },
+          alt: 'Alt text is important'
+        }
+      },
+      tertiaryProduct: {
+        product: {
+          id: '3',
+          name: 'Pillow',
+          slug: '/endy-mattress',
+          variants: [
+            {
+              compareAtPrice: 0
+            }
+          ]
+        },
+        lifestyleImage: {
+          desktopImage: {
+            _ref: 'image-44a74a47aef4174812f3ae27264dabcb4b737a48-756x380-jpg'
+          },
+          mobileImage: {
+            _ref: 'image-267d30e37a95c514e97bd39368e4f11b3e63638c-966x900-jpg'
+          },
+          alt: 'Alt text is important'
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### TextilesProps
+
+<ArgsTable of={Textiles} />

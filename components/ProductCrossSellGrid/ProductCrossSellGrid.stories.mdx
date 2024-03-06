@@ -1,0 +1,166 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { ProductCrossSellGrid } from './ProductCrossSellGrid'
+import dictionary from '../../dictionary.json'
+
+export const Template = (args) => (
+  <div style={{ maxWidth: '1310px', margin: '0 auto' }}>
+    <ProductCrossSellGrid {...args} />
+  </div>
+)
+
+<Meta title='Modules/Product Cross Sell' component={ProductCrossSellGrid} />
+
+export const addToCartAlert = () => alert('Product added to cart!')
+
+export const offSaleArgs = {
+  themeColor: '',
+  saleType: '',
+  microcopyFlag: ''
+}
+
+# Product Cross Sell Grid
+
+<Canvas>
+  <Story
+    name='Product Cross Sell'
+    args={{
+      locale: 'en',
+      addItemToCart: addToCartAlert,
+      sales: {
+        saleType: 'Percentage',
+        discountPercentage: 10,
+        productPillLabel: '10% Off',
+        discountPercentageProducts: [6723047030832]
+      },
+      variants: [
+        {
+          id: 1234,
+          productId: 6723047030832,
+          size: 'Queen',
+          price: 675
+        },
+        {
+          id: 2345,
+          productId: 583763329057,
+          size: 'King',
+          price: 123
+        },
+        {
+          id: 3456,
+          productId: 4429603110960,
+          color: 'Glacial Blue',
+          size: 'Twin',
+          price: 105,
+          images: {
+            crossSellImage: {
+              desktopImage: {
+                _ref: 'image-78af6d2dd2d0bce6608ea6db2c6508067483e1be-275x158-jpg'
+              },
+              alt: 'Alt text is important'
+            }
+          }
+        },
+        {
+          id: 4567,
+          productId: 3474809349,
+          size: 'Standard',
+          price: 85
+        }
+      ],
+      products: [
+        {
+          id: 6723047030832,
+          name: 'The Endy Mattress',
+          slug: 'endy-mattress',
+          images: {
+            crossSellImage: {
+              desktopImage: {
+                _ref: 'image-1edaeca4edd1952a9ed03e65bf713f0181669bae-275x158-jpg'
+              },
+              alt: 'Alt text is important'
+            }
+          },
+          sizeVariants: [
+            {
+              id: 'Queen',
+              label: 'Queen Label'
+            }
+          ]
+        },
+        {
+          id: 583763329057,
+          name: 'The Mattress Protector',
+          productUrl: '/mattress-protector',
+          images: {
+            crossSellImage: {
+              desktopImage: {
+                _ref: 'image-faaf55599037f04fdc646ff6043f1a42d50df14e-550x316-jpg'
+              },
+              alt: 'Alt text is important'
+            }
+          },
+          sizeVariants: [
+            {
+              id: 'King',
+              label: 'King Label'
+            }
+          ]
+        },
+        {
+          id: 4429603110960,
+          name: 'Organic Cotton Duvet Cover',
+          slug: '/duvet-cover',
+          images: {
+            crossSellImage: {
+              desktopImage: {
+                _ref: 'image-1edaeca4edd1952a9ed03e65bf713f0181669bae-275x158-jpg'
+              },
+              alt: 'Alt text is important'
+            }
+          },
+          sizeVariants: [
+            {
+              id: 'Twin',
+              label: 'Twin Label'
+            }
+          ],
+          colorVariants: [
+            {
+              id: 'Glacial Blue',
+              label: 'Glacial Blue Label'
+            }
+          ]
+        },
+        {
+          id: 3474809349,
+          name: 'Customizable Pillow',
+          slug: '/customizable-pillow',
+          images: {
+            crossSellImage: {
+              desktopImage: {
+                _ref: 'image-192958d68884078da03b2ff723bf8af90d935fc9-275x158-jpg'
+              },
+              alt: 'Alt text is important'
+            }
+          },
+          sizeVariants: [
+            {
+              id: 'Standard',
+              label: 'Standard Label'
+            }
+          ]
+        }
+      ],
+      slug: '/endy-mattress',
+      router: {
+        isReady: true
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### ProductCrossSellProps
+
+<ArgsTable of={ProductCrossSellGrid} />

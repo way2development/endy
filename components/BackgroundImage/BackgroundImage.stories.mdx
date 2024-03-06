@@ -1,0 +1,124 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { BackgroundImage } from './BackgroundImage'
+
+export const Template = (args) => (
+  <div style={{ width: '100%', height: '400px' }}>
+    <BackgroundImage {...args} />
+  </div>
+)
+
+<Meta title='Components/Background Image' component={BackgroundImage} />
+
+# Image
+
+This component displays a div with a background image that takes in mobile and desktop assets rendering 4 different sourcesets at mobile: 0 - 767, tablet: 768 - 1024, desktop: 1025 - 1439 and large desktop: 1440+.
+
+## Default
+
+srcHeights prop is always required and it is unique for every background image. It is used to dictate the height of the image we need to source from Sanity at each of the 3 breakpoints (excluding the largest breakpoint as it will take the height of the uploaded image). The sourceHeights values can be found in the mockup by inspecting the height of the background image at each of the breakpoints.
+
+<Canvas>
+  <Story
+    name='Default'
+    args={{
+      srcHeights: [200, 625, 650],
+      desktopImage: {
+        asset: {
+          _ref: 'image-275ea7ac3f171c2793fbb5814253d955fc9e9021-2048x1000-webp'
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Background image with custom widths
+
+srcWidths prop is an optional field that is useful when the background image isn't fullscreen. By default, the srcWidths values are the largest width at each of the 3 breakpoints (excluding the largest breakpoint as it will take the width of the uploaded image) since background images are most often fullscreen. It is used to dictate the width of the image we need to source from Sanity at each of the 3 breakpoints. The sourceWidths values can be found in the mockup by inspecting the width of the background image at each of the breakpoints.
+
+<Canvas>
+  <Story
+    name='Custom Widths'
+    args={{
+      srcHeights: [200, 625, 650],
+      srcWidths: [700, 900, 1100],
+      desktopImage: {
+        asset: {
+          _ref: 'image-275ea7ac3f171c2793fbb5814253d955fc9e9021-2048x1000-webp'
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Background image with tablet and mobile asset
+
+Tablet and mobile assets are optional. If no tablet asset are provided desktop asset is used instead. If no mobile asset is provided tablet asset is used instead.
+
+<Canvas>
+  <Story
+    name='Tablet/Mobile Image'
+    args={{
+      srcHeights: [834, 834, 880],
+      mobileImage: {
+        asset: {
+          _ref: 'image-24e6d180b12ae7dc0b7039811c79c80d6d366ad6-1232x834-webp'
+        }
+      },
+      tabletImage: {
+        asset: {
+          _ref: 'image-6effbaa6914dc87f0a006d62c9fcc90d67f3e13c-918x834-webp'
+        }
+      },
+      desktopImage: {
+        asset: {
+          _ref: 'image-a2b4199dd238b25b84baac53e050461c57d6a25c-2400x880-webp'
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Background image with hotspot
+
+<Canvas>
+  <Story
+    name='Hotspot'
+    args={{
+      srcHeights: [200, 625, 650],
+      mobileImage: {
+        asset: {
+          _ref: 'image-cc26b053f173b609423a1c3766cbab1b46f21167-2882x1280-webp'
+        },
+        hotspot: {
+          height: 0.6991854868567196,
+          width: 0.2945205479452053,
+          x: 0.29623287671232856,
+          y: 0.484573614710601
+        }
+      },
+      desktopImage: {
+        asset: {
+          _ref: 'image-275ea7ac3f171c2793fbb5814253d955fc9e9021-2048x1000-webp'
+        },
+        hotspot: {
+          height: 0.6991854868567196,
+          width: 0.2945205479452053,
+          x: 0.29623287671232856,
+          y: 0.484573614710601
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={BackgroundImage} />

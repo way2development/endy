@@ -1,0 +1,37 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { BadgeTile } from './BadgeTile'
+
+export const Template = (args) => <BadgeTile {...args} />
+
+<Meta title='Components/Badge Tile' component={BadgeTile} />
+
+# Badge Tile
+
+This component horizontally aligns an badge image with its correspondingly heading and subcopy.
+
+## Default
+
+<Canvas>
+  <Story
+    name='Default'
+    args={{
+      heading: 'CertiPUR-US ✓',
+      subcopy:
+        'Our foam is CertiPUR-US Certified, meaning it’s safe from VOCs, formaldehyde, and phthalates.',
+      badgeImage: {
+        alt: '',
+        image: {
+          asset: {
+            _ref: 'image-091a5b766246b45e2757bd051e6810273a90371e-55x55-svg'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Badge Tile Props
+
+<ArgsTable of={BadgeTile} />

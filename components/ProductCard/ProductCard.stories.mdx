@@ -1,0 +1,366 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { ProductCard } from './ProductCard'
+
+export const Template = (args) => <ProductCard {...args} />
+
+<Meta title='Modules/Product Card' component={ProductCard} />
+
+# Product Card
+
+This component displays on the collections page and shows the high level information about a product. Clicking on one of the cards leads the user to the associated product page.
+
+## Variant 1
+
+- [x] Reviews
+- [ ] Long Title
+- [ ] RV Badge
+- [ ] New Badge
+- [ ] Top Product Badge
+- [ ] Gift Idea Badge
+- [ ] Promo Flag
+- [ ] On Sale
+- [ ] Compare At Price
+
+<Canvas>
+  <Story
+    name='Product Card v1'
+    args={{
+      product: {
+        id: 1234,
+        name: 'The Endy Mattress',
+        shortDescription: 'The perfect combination of comfort and support',
+        priceRange: { minVariantPrice: 675 },
+        slug: '/the-endy-mattress',
+        variants: [
+          {
+            compareAtPrice: 0
+          }
+        ]
+      },
+      review: {
+        domain_key: '1234',
+        product_score: 4.8765,
+        total_reviews: 12345
+      },
+      image: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-6fe11598dab8839c30a82c535b2e555d6e6bc206-1578x824-jpg'
+          }
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Variant 2
+
+- [x] Reviews
+- [ ] Long Title
+- [x] RV Badge
+- [ ] New Badge
+- [ ] Top Product Badge
+- [ ] Gift Idea Badge
+- [ ] Promo Flag
+- [ ] On Sale
+- [ ] Compare At Price
+
+<Canvas>
+  <Story
+    name='Product Card v2'
+    args={{
+      product: {
+        id: 4433572003888,
+        name: 'The Endy RV Mattress',
+        shortDescription: 'Take great sleep with you, anywhere',
+        priceRange: { minVariantPrice: 895 },
+        variants: [
+          {
+            compareAtPrice: 0
+          }
+        ]
+      },
+      review: {
+        domain_key: '4433572003888',
+        product_score: 4.8765,
+        total_reviews: 12345
+      },
+      image: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-6fe11598dab8839c30a82c535b2e555d6e6bc206-1578x824-jpg'
+          }
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Variant 3
+
+- [ ] Reviews
+- [ ] Long Title
+- [ ] RV Badge
+- [x] New Badge
+- [ ] Top Product Badge
+- [ ] Gift Idea Badge
+- [ ] Promo Flag
+- [ ] On Sale
+- [ ] Compare At Price
+
+<Canvas>
+  <Story
+    name='Product Card v3'
+    args={{
+      product: {
+        isNewProduct: true,
+        name: 'The Mattress Protector',
+        shortDescription: 'Take great sleep with you, anywhere',
+        priceRange: { minVariantPrice: 115 },
+        variants: [
+          {
+            compareAtPrice: 0
+          }
+        ]
+      },
+      image: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-6fe11598dab8839c30a82c535b2e555d6e6bc206-1578x824-jpg'
+          }
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Variant 4
+
+- [x] Reviews
+- [x] Long Title
+- [ ] RV Badge
+- [ ] New Badge
+- [ ] Gift Idea Badge
+- [x] Top Product Badge
+- [x] Promo Flag
+- [x] On Sale - Percentage
+- [ ] Compare At Price
+
+<Canvas>
+  <Story
+    name='Product Card v4'
+    args={{
+      isOnSale: true,
+      product: {
+        id: 7890,
+        isPopularProduct: true,
+        name: 'Organic Cotton Duvet Cover Long Name',
+        shortDescription: 'Bedding that looks good while doing good',
+        priceRange: { minVariantPrice: 115 },
+        variants: [
+          {
+            compareAtPrice: 0
+          }
+        ]
+      },
+      review: {
+        domain_key: '7890',
+        product_score: 4.8765,
+        total_reviews: 12345
+      },
+      sales: {
+        saleType: 'Percentage',
+        discountPercentage: 30,
+        productPillLabel: 'Promo',
+        themeColor: '#a3a3d2'
+      },
+      image: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-6fe11598dab8839c30a82c535b2e555d6e6bc206-1578x824-jpg'
+          }
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Variant 5
+
+- [x] Reviews
+- [ ] Long Title
+- [ ] RV Badge
+- [ ] New Badge
+- [ ] Top Product Badge
+- [x] Gift Idea Badge
+- [x] Promo Flag
+- [x] On Sale - Fixed Amount
+- [ ] Compare At Price
+
+<Canvas>
+  <Story
+    name='Product Card v5'
+    args={{
+      isOnSale: true,
+      product: {
+        id: 2345,
+        name: 'The Upholstered Bed',
+        shortDescription: 'Timeless elegance and simple set up',
+        priceRange: { minVariantPrice: 795 },
+        isGiftIdea: true,
+        variants: [
+          {
+            compareAtPrice: 0
+          }
+        ]
+      },
+      review: {
+        domain_key: '2345',
+        product_score: 4.8765,
+        total_reviews: 12345
+      },
+      sales: {
+        saleType: 'Fixed Amount',
+        discountValue: 50,
+        productPillLabel: 'Promo',
+        themeColor: '#a3a3d2'
+      },
+      image: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-6fe11598dab8839c30a82c535b2e555d6e6bc206-1578x824-jpg'
+          }
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Variant 6
+
+- [x] Reviews
+- [ ] Long Title
+- [ ] RV Badge
+- [ ] New Badge
+- [ ] Top Product Badge
+- [x] Gift Idea Badge
+- [x] Promo Flag
+- [ ] On Sale - Fixed Amount
+- [ ] Compare At Price
+
+<Canvas>
+  <Story
+    name='Product Card v6'
+    args={{
+      isOnSale: true,
+      productCardPillCopy: 'Best Seller',
+      product: {
+        id: 2345,
+        name: 'The Upholstered Bed',
+        shortDescription: 'Timeless elegance and simple set up',
+        priceRange: { minVariantPrice: 795 },
+        isGiftIdea: false,
+        variants: [
+          {
+            compareAtPrice: 0
+          }
+        ]
+      },
+      review: {
+        domain_key: '2345',
+        product_score: 4.8765,
+        total_reviews: 12345
+      },
+      sales: {
+        saleType: 'Fixed Amount',
+        discountValue: 50,
+        productPillLabel: 'Promo',
+        themeColor: '#a3a3d2'
+      },
+      image: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-1bfa0fcb5ca8a4cec7c044847efef335fff33e89-1720x1038-jpg'
+          }
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Variant 7
+
+- [x] Reviews
+- [ ] Long Title
+- [ ] RV Badge
+- [ ] New Badge
+- [ ] Top Product Badge
+- [x] Gift Idea Badge
+- [ ] Promo Flag
+- [ ] On Sale - Fixed Amount
+- [x] Compare At Price
+
+<Canvas>
+  <Story
+    name='Product Card v7'
+    args={{
+      isOnSale: true,
+      productCardPillCopy: 'Best Seller',
+      product: {
+        id: 2345,
+        name: 'The Upholstered Bed',
+        shortDescription: 'Timeless elegance and simple set up',
+        priceRange: { minVariantPrice: 795 },
+        isGiftIdea: false,
+        variants: [
+          {
+            compareAtPrice: 100
+          }
+        ]
+      },
+      review: {
+        domain_key: '2345',
+        product_score: 4.8765,
+        total_reviews: 12345
+      },
+      sales: {
+        saleType: 'Fixed Amount',
+        discountValue: 50,
+        productPillLabel: 'Promo',
+        themeColor: '#a3a3d2'
+      },
+      image: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-1bfa0fcb5ca8a4cec7c044847efef335fff33e89-1720x1038-jpg'
+          }
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={ProductCard} />

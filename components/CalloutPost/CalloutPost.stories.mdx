@@ -1,0 +1,68 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { CalloutPost } from './CalloutPost'
+import { CtaLink } from '../CtaLink'
+
+export const Template = (args) => <CalloutPost {...args} />
+
+<Meta title='Modules/Callout Post' component={CalloutPost} />
+
+# Callout Post
+
+This module allows the author to display call outs that can be used sitewide. It features customizable text and assets with the option to add a background image or background color.
+
+## Callout Post - v1
+
+<Canvas>
+  <Story
+    name='Callout Post v1'
+    args={{
+      heading:
+        '‘‘Endy boasts ‘perfect firmness’ which I found entirely accurate’’',
+      backgroundImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-6fe965894d681371281bbab0f72caa164e1cb21e-3840x930-jpg-webp'
+          }
+        }
+      },
+      badgeImage: {
+        alt: 'Chatelaine',
+        image: {
+          asset: {
+            _ref: 'image-e043a128c6bd63aeed6f70b7c303518c9c5e3f68-125x16-svg'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Callout Post - v2
+
+<Canvas>
+  <Story
+    name='Callout Post v2'
+    args={{
+      heading:
+        'We’re always eager to welcome more registered charity partners to our program.',
+      backgroundColor: { hex: '#c9ded9' },
+      microcopy:
+        'Please note that Endy donation recipients will solely bear all responsibility for ensuring compliance with and adherence to any applicable health and safety regulations',
+      cta: (
+        <CtaLink
+          variant='solid-gravy'
+          url='mailto:hello@endy.com?subject=Inquiry: Endy Charity Partner'
+          label='Become a Partner'
+        />
+      )
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Featured Reviews Props
+
+<ArgsTable of={CalloutPost} />

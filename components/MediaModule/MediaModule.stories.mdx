@@ -1,0 +1,364 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { MediaModule } from './MediaModule'
+import { CtaLink } from '../CtaLink'
+
+
+export const Template = (args) => (
+  <div style={{ maxWidth: '1310px', margin: '0 auto' }}>
+    <MediaModule {...args} />
+  </div>
+)
+
+<Meta title='Modules/Media Module' component={MediaModule} />
+
+# Media Module
+
+This component allows an author to add a photo or video to accompany a heading and subcopy, with an optional CTA button. The media can be aligned to the right or the left.
+
+## Photo
+
+### Photo on the right
+
+<Canvas>
+  <Story
+    name='Photo v1'
+    args={{
+      cta: (
+        <CtaLink
+          variant='solid-rubine'
+          url='https://ca.endy.com'
+          label='Shop the Bed'
+        />
+      ),
+      lifestyleImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-275ea7ac3f171c2793fbb5814253d955fc9e9021-2048x1000-webp'
+          }
+        },
+        alt: 'Alt text is important'
+      },
+      subcopy:
+        'The Solid Wood Bed is just that, solid. With sturdy construction and enduring mid-century modern design, its the perfect fit for any bedroom.',
+      heading: 'Functional Design. Contemporary Feel.',
+      variant: 'Media Right'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Photo on the left
+
+<Canvas>
+  <Story
+    name='Photo v2'
+    args={{
+      cta: (
+        <CtaLink
+          variant='solid-rubine'
+          url='https://ca.endy.com'
+          label='Shop the Bed'
+        />
+      ),
+      alt: 'Alt text is important',
+      lifestyleImage: {
+        desktopImage: {
+          _ref: 'image-275ea7ac3f171c2793fbb5814253d955fc9e9021-2048x1000-webp'
+        },
+        alt: 'Alt text is important'
+      },
+      subcopy:
+        'The Solid Wood Bed is just that, solid. With sturdy construction and enduring mid-century modern design, its the perfect fit for any bedroom.',
+      heading: 'Functional Design. Contemporary Feel.',
+      variant: 'Media Left'
+    }}
+  
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Vertical Variation - text and photo stacked
+
+<Canvas>
+  <Story
+    name='Photo v3'
+    args={{
+      lifestyleImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-275ea7ac3f171c2793fbb5814253d955fc9e9021-2048x1000-webp'
+          }
+        },
+        alt: 'Alt text is important'
+      },
+      subcopy:
+        'The Solid Wood Bed is just that, solid. With sturdy construction and enduring mid-century modern design, its the perfect fit for any bedroom.',
+      heading: 'Functional Design. Contemporary Feel.',
+      variant: 'Media Right',
+      position: 'Vertical'
+    }}
+
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Video
+
+### Video on the right
+
+<Canvas>
+  <Story
+    name='Video v1'
+    args={{
+      video: {
+        src: 'https://res.cloudinary.com/rangle/video/upload/v1647524935/rangle.io/msdhfptzvj22eak2njxy.mp4'
+      },
+      subcopy:
+        'The Solid Wood Bed is just that, solid. With sturdy construction and enduring mid-century modern design, its the perfect fit for any bedroom.',
+      heading: 'Functional Design. Contemporary Feel.',
+      variant: 'Media Right'
+    }}
+
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Video on the left
+
+<Canvas>
+  <Story
+    name='Video v2'
+    args={{
+      video: {
+        src: 'https://res.cloudinary.com/rangle/video/upload/v1647524935/rangle.io/msdhfptzvj22eak2njxy.mp4'
+      },
+      subcopy:
+        'The Solid Wood Bed is just that, solid. With sturdy construction and enduring mid-century modern design, its the perfect fit for any bedroom.',
+      heading: 'Functional Design. Contemporary Feel.',
+      variant: 'Media Left'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Vertical Variation - text and video stacked
+
+<Canvas>
+  <Story
+    name='Video v3'
+    args={{
+      video:
+        'https://res.cloudinary.com/rangle/video/upload/v1647524935/rangle.io/msdhfptzvj22eak2njxy.mp4',
+      subcopy:
+        'The Solid Wood Bed is just that, solid. With sturdy construction and enduring mid-century modern design, its the perfect fit for any bedroom.',
+      heading: 'Functional Design. Contemporary Feel.',
+      variant: 'Media Left',
+      position: 'Vertical'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Vertical Variation - text and video stacked with Badge Image in Top Left
+
+<Canvas>
+  <Story
+    name='Video v4'
+    args={{
+      alt: 'Alt text is important',
+      badgeImage: {
+        asset: {
+          _ref: 'image-02879a99b8c0e9ec22cd19f83121d79a61ccd931-157x70-svg-webp'
+        }
+      },
+      video:
+        'https://res.cloudinary.com/rangle/video/upload/v1647524935/rangle.io/msdhfptzvj22eak2njxy.mp4',
+      subcopy:
+        'The #1 chiropractor recommended mattress in Canada for responsive and comfortable rest.',
+      heading: 'Optimal Firmness & Support',
+      variant: 'Media Left',
+      position: 'Vertical'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Photo on the Left with Featured Products
+
+<Canvas>
+  <Story
+    name='Modal v1'
+    args={{
+      alt: 'Alt text is important',
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-6389c6c57f104c94ce47d2c62be50ec74912616f-1534x820-jpg-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-2f4868a5f2d1b5f542231b25ed67ff40c050017d-2048x800-jpg-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-bdaf812428cbdabf235bbda743f4a73fe0f61fcf-1486x938-jpg-webp'
+          }
+        }
+      },
+      subcopy:
+        'The Solid Wood Bed is just that, solid. With sturdy construction and enduring mid-century modern design, its the perfect fit for any bedroom.',
+      heading: 'Perfect Match For Your Bedframe',
+      variant: 'Media Left',
+      locale: 'en',
+      featuredProducts: {
+        buttonLabel: 'Shop Bed Frames',
+        products: [
+          {
+            id: '1234',
+            name: 'The Solid Wood Bed',
+            slug: '/the-solid-wood-bed',
+            priceRange: {
+              minVariantPrice: 1350
+            },
+            images: {
+              crossSellImage: {
+                mobileImage: {
+                  asset: {
+                    _ref: 'image-8b96be57ffb5d2e95829302d1cb4ba435beb304b-170x150-jpg-webp'
+                  }
+                },
+                tabletImage: {
+                  asset: {
+                    _ref: 'image-8b96be57ffb5d2e95829302d1cb4ba435beb304b-170x150-jpg-webp'
+                  }
+                },
+                desktopImage: {
+                  asset: {
+                    _ref: 'image-8b96be57ffb5d2e95829302d1cb4ba435beb304b-170x150-jpg-webp'
+                  }
+                }
+              }
+            },
+            variants: [
+              {
+                size: 'Twin'
+              },
+              {
+                size: 'Queen'
+              },
+              {
+                size: 'King'
+              },
+              {
+                size: 'King Cal'
+              }
+            ]
+          },
+          {
+            id: '12345',
+            name: 'The Upholstered Bed',
+            slug: '/the-upholstered-bed',
+            priceRange: {
+              minVariantPrice: 795
+            },
+            images: {
+              crossSellImage: {
+                mobileImage: {
+                  asset: {
+                    _ref: 'image-e6d6b57cb48104283f8698dca691bb39ba10c6c1-170x150-jpg-webp'
+                  }
+                },
+                tabletImage: {
+                  asset: {
+                    _ref: 'image-e6d6b57cb48104283f8698dca691bb39ba10c6c1-170x150-jpg-webp'
+                  }
+                },
+                desktopImage: {
+                  asset: {
+                    _ref: 'image-e6d6b57cb48104283f8698dca691bb39ba10c6c1-170x150-jpg-webp'
+                  }
+                }
+              }
+            },
+            variants: [
+              {
+                size: 'Twin'
+              },
+              {
+                size: 'Queen'
+              },
+              {
+                size: 'King'
+              },
+              {
+                size: 'King Cal'
+              }
+            ]
+          },
+          {
+            id: '123456',
+            name: 'The Platform Bed',
+            slug: '/the-platform-bed',
+            priceRange: {
+              minVariantPrice: 465
+            },
+            images: {
+              crossSellImage: {
+                mobileImage: {
+                  asset: {
+                    _ref: 'image-db0838dbaecefcc819c400d78953a272ff8a7de0-170x150-jpg-webp'
+                  }
+                },
+                tabletImage: {
+                  asset: {
+                    _ref: 'image-db0838dbaecefcc819c400d78953a272ff8a7de0-170x150-jpg-webp'
+                  }
+                },
+                desktopImage: {
+                  asset: {
+                    _ref: 'image-db0838dbaecefcc819c400d78953a272ff8a7de0-170x150-jpg-webp'
+                  }
+                }
+              }
+            },
+            variants: [
+              {
+                size: 'Twin'
+              },
+              {
+                size: 'Twin XL'
+              },
+              {
+                size: 'Full'
+              },
+              {
+                size: 'Queen'
+              },
+              {
+                size: 'King'
+              },
+              {
+                size: 'King Cal'
+              }
+            ]
+          }
+        ]
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### MediaModuleProps
+
+<ArgsTable of={MediaModule} />

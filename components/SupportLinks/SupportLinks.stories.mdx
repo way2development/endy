@@ -1,0 +1,85 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { useState } from 'react'
+import { SupportLinks } from './SupportLinks.tsx'
+import { SupportLinkColumn } from './SupportLinkColumn.tsx'
+
+export const Template = (args) => <SupportLinks {...args} />
+
+<Meta title='Modules/Support Links' component={SupportLinks} />
+
+# Support Links
+
+This module is used to showcase to users the various ways in which they can contact Endy for support.
+
+Example of variant with all possible options.
+
+- [x] Background image/color
+- [x] Heading
+- [x] Icon
+- [x] Subheading
+- [x] Subcopy
+
+\*Note that "Chat with support" button will not work on Storybook since the chatbot is not apart of Storybook
+
+<Canvas>
+  <Story
+    name='Support Links'
+    args={{
+      supportLinkColumns: [
+        <SupportLinkColumn
+          badgeImage={{
+            image: {
+              asset: {
+                _ref: 'image-1e4585bd456293b0d3500b2a222ae039248e3f4e-64x64-svg'
+              }
+            },
+            alt: 'Alt text is important'
+          }}
+          heading='Live Chat'
+          subcopy='Ask us anything about Endy'
+          locale='en'
+          _key='1'
+        />,
+        <SupportLinkColumn
+          badgeImage={{
+            image: {
+              asset: {
+                _ref: 'image-23b21be6a2c213843ddf55a3f162951d8091bf77-64x64-svg'
+              }
+            },
+            alt: 'Alt text is important'
+          }}
+          heading='Email'
+          subcopy='Send us your questions'
+          locale='en'
+          _key='2'
+        />,
+        <SupportLinkColumn
+          badgeImage={{
+            image: {
+              asset: {
+                _ref: 'image-845d6ffea39416449e510bed06bb88f9831fc745-64x64-svg'
+              }
+            },
+            alt: 'Alt text is important'
+          }}
+          heading='Call Us'
+          subcopy='Talk with customer care'
+          locale='en'
+          _key='3'
+        />
+      ],
+      heading: 'More Questions?',
+      locale: 'en',
+      backgroundColor: {
+        hex: '#f6f6f4'
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### SupportLinks Props
+
+<ArgsTable of={SupportLinks} />

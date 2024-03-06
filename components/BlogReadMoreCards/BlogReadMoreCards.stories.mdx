@@ -1,0 +1,110 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+
+import { BlogReadMoreCard } from './BlogReadMoreCard'
+import { BlogReadMoreCards } from './BlogReadMoreCards'
+
+export const Template = (args) => <BlogReadMoreCards {...args} />
+
+<Meta title='Modules/Blog Read More Cards' component={BlogReadMoreCards} />
+
+# Blog Read More Cards
+
+Appears in the aside content on Blog Article Pages.
+
+## Blog Read More
+
+<Canvas>
+  <Story
+    name='Blog Read More Cards'
+    args={{
+      title: 'Read More',
+      blogReadMoreCard: [
+        {
+          settings: {
+            heading: '3 Signs It’s Time to Replace Your Pillow',
+            publishedAt: '2023-01-03T08:20:00.000Z',
+            slug: {
+              current: '3-signs-it-s-time-to-replace-your-pillow'
+            },
+            categories: [
+              {
+                slug: {
+                  current: 'product-features'
+                }
+              }
+            ]
+          },
+          hero: {
+            image: {
+              desktopImage: {
+                asset: {
+                  _ref: 'image-031513fdba70899e53610094a0e5a017c18a3cc8-2400x1028-jpg'
+                }
+              }
+            }
+          },
+          locale: 'en'
+        },
+        {
+          settings: {
+            heading: 'Foam Mattresses vs Hybrid Mattresses: Which is Better?',
+            publishedAt: '2023-01-01T08:17:00.000Z',
+            slug: {
+              current: 'foam-mattresses-vs-hybrid-mattresses-which-is-better'
+            },
+            categories: [
+              {
+                slug: {
+                  current: 'product-features'
+                }
+              }
+            ]
+          },
+          hero: {
+            image: {
+              desktopImage: {
+                asset: {
+                  _ref: 'image-6341befc5f9ff9d43130010b1d991037eb7dd0d5-520x223-webp'
+                }
+              }
+            }
+          },
+          locale: 'en'
+        },
+        {
+          settings: {
+            heading: '5 Things to Consider When Buying a Mattress Online',
+            publishedAt: '2023-01-02T08:19:00.000Z',
+            slug: {
+              current: '5-things-to-consider-when-buying-a-mattress-online'
+            },
+            categories: [
+              {
+                slug: {
+                  current: 'product-features'
+                }
+              }
+            ]
+          },
+          hero: {
+            image: {
+              desktopImage: {
+                asset: {
+                  _ref: 'image-63ae6f0d32fb044f8a6212be9a1e7b95d45bd5e4-2400x1028-jpg'
+                }
+              }
+            }
+          },
+          locale: 'en'
+        }
+      ],
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={BlogReadMoreCards} />

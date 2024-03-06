@@ -1,0 +1,46 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { Video } from './Video'
+
+export const Template = (args) => (
+  <div style={{ maxWidth: '1310px', margin: '0 auto' }}>
+    <Video {...args} />
+  </div>
+)
+
+<Meta title='Components/Video' component={Video} />
+
+# Video
+
+This component displays an iframed Video.
+
+## Default
+
+<Canvas>
+  <Story
+    name='Default'
+    args={{
+      variant: 'standard',
+      src: 'https://player.vimeo.com/progressive_redirect/playback/716166364/rendition/540p/file.mp4?loc=external&signature=aad629978b9b9adf15655369248328fa1b87457265327bf97eadc04fc4aae5e2'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Mini Player
+
+<Canvas>
+  <Story
+    name='Mini'
+    args={{
+      variant: 'mini',
+      src: 'https://player.vimeo.com/progressive_redirect/playback/716123083/rendition/1080p/file.mp4?loc=external&signature=e44957bae1ab1f0499b93ec4117329ba455c37ba0affa651bd727f2f5569ca8d'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Video} />

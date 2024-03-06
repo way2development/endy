@@ -1,0 +1,6 @@
+{
+    "idStructure": "subpath",
+    "referenceBehavior": "weak",
+    "base": "en",
+    "languages": ["en", "fr"]
+}

@@ -1,0 +1,130 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+
+import { GenericHero } from './GenericHero'
+import { BadgeImage } from '../BadgeImage/BadgeImage'
+
+export const Template = (args) => <GenericHero {...args} />
+
+<Meta title='Modules/Generic Hero' component={GenericHero} />
+
+# Generic Hero
+
+This component displays a generic hero which can be used on any page to highlight brand content independent from any sale treatment/schedule. The author is able to customize copy fields, and background, lifestyle and graphic images assets.
+
+## Generic Hero v1
+
+<Canvas>
+  <Story
+    name='Generic Hero - v1'
+    args={{
+      heading: 'Your Closest Showroom is Your Home',
+      subcopy: 'Try Endy at home for 100 nights with our risk-free trial',
+      backgroundImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-1ad7969869dd61b289871d011b22f64fd83a6fab-2048x1190-jpg'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-1ad7969869dd61b289871d011b22f64fd83a6fab-2048x1190-jpg'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-1e72cef0eff02499c4240c0b16ce4bd24e807e5a-3840x660-jpg'
+          }
+        }
+      },
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-11e9d4d261d8bb3453dff44541ac27abd7c03499-1534x1024-png'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-c45747824d371eea16d718124b1c602888be1d8b-2048x800-png'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-4efdc971621317e6d91cf0ec2b5ba870caf986d6-1408x660-png'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Generic Hero v2
+
+<Canvas>
+  <Story
+    name='Generic Hero - v2'
+    args={{
+      graphicImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-21f7a56c190f278ef3f99644e1ef25680fdb2962-182x91-svg'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-54726908069eed28582d0cb0386526668da118b2-266x48-svg'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-54726908069eed28582d0cb0386526668da118b2-266x48-svg'
+          }
+        }
+      },
+      heading: 'Endy Mattress Reviews',
+      subcopy:
+        'Don’t just take our word for it! See what other Canadians are saying.',
+      backgroundImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-1ad7969869dd61b289871d011b22f64fd83a6fab-2048x1190-jpg'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-1ad7969869dd61b289871d011b22f64fd83a6fab-2048x1190-jpg'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-1e72cef0eff02499c4240c0b16ce4bd24e807e5a-3840x660-jpg'
+          }
+        }
+      },
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-56e7dbd01463f364c46f351ed27e08ff38acec0e-1534x952-png'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-3ba39b50b11d487568ec9cc2023da347375929a2-2048x1366-png'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-61f555821da4dfdb1f9799148091d98c62516fed-1408x660-png'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={GenericHero} />

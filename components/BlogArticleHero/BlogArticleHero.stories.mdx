@@ -1,0 +1,48 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { BlogArticleHero } from './BlogArticleHero.tsx'
+import dictionary from '../../dictionary.json'
+
+export const Template = (args) => <BlogArticleHero {...args} />
+
+<Meta title='Modules/Blog Article Hero' component={BlogArticleHero} />
+
+# Blog Article Page Hero
+
+Appears at the top of each Article Page on the Endy Blog! The background image is authorable content and the links include breadcrumbs for article tags.
+
+## Default
+
+<Canvas>
+  <Story
+    name='Blog Article Hero'
+    args={{
+      category: { title: 'Product Features', slug: 'product-features' },
+      heading: '3 Signs It’s Time to Replace Your Pillow',
+      slug: '3-signs-its-time-to-replace-your-pillow',
+      backgroundImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-da89f989d67da6c9b9feff1260e71d6a243a8cf2-2951x1082-png-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-da89f989d67da6c9b9feff1260e71d6a243a8cf2-2951x1082-png-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-da89f989d67da6c9b9feff1260e71d6a243a8cf2-2951x1082-png-webp'
+          }
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={BlogArticleHero} />

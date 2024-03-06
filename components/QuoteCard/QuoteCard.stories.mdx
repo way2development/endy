@@ -1,0 +1,30 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { QuoteCard } from './QuoteCard'
+
+export const Template = (args) => <QuoteCard {...args} />
+
+<Meta title='Modules/Quote Card' component={QuoteCard} />
+
+# Quote Card
+
+This module allows the author to display quotes that can be used sitewide (but mainly intended for the blog). It features customizable text and assets with the option to add a background image or background color.
+
+<Canvas>
+  <Story
+    name='Quote Card'
+    args={{
+      quote:
+        'EA block quote. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      author: 'Florida Man',
+      backgroundColor: {
+        hex: '#c9ded9'
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Quote Card Props
+
+<ArgsTable of={QuoteCard} />

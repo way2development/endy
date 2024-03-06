@@ -1,0 +1,94 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { Dropdown } from './Dropdown'
+
+export const Template = (args) => (
+  <div style={{ height: '175px' }}>
+    <Dropdown {...args} />
+  </div>
+)
+
+<Meta title='Components/Dropdown' component={Dropdown} />
+
+# Dropdown
+
+This component displays a custom dropdown that can be used throughout the site. On mobile, the dropdown utilizes native controls while on desktop, displays a custom dropdown.
+
+## Off White
+
+<Canvas>
+  <Story
+    name='Dropdown - Off White'
+    args={{
+      label: 'Sort By:',
+      variant: 'offWhite',
+      handleChange: (optionId) => {
+        console.log(`Handle select event for ${optionId}`)
+      },
+      handleClick: (optionId) => {
+        console.log(`Handle click event for ${optionId}`)
+      },
+      options: [
+        { label: 'Highest Rating', id: 'highest-rating' },
+        { label: 'Lowest Rating', id: 'lowest-rating' },
+        { label: 'Most Helpful', id: 'most-helpful' }
+      ]
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## White
+
+<Canvas>
+  <Story
+    name='Dropdown - White'
+    args={{
+      label: 'Product:',
+      variant: 'white',
+      handleChange: (optionId) => {
+        console.log(`Handle select event for ${optionId}`)
+      },
+      handleClick: (optionId) => {
+        console.log(`Handle click event for ${optionId}`)
+      },
+      options: [
+        { label: 'Endy Mattress', id: 'endy-mattress' },
+        { label: 'Luxe Pillow', id: 'luxe-pillow' },
+        { label: 'Mattress Protector', id: 'mattress-protector' }
+      ]
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## White with no defaultValue
+
+<Canvas>
+  <Story
+    name='Dropdown - black'
+    args={{
+      label: 'Select',
+      variant: 'black',
+      handleChange: (optionId) => {
+        console.log(`Handle select event for ${optionId}`)
+      },
+      handleClick: (optionId) => {
+        console.log(`Handle click event for ${optionId}`)
+      },
+      options: [
+        { label: 'Endy Mattress', id: 'endy-mattress' },
+        { label: 'Luxe Pillow', id: 'luxe-pillow' },
+        { label: 'Mattress Protector', id: 'mattress-protector' }
+      ],
+      showLabelOnLoad: true
+    }}    
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Dropdown} />

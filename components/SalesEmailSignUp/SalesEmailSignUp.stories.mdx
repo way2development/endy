@@ -1,0 +1,52 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { SalesEmailSignUp } from './SalesEmailSignUp'
+
+export const Template = (args) => (
+  <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+    <SalesEmailSignUp {...args} />
+  </div>
+)
+
+<Meta title='Components/Sales Email Sign Up' component={SalesEmailSignUp} />
+
+# Sales Email Sign Up
+
+This component displays a card for sales page newsletter subscription with a heading, a subheading, an input field for email address, a CTA button to subscribe and an Image.
+
+## Default
+
+<Canvas>
+  <Story
+    name='Default'
+    args={{
+      locale: 'en',
+      isMobile: false,
+      heading: 'Get 10% OFF',
+      subcopy: 'Sign up for our newsletter and get 10% off your first order.',
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-0bb15c4f2871b77a42eb12d8e9bd635e3714c904-1776x1320-jpg'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-b24242dfb27362d3a09467e1e196888c1c8673a4-2048x1202-jpg'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-6bf3cd1b9ddc5e47db6633485b6d1dd26aafdb74-2048x1202-jpg'
+          }
+        },
+        alt: 'couple using laptop on mattress'
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={SalesEmailSignUp} />

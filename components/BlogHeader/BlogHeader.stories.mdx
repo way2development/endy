@@ -1,0 +1,35 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { BlogHeader } from './BlogHeader.tsx'
+import dictionary from '../../dictionary.json'
+
+export const Template = (args) => <BlogHeader {...args} />
+
+<Meta title='Modules/Blog Header' component={BlogHeader} />
+
+# Blog Header
+
+Appears at the header  on the Endy Blog!.
+
+## Default
+
+<Canvas>
+  <Story
+    name='Blog Header'
+    args={{
+      header: {
+        navigation: [
+          { label: 'Sleep & Wellbeing', url: 'sleep-wellbeing' },
+          { label: 'Product Features', url: 'product-features' }
+        ],
+        heading: "The Endy Blog"
+      },
+      locale: 'en'
+    }}
+  >
+    { Template.bind({}) }
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={BlogHeader} />

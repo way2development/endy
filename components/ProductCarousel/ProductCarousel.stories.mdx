@@ -1,0 +1,82 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { ProductCarousel } from './ProductCarousel'
+
+export const Template = (args) => <ProductCarousel {...args} />
+
+<Meta title='Modules/Product Carousel' component={ProductCarousel} />
+
+# Product Carousel
+
+This module allows an author to add product photos to create a carousel and an option to also add in a badge that appears at top-right corner (badge) and bottom-left corner (badgeSecondary) of the carousel.
+
+<Canvas>
+  <Story
+    name='Default'
+    args={{
+      images: [
+        {
+          desktopImage: {
+            asset: {
+              _ref: 'image-7d85c7a9e02025874ffdb98be0d1326d118d344e-1720x1038-jpg'
+            }
+          },
+          alt: 'Man and woman chillin like villians on an Endy Mattress.'
+        },
+        {
+          desktopImage: {
+            asset: {
+              _ref: 'image-211e63e15bb6854646cd120a7d14c97803b3b755-1720x1038-jpg'
+            }
+          },
+          alt: 'Up close & personal with THE Endy Mattress.'
+        },
+        {
+          desktopImage: {
+            asset: {
+              _ref: 'image-1b24f70a3183a1b14c11dd11096874b9751c5c13-1720x1038-jpg'
+            }
+          },
+          alt: 'A hand brushing against an Endy Mattress. So soft & comfy.'
+        },
+        {
+          desktopImage: {
+            asset: {
+              _ref: 'image-e8cf7d8a1d80f126faf93fc4635380f2ef903c50-1720x1038-jpg'
+            }
+          },
+          alt: 'Endy Mattress box on top of an Endy Mattress.'
+        },
+        {
+          desktopImage: {
+            asset: {
+              _ref: 'image-0246dc4602bc1b4d9b72a3a783064a936bfaa471-1720x1038-jpg'
+            }
+          },
+          alt: 'A different close-up angle of The Endy Mattress.'
+        }
+      ],
+      badge: {
+        image: {
+          asset: {
+            _ref: 'image-51b956326a9994b95b5d415063f1ce7d99b9defb-226x113-svg'
+          }
+        },
+        alt: 'Alt text is important'
+      },
+      badgeSecondary: {
+        image: {
+          asset: {
+            _ref: 'image-1515fc66802f089068b14b0f81d6105707bc0528-164x93-svg'
+          }
+        },
+        alt: 'Alt text is important'
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Product Carousel Props
+
+<ArgsTable of={ProductCarousel} />

@@ -1,0 +1,206 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { CollectionsFeature } from './CollectionsFeature.tsx'
+import { CtaLink } from '../CtaLink'
+
+export const Template = (args) => <CollectionsFeature {...args} />
+
+<Meta title='Modules/Collections Feature' component={CollectionsFeature} />
+
+# Collections Feature
+
+## Usage
+
+This module appears at the very bottom of the Collections Page (right before the footer). The card is often used to direct customers to a specific product page and during active sales, showcases the current sale offer.
+
+## Collections Feature v1 - Default (Off-Sale)
+
+- [x] Background Image
+- [ ] Sale Pill
+- [x] Heading
+- [ ] Subcopy
+- [x] CTA Link or CTA Button
+- [ ] Microcopy
+
+<Canvas>
+  <Story
+    name='Collections Feature v1'
+    args={{
+      heading: 'Looking inside our award-winning mattress',
+      backgroundColor: {
+        hex: '#c9ded9'
+      },
+      cta: (
+        <CtaLink
+          variant='block-line-gravy'
+          url='https://ca.endy.com/products/the-customizable-pillow'
+          label='Shop the mattress'
+        />
+      ),
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-7eccd4ec43b92d0ff38040e2260217e0bfdd2398-1234x772-png-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-8fc0503b73f4f005be4912074ed085149425d37a-1750x592-png-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-b0f18943bd2095a441cbed5592b5b8b3296ce793-1200x882-png-webp'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Collections Feature v1 - Sale
+
+- [x] Background Image
+- [x] Sale Pill
+- [x] Heading
+- [x] Subcopy
+- [x] CTA Link or CTA Button
+- [x] Microcopy
+
+<Canvas>
+  <Story
+    name='Collections Feature v2'
+    args={{
+      heading: 'Looking inside our award-winning mattress',
+      backgroundColor: {
+        hex: '#c9ded9'
+      },
+      cta: (
+        <CtaLink
+          variant='block-line-gravy'
+          url='https://ca.endy.com/products/the-customizable-pillow'
+          label='Shop the mattress'
+        />
+      ),
+      sales: {
+        isLastChance: false,
+        lastChance: {
+          collections: {
+            prefooterPillLabel: 'Last Chance'
+          }
+        },
+        collectionsFeature: {
+          heading: 'Enjoy Your Gift',
+          subcopy: 'Free weighted blanket with mattress',
+          lifestyleImage: {
+            mobileImage: {
+              asset: {
+                _ref: 'image-7eccd4ec43b92d0ff38040e2260217e0bfdd2398-1234x772-png-webp'
+              }
+            },
+            tabletImage: {
+              asset: {
+                _ref: 'image-8fc0503b73f4f005be4912074ed085149425d37a-1750x592-png-webp'
+              }
+            },
+            desktopImage: {
+              asset: {
+                _ref: 'image-b0f18943bd2095a441cbed5592b5b8b3296ce793-1200x882-png-webp'
+              }
+            }
+          },
+          cta: (
+            <CtaLink
+              variant='block-line-gravy'
+              url='https://ca.endy.com/products/mattresses'
+              label='Shop the mattress'
+            />
+          ),
+          microcopy: '*Terms & conditions apply.',
+          pillLabel: 'Limited Time Only',
+          backgroundColor: {
+            hex: '#c9ded9'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Last Chance
+
+- [x] Background Image
+- [x] Sale Pill
+- [x] Heading
+- [x] Subcopy
+- [x] CTA Link or CTA Button
+- [x] Microcopy
+
+<Canvas>
+  <Story
+    name='Last Chance'
+    args={{
+      heading: 'Looking inside our award-winning mattress',
+      backgroundColor: {
+        hex: '#c9ded9'
+      },
+      cta: (
+        <CtaLink
+          variant='block-line-gravy'
+          url='https://ca.endy.com/products/the-customizable-pillow'
+          label='Shop the mattress'
+        />
+      ),
+      sales: {
+        isLastChance: true,
+        lastChance: {
+          collections: {
+            prefooterPillLabel: 'Last Chance'
+          }
+        },
+        collectionsFeature: {
+          heading: 'Enjoy Your Gift',
+          subcopy: 'Free weighted blanket with mattress',
+          lifestyleImage: {
+            mobileImage: {
+              asset: {
+                _ref: 'image-7eccd4ec43b92d0ff38040e2260217e0bfdd2398-1234x772-png-webp'
+              }
+            },
+            tabletImage: {
+              asset: {
+                _ref: 'image-8fc0503b73f4f005be4912074ed085149425d37a-1750x592-png-webp'
+              }
+            },
+            desktopImage: {
+              asset: {
+                _ref: 'image-b0f18943bd2095a441cbed5592b5b8b3296ce793-1200x882-png-webp'
+              }
+            }
+          },
+          cta: (
+            <CtaLink
+              variant='block-line-gravy'
+              url='https://ca.endy.com/products/mattresses'
+              label='Shop the mattress'
+            />
+          ),
+          microcopy: '*Terms & conditions apply.',
+          pillLabel: 'Limited Time Only',
+          backgroundColor: {
+            hex: '#c9ded9'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Collections Feature Props
+
+<ArgsTable of={CollectionsFeature} />

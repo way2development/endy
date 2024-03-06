@@ -1,0 +1,66 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { TermsAndConditions } from './TermsAndConditions'
+import { StyledBulletlist } from '../../styles/global.styled'
+
+export const Template = (args) => <TermsAndConditions {...args} />
+
+<Meta title='Modules/Terms And Conditions' component={TermsAndConditions} />
+
+# Terms and Conditions
+
+Terms and Conditions module with a RTE (Rich Text Editor) so CMS users can customize content.
+
+export const termsArgs = {
+  heading: 'Terms & Conditions',
+  body: (
+    <StyledBulletlist>
+      <li>While supplies last. Offer expires 09/07/2021 at 11:59PM PST</li>
+      <li>
+        Applicable with purchase of a mattress at full price between August 21 -
+        September 7
+      </li>
+      <li>
+        Promo code FREEWB-0821 will be auto-applied at checkout if both products
+        are in cart
+      </li>
+      <li>To qualify, all items must be purchased as part of the same order</li>
+      <li>Offer limited to a maximum of ten mattresses per customer</li>
+      <li>Offer not valid on previous purchases or pending orders</li>
+      <li>
+        Previous free gift products may not be exchanged for current offer
+      </li>
+      <li>
+        Offer may not be combined with any other sale, promotion, discount,
+        code, coupon and/or offer; no cash value
+      </li>
+      <li>
+        Returns of any portion of the purchase will require equal forfeiture of
+        offer or amount equal to offer of up to $195 value
+      </li>
+      <li>
+        Offer may not be combined with Affirm financing. If you would like to
+        use financing, please remove any promo code at checkout and review items
+        in your shopping cart
+      </li>
+      <li>
+        Previously purchased mattresses currently under the one hundred (100)
+        night trial cannot be returned to redeem free gift offer
+      </li>
+      <li>Free gift product does not qualify for regular product trial</li>
+      <li>
+        Endy has the right to end any promotion at any time; other restrictions
+        may apply
+      </li>
+    </StyledBulletlist>
+  )
+}
+
+<Canvas>
+  <Story name='TermsAndConditions' args={{ ...termsArgs }}>
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Terms and Conditions Props
+
+<ArgsTable of={TermsAndConditions} />

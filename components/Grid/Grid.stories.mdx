@@ -1,0 +1,77 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { Grid } from './Grid'
+
+export const Template = (args) => (
+  <Grid {...args}>
+    <div style={{ height: '50px', backgroundColor: 'grey' }}></div>
+    <div style={{ height: '50px', backgroundColor: 'grey' }}></div>
+    <div style={{ height: '50px', backgroundColor: 'grey' }}></div>
+    <div style={{ height: '50px', backgroundColor: 'grey' }}></div>
+    <div style={{ height: '50px', backgroundColor: 'grey' }}></div>
+  </Grid>
+)
+
+export const Template2 = (args) => (
+  <Grid {...args}>
+    <div style={{ height: '50px', backgroundColor: 'grey' }}></div>
+    <div style={{ height: '50px', backgroundColor: 'grey' }}></div>
+    <div style={{ height: '50px', backgroundColor: 'grey' }}></div>
+    <div style={{ height: '50px', backgroundColor: 'grey' }}></div>
+    <div
+      style={{ height: '50px', backgroundColor: 'grey', gridColumn: 'span 2' }}
+    ></div>
+  </Grid>
+)
+
+<Meta title='Components/Grid' component={Grid} />
+
+# Grid
+
+## Default
+
+<Canvas>
+  <Story
+    name='Default'
+    args={{
+      columnRatio: ['1', '1:1', '1:1:1'],
+      rowGap: '50px',
+      columnGap: '30px'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Responsive Gap
+
+<Canvas>
+  <Story
+    name='Responsive Gap'
+    args={{
+      columnRatio: ['1', '1:1', '1:1:1'],
+      rowGap: ['10px', '30px', '50px'],
+      columnGap: ['20px', '25px', '30px']
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Custom Column Span
+
+<Canvas>
+  <Story
+    name='Column Span'
+    args={{
+      columnRatio: ['1', '1:1', '1:1:1'],
+      rowGap: '50px',
+      columnGap: ['0px', '30px']
+    }}
+  >
+    {Template2.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Grid} />

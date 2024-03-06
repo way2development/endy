@@ -1,0 +1,233 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { VersusProduct } from './VersusProduct'
+
+export const Template = (args) => (
+  <>
+    <VersusProduct {...args} />
+  </>
+)
+
+<Meta title='Modules/Versus Product' component={VersusProduct} />
+
+# Versus Product
+
+A 2 column layout module that references 2 different products for comparing qualities and details. Module is currently used to compare the Endy Mattress and Hybrid Mattress on the MLP.
+
+## Off-Sale
+
+<Canvas>
+  <Story
+    name='Versus Product - Off Sale'
+    parameters={{
+      layout: 'fullscreen'
+    }}
+    args={{
+      locale: 'en',
+      heading: 'Explore Endy Mattresses',
+      productOne: {
+        product: {
+          name: 'The Endy Mattress',
+          slug: '/endy-mattress',
+          id: 1,
+          priceRange: {
+            minVariantPrice: 675
+          }
+        },
+        recommendation: {
+          heading: 'Recommended for:',
+          subcopy:
+            'All sleepers, whether you prefer resting on your front, back, or side. The award-winning Endy Mattress balances perfect comfort and support.'
+        },
+        features: [
+          {
+            heading: 'Responsive Rest',
+            subcopy:
+              'The Endy Mattress quickly bounces back to ensure your spine is properly supported throughout the night. Say goodbye to morning soreness!'
+          },
+          {
+            heading: 'Perfect Firmness',
+            subcopy:
+              'Excellent support meets plush comfort. Experience award-winning sleep with the medium-firm Endy Mattress!'
+          }
+        ],
+        productImage: {
+          desktopImage: {
+            _ref: 'image-22d23f0ee9188180f682adb17abb252535da74fd-960x622-jpg'
+          },
+          mobileImage: {
+            _ref: 'image-22d23f0ee9188180f682adb17abb252535da74fd-960x622-jpg'
+          },
+          alt: 'Alt text is important'
+        },
+        productPill: 'MOST POPULAR'
+      },
+      productTwo: {
+        product: {
+          name: 'The Endy Mattress',
+          slug: '/endy-mattress',
+          id: 2,
+          priceRange: {
+            minVariantPrice: 895
+          }
+        },
+        recommendation: {
+          heading: 'Recommended for: ',
+          subcopy:
+            'Sleepers who want maximum levels of support from durable pocket coils—with the comfort of Endys award-winning foam.'
+        },
+        features: [
+          {
+            heading: 'Ergonomic Support',
+            subcopy:
+              'Hundreds of high-carbon steel coils offer unparalleled support and extra firmness in the areas that need it most.'
+          },
+          {
+            heading: 'Added Airflow',
+            subcopy:
+              'Pocket coils complement our signature open-cell foam to create the most refreshing sleep experience of your life.'
+          }
+        ],
+        productImage: {
+          desktopImage: {
+            _ref: 'image-6af546d4cdaabebb137c487557ebe81578b8f344-960x622-jpg'
+          },
+          mobileImage: {
+            _ref: 'image-6af546d4cdaabebb137c487557ebe81578b8f344-960x622-jpg'
+          },
+          alt: 'Alt text is important'
+        },
+        productPill: 'EXTRA SUPPORT'
+      },
+      productReviews: [
+        {
+          domain_key: '1',
+          product_score: 4.85714,
+          total_reviews: 14
+        },
+        {
+          domain_key: '2',
+          product_score: 0,
+          total_reviews: 14
+        }
+      ]
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## On-Sale
+
+Promo tags appear for all sale types.
+
+<Canvas>
+  <Story
+    name='Versus Product - On Sale'
+    parameters={{
+      layout: 'fullscreen'
+    }}
+    args={{
+      locale: 'en',
+      heading: 'Explore Endy Mattresses',
+      productOne: {
+        product: {
+          name: 'The Endy Mattress',
+          slug: '/endy-mattress',
+          id: 1,
+          priceRange: {
+            minVariantPrice: 675
+          }
+        },
+        recommendation: {
+          heading: 'Recommended for:',
+          subcopy:
+            'All sleepers, whether you prefer resting on your front, back, or side. The award-winning Endy Mattress balances perfect comfort and support.'
+        },
+        features: [
+          {
+            heading: 'Responsive Rest',
+            subcopy:
+              'The Endy Mattress quickly bounces back to ensure your spine is properly supported throughout the night. Say goodbye to morning soreness!'
+          },
+          {
+            heading: 'Perfect Firmness',
+            subcopy:
+              'Excellent support meets plush comfort. Experience award-winning sleep with the medium-firm Endy Mattress!'
+          }
+        ],
+        productImage: {
+          desktopImage: {
+            _ref: 'image-22d23f0ee9188180f682adb17abb252535da74fd-960x622-jpg'
+          },
+          mobileImage: {
+            _ref: 'image-22d23f0ee9188180f682adb17abb252535da74fd-960x622-jpg'
+          },
+          alt: 'Alt text is important'
+        },
+        productPill: 'MOST POPULAR'
+      },
+      productTwo: {
+        product: {
+          name: 'The Endy Mattress',
+          slug: '/endy-mattress',
+          id: 2,
+          priceRange: {
+            minVariantPrice: 895
+          }
+        },
+        recommendation: {
+          heading: 'Recommended for: ',
+          subcopy:
+            'Sleepers who want maximum levels of support from durable pocket coils—with the comfort of Endys award-winning foam.'
+        },
+        features: [
+          {
+            heading: 'Ergonomic Support',
+            subcopy:
+              'Hundreds of high-carbon steel coils offer unparalleled support and extra firmness in the areas that need it most.'
+          },
+          {
+            heading: 'Added Airflow',
+            subcopy:
+              'Pocket coils complement our signature open-cell foam to create the most refreshing sleep experience of your life.'
+          }
+        ],
+        productImage: {
+          desktopImage: {
+            _ref: 'image-6af546d4cdaabebb137c487557ebe81578b8f344-960x622-jpg'
+          },
+          mobileImage: {
+            _ref: 'image-6af546d4cdaabebb137c487557ebe81578b8f344-960x622-jpg'
+          },
+          alt: 'Alt text is important'
+        },
+        productPill: 'EXTRA SUPPORT'
+      },
+      sales: {
+        discountValue: 50,
+        productPillLabel: 'Promo',
+        themeColor: '#c9ded9',
+        saleType: 'Fixed Amount',
+        discountValueProducts: [1, 2]
+      },
+      productReviews: [
+        {
+          domain_key: '1',
+          product_score: 4.85714,
+          total_reviews: 14
+        },
+        {
+          domain_key: '2',
+          product_score: 0,
+          total_reviews: 14
+        }
+      ]
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable of={VersusProduct} />
+
+;

@@ -1,0 +1,73 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { BadgeBanner } from './BadgeBanner'
+import { CtaLink } from '../CtaLink'
+
+export const Template = (args) => <BadgeBanner {...args} />
+
+<Meta title='Modules/Badge Banner' component={BadgeBanner} />
+
+# Badge Banner
+
+This module allows the author to display call outs that can be used site wide. The author is able to customize the badge image, background image, heading and subcopy (optional).
+
+## Badge Banner v1
+
+<Canvas>
+  <Story
+    name='Badge Banner v1'
+    args={{
+      heading: 'Free 100 Night Trial Lorem Impsum Dolor',
+      backgroundImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-9e5e54e9bc6c6bd69be3f57b948d01ce08ea1d97-2400x306-jpg-webp'
+          }
+        }
+      },
+      badgeImage: {
+        alt: '100 Nights',
+        image: {
+          asset: {
+            _ref: 'image-6af59baeae2829e22be8e52bae91f142c23190c9-64x64-svg'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Badge Banner v2
+
+<Canvas>
+  <Story
+    name='Badge Banner v2'
+    args={{
+      heading: 'Safe For Families',
+      backgroundImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-00f83b4e3d1ce1b4166c7ab98add3fcac9b1e609-2400x358-jpg-webp'
+          }
+        }
+      },
+      badgeImage: {
+        alt: 'GREENGUARD Gold Certified',
+        image: {
+          asset: {
+            _ref: 'image-f3ed01fe2299aec66c4133ba37b349d4853718f8-73x98-svg'
+          }
+        }
+      },
+      subcopy:
+        'All Endy mattresses are GREENGUARD Gold Certified, meaning your entire mattress, inside and out, is made without harmful pollutants.'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Featured Reviews Props
+
+<ArgsTable of={BadgeBanner} />

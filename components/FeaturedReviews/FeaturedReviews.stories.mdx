@@ -1,0 +1,246 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { FeaturedReviews } from './FeaturedReviews'
+import { CtaLink } from '../CtaLink'
+
+export const Template = (args) => <FeaturedReviews {...args} />
+
+<Meta title='Modules/Featured Reviews' component={FeaturedReviews} />
+
+# Featured Reviews
+
+This module allows the author to add featured reviews to curate and display products and brand reviews. The module features a carousel on tablet and mobile devices while displaying 3 reviews on desktop.
+
+## Featured Reviews with Image
+
+<Canvas>
+  <Story
+    name='Featured Reviews - Image'
+    args={{
+      heading: 'Join the 300,000+ waking up to better sleep everyday.',
+      reviews: [
+        {
+          heading: 'Love Endy!',
+          subcopy:
+            'We’ve had our Endy for a couple years now and we LOVE it. It’s so comfortable. We’ve had many friends come try it and then end up buying their own!',
+          name: 'Susan P.',
+          location: 'Hamilton, ON',
+          lifestyleImage: {
+            desktopImage: {
+              asset: {
+                _ref: 'image-249c9bb79fd0fbff978aba67457189a8a88a6e0d-756x488-jpg-webp'
+              }
+            },
+            alt: 'Alt text is important'
+          },
+          socialHandle: '@endyInfluencer'
+        },
+        {
+          heading: 'Amazing Sleep!',
+          subcopy:
+            'Best sleep Ive had on any mattress. Keeps you cool at night and has just the right amount of support.',
+          name: 'Susan P.',
+          location: 'Hamilton, ON',
+          lifestyleImage: {
+            desktopImage: {
+              asset: {
+                _ref: 'image-249c9bb79fd0fbff978aba67457189a8a88a6e0d-756x488-jpg-webp'
+              }
+            },
+            alt: 'Alt text is important'
+          },
+          socialHandle: '@endyInfluencer'
+        },
+        {
+          heading: 'World Class Comfort',
+          subcopy:
+            'I bought [another mattress-in-a-box] initially after doing my research, but it was too firm… Endy has been perfection for me and is only getting better every day.',
+          name: 'Susan P.',
+          location: 'Hamilton, ON',
+          lifestyleImage: {
+            desktopImage: {
+              asset: {
+                _ref: 'image-249c9bb79fd0fbff978aba67457189a8a88a6e0d-756x488-jpg-webp'
+              }
+            },
+            alt: 'Alt text is important'
+          },
+          socialHandle: '@endyInfluencer'
+        }
+      ],
+      backgroundImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-f925234ae77c2a9efeed9547aa0bc6255bca2cd2-2880x1078-png-webp'
+          }
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Featured Reviews without Image
+
+<Canvas>
+  <Story
+    name='Featured Reviews - No Image'
+    args={{
+      heading: 'Join the 300,000+ waking up to better sleep everyday.',
+      reviews: [
+        {
+          heading: 'Love Endy!',
+          subcopy:
+            'We’ve had our Endy for a couple years now and we LOVE it. It’s so comfortable. We’ve had many friends come try it and then end up buying their own!',
+          name: 'Susan P.',
+          location: 'Hamilton, ON'
+        },
+        {
+          heading: 'Amazing Sleep!',
+          subcopy:
+            'Best sleep Ive had on any mattress. Keeps you cool at night and has just the right amount of support.',
+          name: 'Barry H.',
+          location: 'Sydney, NS'
+        },
+        {
+          heading: 'World Class Comfort',
+          subcopy:
+            'I bought [another mattress-in-a-box] initially after doing my research, but it was too firm… Endy has been perfection for me and is only getting better every day.',
+          name: 'Hope L.',
+          location: 'Toronto, ON'
+        }
+      ],
+      backgroundImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-f925234ae77c2a9efeed9547aa0bc6255bca2cd2-2880x1078-png-webp'
+          }
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Featured Reviews without Image with Pill & CTA
+
+<Canvas>
+  <Story
+    name='Featured Reviews without Image with Pill & CTA'
+    args={{
+      heading: 'See What Canadians Are Saying',
+      reviews: [
+        {
+          pillLabel: 'Shipping & Delivery',
+          heading: 'Pure luxury for an affordable price',
+          subcopy:
+            'The service and the shipping were both so fast and efficient + this is the most comfortable mattress I have ever owned.',
+          name: 'Anna F.',
+          location: 'Vancouver, BC'
+        },
+        {
+          pillLabel: 'MOST HELPFUL',
+          heading: 'So happy with our mattress',
+          subcopy:
+            'My sleep has been incredible since we got it. Shipping was super fast, the customer service was amazing and the mattress itself is even better! Highly recommend ❤️',
+          name: 'Kirsti M.',
+          location: 'Pickering, ON'
+        },
+        {
+          pillLabel: '100 NIGHTS OF SLEEP',
+          heading: 'Sound Sleeping',
+          subcopy:
+            'Waking up with no sore pressure points. Also minimal/no movement from my husband and dogs on the bed. The trial period was a great stress-free way to decide if this was the best for us.',
+          name: 'Katie M.',
+          location: 'Inverness, QC'
+        }
+      ],
+      cta: (
+        <CtaLink
+          variant='hollow-gravy'
+          url='https://www.canadianliving.com/health/sleep/article/we-tried-it-endy-mattress-in-a-box'
+          label='Read More'
+        />
+      ),
+      backgroundImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-f925234ae77c2a9efeed9547aa0bc6255bca2cd2-2880x1078-png-webp'
+          }
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Influencer Featured Reviews
+
+<Canvas>
+  <Story
+    name='Featured Reviews - Influencer'
+    args={{
+      heading: '#EndyAtHome',
+      reviews: [
+        {
+          subcopy:
+            'We’ve had our Endy for a couple years now and we LOVE it. It’s so comfortable. We’ve had many friends come try it and then end up buying their own!',
+          lifestyleImage: {
+            desktopImage: {
+              asset: {
+                _ref: 'image-249c9bb79fd0fbff978aba67457189a8a88a6e0d-756x488-jpg-webp'
+              }
+            },
+            alt: 'Alt text is important'
+          },
+          socialHandle: '@endyInfluencer'
+        },
+        {
+          subcopy:
+            'Best sleep Ive had on any mattress. Keeps you cool at night and has just the right amount of support.',
+          lifestyleImage: {
+            desktopImage: {
+              asset: {
+                _ref: 'image-249c9bb79fd0fbff978aba67457189a8a88a6e0d-756x488-jpg-webp'
+              }
+            },
+            alt: 'Alt text is important'
+          },
+          socialHandle: '@endyInfluencer'
+        },
+        {
+          subcopy:
+            'I bought [another mattress-in-a-box] initially after doing my research, but it was too firm… Endy has been perfection for me and is only getting better every day.',
+          lifestyleImage: {
+            desktopImage: {
+              asset: {
+                _ref: 'image-249c9bb79fd0fbff978aba67457189a8a88a6e0d-756x488-jpg-webp'
+              }
+            },
+            alt: 'Alt text is important'
+          },
+          socialHandle: '@endyInfluencer'
+        }
+      ],
+      backgroundImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-f925234ae77c2a9efeed9547aa0bc6255bca2cd2-2880x1078-png-webp'
+          }
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Featured Reviews Props
+
+<ArgsTable of={FeaturedReviews} />

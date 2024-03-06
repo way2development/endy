@@ -1,0 +1,21 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { ProgressBar } from './ProgressBar'
+
+export const Template = (args) => <ProgressBar {...args} />
+
+<Meta title='Components/Progress Bar' component={ProgressBar} />
+
+# Progress Bar
+
+Used in the cart to display a progress bar related to customer spend. Indicates how close they are to leveling up their offer based on sale threshold settings.
+
+## Default
+
+<Canvas>
+  <Story
+    name='Progress Bar'
+    args={{ sales: { discountThresholdForLevelUp: 1500 }, currentSpend: 895 }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>

@@ -1,0 +1,280 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { ProductBreakdown } from './ProductBreakdown'
+
+export const Template = (args) => <ProductBreakdown {...args} />
+
+<Meta title='Modules/Product Breakdown' component={ProductBreakdown} />
+
+# Product Breakdown
+
+## Usage
+
+This module appears on the Mattress Learner Page and Product Detail Pages to highlight specific features about a product — with the added ability to toggle between two products.
+
+## Product Breakdown with guiding line on desktop
+
+<Canvas>
+  <Story
+    name='Product Breakdown v1'
+    args={{
+      heading: 'Its What Is Inside That Counts',
+      productOne: {
+        lineAnimation: true,
+        image: {
+          asset: {
+            _ref: 'image-d885e5780b10515de7faf43a33bd77b8051251e0-1372x724-png'
+          }
+        },
+        hotspotImageAlt: 'Hot spot image alt text',
+        hotspots: [
+          {
+            subcopy:
+              'Breathable and soft, our micro-quilted cover is removable and the top half is machine washable for your convenience.',
+            microcopy: 'This is a microcopy.',
+            subheading: 'Micro Quilted Cover',
+            x: 78.11,
+            y: 15,
+            lifestyleImage: {
+              desktopImage: {
+                asset: {
+                  _ref: 'image-4b16c77d63cca9f826657831aebafbf4d53aa2f9-814x336-jpg'
+                }
+              },
+              alt: 'Alt text is important'
+            }
+          },
+          {
+            subheading: 'Endy Comfort Foam',
+            subcopy:
+              'Endys proprietary top layer is made from open air cell foam that allows for better air flow than traditional memory foam. This layer is also temperature neutral—wont harden or soften—so its perfect no matter the Canadian season.',
+            x: 70.47,
+            y: 32.46
+          },
+          {
+            subheading: 'Transition Foam',
+            subcopy:
+              'Our transitional foam provides a gradual transfer of energy to achieve zero motion transfer while relieving body pressure. Go ahead and roll around—you wont wake up your partner.',
+            x: 63.96,
+            y: 48.18
+          },
+          {
+            subheading: 'Support/Base Foam',
+            subcopy:
+              'Our high-density foundational layer provides ultimate structural support for the upper layers. Our foam is CertiPUR-US certified, which means it’s made from materials safe for you and your home.',
+            x: 71.49,
+            y: 64.72
+          },
+          {
+            subheading: 'Logo Alignment System',
+            subcopy:
+              'Our Endy Logo system makes, making your bed a breeze. All of our products are designed to easily identify how and what direction to make your bed based on where the logos are.',
+            x: 79.17,
+            y: 79.15
+          }
+        ]
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Product Breakdown with no guiding line
+
+<Canvas>
+  <Story
+    name='Product Breakdown v2'
+    args={{
+      heading: 'This Is What Were Made Of',
+      productOne: {
+        lineAnimation: false,
+        image: {
+          asset: {
+            _ref: 'image-d885e5780b10515de7faf43a33bd77b8051251e0-1372x724-png'
+          }
+        },
+        hotspotImageAlt: 'Hot spot image alt text',
+        hotspots: [
+          {
+            subheading: 'Shredded Memory Foam',
+            subcopy:
+              'Take out as much or as little as you need to find the perfect height & firmness.',
+            microcopy: 'This is a microcopy.',
+            x: 73.94,
+            y: 24.6
+          },
+          {
+            subheading: 'Sed eget rutrum ante.',
+            subcopy:
+              'Maecenas a magna nec leo tincidunt porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed facilisis lacinia ex eu finibus.',
+            x: 56.24,
+            y: 39.77
+          },
+          {
+            subheading: 'Etiam porttitor bibendum leo',
+            subcopy:
+              'Nam scelerisque justo urna, sed volutpat lectus malesuada in. Aliquam iaculis nisi id justo scelerisque consequat. Vestibulum id metus malesuada, volutpat turpis a, egestas sem.',
+            x: 76.77,
+            y: 69.85
+          }
+        ]
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Product Breakdown with toggle for two product comparison
+
+<Canvas>
+  <Story
+    name='Product Breakdown v3'
+    args={{
+      heading: 'The Magic Behind the Endy Mattress',
+      toggleLabelOne: 'Classic',
+      toggleLabelTwo: 'Hybrid',
+      productOne: {
+        lineAnimation: true,
+        image: {
+          asset: {
+            _ref: 'image-d885e5780b10515de7faf43a33bd77b8051251e0-1372x724-png'
+          }
+        },
+        hotspotImageAlt: 'Hot spot image alt text',
+        hotspots: [
+          {
+            subcopy:
+              'Breathable and soft, our micro-quilted cover is removable and the top half is machine washable for your convenience.',
+            microcopy: 'This is a microcopy.',
+            subheading: 'Micro Quilted Cover',
+            x: 78.11,
+            y: 15,
+            lifestyleImage: {
+              desktopImage: {
+                asset: {
+                  _ref: 'image-4b16c77d63cca9f826657831aebafbf4d53aa2f9-814x336-jpg'
+                }
+              },
+              alt: 'Alt text is important'
+            }
+          },
+          {
+            subheading: 'Endy Comfort Foam',
+            subcopy:
+              'Endys proprietary top layer is made from open air cell foam that allows for better air flow than traditional memory foam. This layer is also temperature neutral—wont harden or soften—so its perfect no matter the Canadian season.',
+            x: 70.47,
+            y: 32.46
+          },
+          {
+            subheading: 'Transition Foam',
+            subcopy:
+              'Our transitional foam provides a gradual transfer of energy to achieve zero motion transfer while relieving body pressure. Go ahead and roll around—you wont wake up your partner.',
+            x: 63.96,
+            y: 48.18
+          },
+          {
+            subheading: 'Support/Base Foam',
+            subcopy:
+              'Our high-density foundational layer provides ultimate structural support for the upper layers. Our foam is CertiPUR-US certified, which means its made from materials safe for you and your home.',
+            x: 71.49,
+            y: 64.72
+          },
+          {
+            subheading: 'Logo Alignment System',
+            subcopy:
+              'Our Endy Logo system makes, making your bed a breeze. All of our products are designed to easily identify how and what direction to make your bed based on where the logos are.',
+            x: 79.17,
+            y: 79.15
+          }
+        ]
+      },
+      productTwo: {
+        lineAnimation: true,
+        image: {
+          asset: {
+            _ref: 'image-10cc8b6a19da8ba538e4a7f5b2b03bf222e2f49b-1372x784-png'
+          }
+        },
+        hotspotImageAlt: 'Hot spot image alt text',
+        hotspots: [
+          {
+            subcopy:
+              'The plush quilted top layer is lined with foam, so its ultra-comfortable and soft to the touch. Sweet dreams!',
+            microcopy: 'This is a microcopy.',
+            subheading: 'Plush Quilted Cover',
+            x: 80.59,
+            y: 13.3,
+            lifestyleImage: {
+              desktopImage: {
+                asset: {
+                  _ref: 'image-dd61a5065afb527f3784fb15dab59ccb97a0369e-814x336-jpg'
+                }
+              },
+              alt: 'Alt text is important'
+            }
+          },
+          {
+            subheading: 'Endy Comfort Foam',
+            subcopy:
+              'All Endy mattresses have the same perfect medium-firm support thanks to our highly responsive proprietary foam. Our open-cell foam provides optimal airflow and breathability for cooler sleep.',
+            x: 71.18,
+            y: 29.17
+          },
+          {
+            subheading: 'Transition Foam',
+            subcopy:
+              'Transition foam is designed to promote pressure relief and eliminate motion transfer for undisturbed sleep.',
+            x: 63.96,
+            y: 48.18,
+            lifestyleImage: {
+              desktopImage: {
+                asset: {
+                  _ref: 'image-231d9a71ee420769ae7c9c1e2ddcb58f9fc39b45-814x336-gif'
+                }
+              }
+            }
+          },
+          {
+            subheading: 'Zoned Coil Support',
+            subcopy:
+              'Made from high-carbon steel, our pocket coils are quiet and durable. Enjoy ergonomic lumbar support and superior motion isolation. ',
+            microcopy:
+              'Depiction of product is for demonstration purposes only',
+            x: 71.83,
+            y: 56.25,
+            lifestyleImage: {
+              desktopImage: {
+                asset: {
+                  _ref: 'image-191ad25d9645cefaf77f50eb97fbc7e9f192a36b-814x338-jpg'
+                }
+              },
+              alt: 'Alt text is important'
+            }
+          },
+          {
+            subheading: 'Support Foam',
+            subcopy:
+              'High-density foam keeps your mattress perfectly firm and supportive for years. All Endy foam is certified by CertiPUR-US® for clean comfort.',
+            x: 80.75,
+            y: 68.67,
+            lifestyleImage: {
+              desktopImage: {
+                asset: {
+                  _ref: 'image-01532c2a028b80ee2d4ece829addb9fef2e1bfd9-814x338-jpg'
+                }
+              },
+              alt: 'Alt text is important'
+            }
+          }
+        ]
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### ProductBreakdown Props
+
+<ArgsTable of={ProductBreakdown} />

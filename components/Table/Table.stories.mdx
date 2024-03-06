@@ -1,0 +1,59 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { Table } from './Table'
+import styled from 'styled-components'
+
+export const StyledCell = styled.div`
+  border-right: 1px rgba(36, 55, 70, 0.3) solid;
+  border-bottom: 1px rgba(36, 55, 70, 0.3) solid;
+  padding: 0.5rem;
+`
+
+export const Template = (args) => (
+  <Table {...args}>
+    <StyledCell style={{ fontWeight: 'bold' }}>Mattress size</StyledCell>
+    <StyledCell style={{ fontWeight: 'bold' }}>Mattress dimensions</StyledCell>
+    <StyledCell style={{ fontWeight: 'bold' }}>
+      Minimum recommended room size
+    </StyledCell>
+    <StyledCell>California King</StyledCell>
+    <StyledCell>72” x 84”</StyledCell>
+    <StyledCell>Large bedroom (12' x 12)</StyledCell>
+    <StyledCell>King</StyledCell>
+    <StyledCell>76” x 80”</StyledCell>
+    <StyledCell>Large bedroom (10' x 12)</StyledCell>
+    <StyledCell>Queen</StyledCell>
+    <StyledCell>60” x 80”</StyledCell>
+    <StyledCell>Mid-size bedroom (10' x 10)</StyledCell>
+    <StyledCell>Full</StyledCell>
+    <StyledCell>54” x 75”</StyledCell>
+    <StyledCell>Mid-size bedroom (9.6’ x 10.6’)</StyledCell>
+    <StyledCell>Twin XL</StyledCell>
+    <StyledCell>39” x 80”</StyledCell>
+    <StyledCell>Small bedroom (7’ x 10’)</StyledCell>
+    <StyledCell>Twin</StyledCell>
+    <StyledCell>39” x 75”</StyledCell>
+    <StyledCell>Small bedroom (7’ x 10’)</StyledCell>
+  </Table>
+)
+
+<Meta title='Components/Table' component={Table} />
+
+# Table
+
+- This component is modelled after the Grid component, but is used for tabular data and is styled to look like a table (even though semantically it is not one).
+- Note: will be replaced by a proper table with semantic HTML elements once we upgrade to Sanity V3.
+
+<Canvas>
+  <Story
+    name='Table'
+    args={{
+      numOfColumns: 3
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Table} />

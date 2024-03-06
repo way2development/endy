@@ -1,0 +1,220 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { CtaLink } from './CtaLink'
+import { Text } from '../Text'
+
+export const Template = (args) => <CtaLink {...args} />
+
+<Meta title='Components/CtaLink' component={CtaLink} />
+
+# CTA Link
+
+There are two types of CTA links:
+
+- [Button Link](#button-link)
+- [Text Link](#text-link)
+
+# Button Link
+
+## Usage
+
+- Button links look like buttons, but are actually links
+- Clicking on a button link re-directs to an internal or external URL.
+- Can open in the same tab or a new tab.
+
+Button links have two possible states:
+
+- [Primary](#primary)
+- [Secondary](#secondary)
+
+## Primary
+
+### Button Link v1 - Solid Rubine
+
+<Canvas>
+  <Story
+    name='Button Link v1'
+    args={{
+      label: 'Primary Button',
+      variant: 'solid-rubine',
+      url: 'https://www.endy.com/'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Button Link v2 - Solid Gravy
+
+<Canvas>
+  <Story
+    name='Button Link v2'
+    args={{
+      label: 'Primary Button',
+      variant: 'solid-gravy',
+      url: 'https://www.endy.com/'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Secondary
+
+### Button Link v3 - Hollow Rubine
+
+<Canvas>
+  <Story
+    name='Button Link v3'
+    args={{
+      label: 'Secondary Button',
+      variant: 'hollow-rubine',
+      url: 'https://www.endy.com/'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Button Link v4 - Hollow Gravy
+- This variant is being used for the ProductTypeSelector component in the Shop Module folder
+- Only other instance (so far) is an optional field for our Featured Reviews Module
+
+<Canvas>
+  <Story
+    name='Button Link v4'
+    args={{
+      label: 'Secondary Button',
+      variant: 'hollow-gravy',
+      url: 'https://www.endy.com/'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Button Link v5 - Hollow White
+
+<Canvas>
+  <Story
+    name='Button Link v5'
+    args={{
+      label: 'Secondary Button',
+      variant: 'hollow-white',
+      url: 'https://www.endy.com/'
+    }}
+    decorators={[
+      (Story) => (
+        <div style={{ backgroundColor: '#243746', padding: '1.5rem 1rem' }}>
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+# Text Link
+
+## Usage
+
+- Clicking on an block-line link re-directs to an internal or external URL.
+- Can open in the same tab or a new tab.
+- block-line links have an arrow symbol next to it.
+
+### Text Link v1
+
+<Canvas>
+  <Story
+    name='Text Link v1'
+    args={{
+      label: 'Shop the mattress',
+      variant: 'block-line-gravy',
+      url: 'https://www.endy.com/'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Text Link v2
+
+<Canvas>
+  <Story
+    name='Text Link v2'
+    args={{
+      label: 'Shop the mattress',
+      variant: 'block-line-white',
+      url: 'https://www.endy.com/'
+    }}
+    decorators={[
+      (Story) => (
+        <div style={{ backgroundColor: '#243746', padding: '1rem' }}>
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+# Inline Link
+
+## Usage
+
+- Inline links do not have an arrow symbol next to it.
+- Inline links are meant to be used as a part of a paragraph and will take the font size, font family, and font color of the parent, please use the Block-Inline variants if you are looking for a standalone link that looks visually the same
+
+### Inline Link v1
+
+export const InlineTemplate = (args) => (
+  <Text variant='largeBody' color='gravy'>
+    *Offer valid until 05/10/2022 at 11:59PM PST <CtaLink {...args} />
+  </Text>
+)
+
+<Canvas>
+  <Story
+    name='Inline Link v1'
+    args={{
+      label: 'See terms.',
+      variant: 'inline',
+      url: 'https://www.endy.com/'
+    }}
+  >
+    {InlineTemplate.bind()}
+  </Story>
+</Canvas>
+
+### Inline Link v2
+
+export const DarkInlineTemplate = (args) => (
+  <Text variant='micro' color='white'>
+    *Offer valid until 05/10/2022 at 11:59PM PST <CtaLink {...args} />
+  </Text>
+)
+
+<Canvas>
+  <Story
+    name='Inline Link v2'
+    args={{
+      label: 'See terms.',
+      variant: 'inline',
+      url: 'https://www.endy.com/'
+    }}
+    decorators={[
+      (Story) => (
+        <div style={{ backgroundColor: '#243746', padding: '1rem' }}>
+          {Story()}
+        </div>
+      )
+    ]}
+  >
+    {DarkInlineTemplate.bind()}
+  </Story>
+</Canvas>
+
+### Button Link Props
+
+<ArgsTable of={CtaLink} />

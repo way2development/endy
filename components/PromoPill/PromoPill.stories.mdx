@@ -1,0 +1,118 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { PromoPill } from './PromoPill'
+
+export const Template = (args) => {
+  return (
+    <div
+      style={{
+        position: 'relative',
+        height: '100px',
+        marginTop: '25px'
+      }}
+    >
+      <PromoPill {...args} />
+    </div>
+  )
+}
+
+<Meta title='Components/Promo Pill' component={PromoPill} />
+
+# Promo Pill
+
+This component creates a pill banner. The promo pill is often used in sales and special promotions. The promo pill is available in all Endy colors to accomodate all sale designs.
+
+## Gravy (Default)
+
+<Canvas>
+  <Story name='Promo Pill - Default'>{Template.bind()}</Story>
+</Canvas>
+
+## Rubine
+
+<Canvas>
+  <Story
+    name='Promo Pill - Rubine'
+    args={{
+      promoCopy: 'Limited Time Only',
+      variant: 'rubine',
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Endy Blue
+
+<Canvas>
+  <Story
+    name='Promo Pill - Dark Blue'
+    args={{
+      promoCopy: 'Limited Time Only',
+      variant: 'dark-blue',
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## White
+
+<Canvas>
+  <Story
+    name='Promo Pill - White'
+    args={{
+      promoCopy: 'Limited Time Only',
+      variant: 'white',
+      locale: 'en'
+    }}
+    decorators={[
+      (Story) => (
+        <div style={{ backgroundColor: '#243746', padding: '1rem' }}>
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## With Background Fill
+
+<Canvas>
+  <Story
+    name='Promo Pill - With Fill'
+    args={{
+      promoCopy: 'Limited Time Only',
+      variant: 'gravy',
+      bgColor: '#c5dce8',
+      borderStyle: 'none',
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## With Background color with white text
+
+<Canvas>
+  <Story
+    name='Promo Pill - With Background color with white text'
+    args={{
+      promoCopy: 'MOST SUPPORTIVE',
+      variant: 'white',
+      bgColor: '#596F8C',
+      borderStyle: 'none',
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={PromoPill} />

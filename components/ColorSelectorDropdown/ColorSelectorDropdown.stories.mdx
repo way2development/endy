@@ -1,0 +1,117 @@
+import { useState } from 'react'
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { ColorSelectorDropdown } from './ColorSelectorDropdown'
+import {
+  ColorSelectorToggle,
+  StyledToggleButton
+} from '../ColorSelectorToggle/ColorSelectorToggle.tsx'
+import { Button } from '../Button/Button.tsx'
+import { Text } from '../Text'
+import { arrowDownIcon, arrowUpIcon } from '../Dropdown/utils'
+
+export const Template = (args) => (
+  <div style={{ height: '175px' }}>
+    <ColorSelectorDropdown {...args} />
+  </div>
+)
+
+<Meta
+  title='Components/Color Selector/Dropdown'
+  component={ColorSelectorDropdown}
+/>
+
+# Color Selector Dropdown
+
+This component is used to select a color from a custom menu. It is used for add-on items on the shop module.
+
+There are two elements to the menu. The first is a toggle button that shows the currently selected color. On click of the toggle button, the radio buttons are shown where the user can update their color selection.
+
+While the component is used in the shop module, it is not specific to the shop module and can be used anywhere.
+
+export const ColorSelector = (args) => {
+  const [isExpanded, setIsExpanded] = useState(false)
+  return (
+    <div>
+      <ColorSelectorToggle
+        setIsExpanded={setIsExpanded}
+        selectedColor={'Alphine White'}
+        isExpanded={isExpanded}
+        locale={'en'}
+      />
+      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <ColorSelectorDropdown {...args} isExpanded={isExpanded} />
+      </div>
+    </div>
+  )
+}
+
+<Canvas>
+  <Story
+    name='Color Selector Dropdown'
+    args={{
+      selectedColorId: 'Alphine White',
+      selectedSizeId: 'Queen',
+      colorVariants: [
+        {
+          color: '#ffffff',
+          id: 'Alpine White',
+          label: 'Alpine White'
+        },
+        {
+          color: '#a19ea1',
+          id: 'Storm Grey',
+          label: 'Storm Grey'
+        },
+        {
+          color: '#b2c0cb',
+          id: 'Glacier Blue',
+          label: 'Glacier Blue'
+        },
+        {
+          color: '#9BB1A8',
+          id: 'Soft Sage',
+          label: 'Soft Sage'
+        }
+      ],
+      productVariants: [
+        {
+          color: 'Alpine White',
+          id: 31612675686448,
+          isAvailable: true,
+          price: 125,
+          size: 'Queen'
+        },
+        {
+          color: 'Storm Grey',
+          id: 31612675686448,
+          isAvailable: false,
+          price: 125,
+          size: 'Queen'
+        },
+        {
+          color: 'Glacier Blue',
+          id: 31612675686448,
+          isAvailable: true,
+          price: 125,
+          size: 'Queen'
+        },
+        {
+          color: 'Soft Sage',
+          id: 31612675686448,
+          isAvailable: true,
+          price: 125,
+          size: 'Queen'
+        }
+      ],
+      locale: 'en',
+      isDropdown: true,
+      hidePopularBadge: false
+    }}
+  >
+    {ColorSelector.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={ColorSelectorDropdown} />

@@ -1,0 +1,26 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { ProductReviewStars } from './ProductReviewStars'
+
+export const Template = (args) => (
+  <div style={{ width: '414px' }}>
+    <ProductReviewStars {...args} />
+  </div>
+)
+
+<Meta title='Components/Product Review Stars' component={ProductReviewStars} />
+
+# Product Review Stars
+
+This component shows a visual indication of a product's rating. The stars will fill in to the appropriate amount based on the rating that is passed in.
+
+## Variant 1
+
+<Canvas>
+  <Story name='Product Review Stars v1' args={{ rating: 2.5 }}>
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={ProductReviewStars} />

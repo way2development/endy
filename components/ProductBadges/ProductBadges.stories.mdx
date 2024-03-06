@@ -1,0 +1,197 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { ProductBadges } from './ProductBadges'
+import { ProductBadge } from './ProductBadge'
+
+export const Template = (args) => (
+  <div style={{ maxWidth: '600px', height: '120px', margin: '0 auto' }}>
+    <ProductBadges {...args} />
+  </div>
+)
+
+<Meta title='Modules/Product Badges' component={ProductBadges} />
+
+# Product Badges
+
+This module allows the author to add product value icons to display relevant content to customers. It currently appears under the product carousel on all product pages and links to the product details module.
+
+## 3 Icon Layout
+
+{/* TODO: Reformat key values to match what is coming from Sanity for all variants */}
+
+<Canvas>
+  <Story
+    name='3 Icon Layout'
+    args={{
+      productBadges: [
+        {
+          anchorUrl: '',
+          badgeImage: {
+            image: {
+              asset: {
+                _ref: 'image-75f8a2859cdba03388f6ada44edf8aa6de8787f9-64x64-svg'
+              }
+            }
+          },
+          heading: '60-Night Trial',
+          key: '1'
+        },
+        {
+          anchorUrl: '',
+          badgeImage: {
+            image: {
+              asset: {
+                _ref: 'image-d6b4e87941e78fc16f84e9b213e0e6582c5981df-64x64-svg'
+              }
+            }
+          },
+          heading: '3-Year Warranty',
+          key: '2'
+        },
+        {
+          anchorUrl: '',
+          badgeImage: {
+            image: {
+              asset: {
+                _ref: 'image-1de44c3c9546ecc99cbf87a058f1a46a0325cbf5-64x64-svg'
+              }
+            }
+          },
+          heading: 'Free Shipping†',
+          key: '3'
+        }
+      ]
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## 4 Icon Layout
+
+<Canvas>
+  <Story
+    name='4 Icon Layout'
+    args={{
+      productBadges: [
+        {
+          anchorUrl: '',
+          badgeImage: {
+            image: {
+              asset: {
+                _ref: 'image-b7af1cbde8b7ab597ba9cbff76e30ad7fdb89219-64x64-svg'
+              }
+            }
+          },
+          heading: 'Made In Canada',
+          key: '01'
+        },
+        {
+          anchorUrl: '',
+          badgeImage: {
+            image: {
+              asset: {
+                _ref: 'image-9c6d19e23a566d0b581b4b667f8f2863474b157f-64x64-svg'
+              }
+            }
+          },
+          heading: '100-Night Trial',
+          key: '02'
+        },
+        {
+          anchorUrl: '',
+          badgeImage: {
+            image: {
+              asset: {
+                _ref: 'image-c95f5595901aeecec42e498e6f8acae183d52c5f-64x64-svg'
+              }
+            }
+          },
+          heading: '10-Year Warranty',
+          key: '03'
+        },
+        {
+          anchorUrl: '',
+          badgeImage: {
+            image: {
+              asset: {
+                _ref: 'image-1de44c3c9546ecc99cbf87a058f1a46a0325cbf5-64x64-svg'
+              }
+            }
+          },
+          heading: 'Free Shipping†',
+          key: '04'
+        }
+      ]
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## 4 Icon Layout - With Optional Tooltip
+
+<Canvas>
+  <Story
+    name='4 Icon Layout - With Tooltip'
+    args={{
+      productBadges: [
+        {
+          anchorUrl: '',
+          badgeImage: {
+            image: {
+              asset: {
+                _ref: 'image-b7af1cbde8b7ab597ba9cbff76e30ad7fdb89219-64x64-svg'
+              }
+            }
+          },
+          heading: 'Made In Canada',
+          key: '01'
+        },
+        {
+          anchorUrl: '',
+          badgeImage: {
+            image: {
+              asset: {
+                _ref: 'image-9c6d19e23a566d0b581b4b667f8f2863474b157f-64x64-svg'
+              }
+            }
+          },
+          heading: '100-Night Trial',
+          key: '02'
+        },
+        {
+          anchorUrl: '',
+          badgeImage: {
+            image: {
+              asset: {
+                _ref: 'image-c95f5595901aeecec42e498e6f8acae183d52c5f-64x64-svg'
+              }
+            }
+          },
+          heading: '10-Year Warranty',
+          key: '03',
+          tooltip:
+            '*Qualify for a 15-year warranty when you register as an Endy VIP in your post-purchase email—default warranty is 10 years.'
+        },
+        {
+          anchorUrl: '',
+          badgeImage: {
+            image: {
+              asset: {
+                _ref: 'image-1de44c3c9546ecc99cbf87a058f1a46a0325cbf5-64x64-svg'
+              }
+            }
+          },
+          heading: 'Free Shipping†',
+          key: '04'
+        }
+      ]
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={ProductBadges} />

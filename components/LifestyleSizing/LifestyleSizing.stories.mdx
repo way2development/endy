@@ -1,0 +1,147 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+
+import dictionary from '../../dictionary.json'
+
+import { LifestyleSizing } from './LifestyleSizing'
+
+export const Template = (args) => <LifestyleSizing {...args} />
+
+<Meta title='Modules/Lifestyle Sizing' component={LifestyleSizing} />
+
+# Lifestyle Sizing
+
+## Usage
+
+<Canvas>
+  <Story
+    name='Lifestyle Sizing'
+    args={{
+      heading: 'How to Style the Hand-Loomed Jute Rug',
+      subcopy:
+        'Check out our sizing guide to see how this versatile area rug will fit in your bedroom or living room.',
+      options: [
+        {
+          label: 'Bedroom',
+          images: [
+            {
+              label: 'Twin Mattress + Platform Bed Frame',
+              LifestyleImage: {
+                desktopImage: {
+                  asset: {
+                    _ref: 'image-5908325112ac220d43b3bd03f3e1b3786a76af48-490x464-png'
+                  }
+                },
+                tabletImage: {
+                  asset: {
+                    _ref: 'image-9fc9b3bda557a7472f32984911a6c1ca5f26c059-582x540-png'
+                  }
+                },
+                mobileImage: {
+                  asset: {
+                    _ref: 'image-9fc9b3bda557a7472f32984911a6c1ca5f26c059-582x540-png'
+                  }
+                },
+                alt: 'Alt text is important'
+              }
+            },
+            {
+              label: 'Queen Mattress + Platform Bed Frame',
+              lifestyleImage: {
+                desktopImage: {
+                  asset: {
+                    _ref: 'image-5e9a18d939886392de404edd3a6d47f1542dc95b-488x464-png'
+                  }
+                },
+                tabletImage: {
+                  asset: {
+                    _ref: 'image-aeb55bf8105d80eab70a25f84bd076ecee920a7a-582x540-png'
+                  }
+                },
+                mobileImage: {
+                  asset: {
+                    _ref: 'image-aeb55bf8105d80eab70a25f84bd076ecee920a7a-582x540-png'
+                  }
+                },
+                alt: 'Alt text is important'
+              }
+            },
+            {
+              label: 'King Mattress + Platform Bed Frame',
+              lifestyleImage: {
+                desktopImage: {
+                  asset: {
+                    _ref: '_ref:image-c9dfbce5008918f008a1c58d53eee208dce5d028-486x464-png'
+                  }
+                },
+                tabletImage: {
+                  asset: {
+                    _ref: 'image-9fa505d92d008101556a3acf4e15f86072427bb0-582x540-png'
+                  }
+                },
+                mobileImage: {
+                  asset: {
+                    _ref: 'image-9fa505d92d008101556a3acf4e15f86072427bb0-582x540-png'
+                  }
+                },
+                alt: 'Alt text is important'
+              }
+            }
+          ]
+        },
+        {
+          label: 'Living Room',
+          images: [
+            {
+              label: 'The Endy Sofa: 1 Seat + 2 Seats + Ottoman',
+              lifestyleImage: {
+                desktopImage: {
+                  asset: {
+                    _ref: 'image-659ef95f9e88f471488f957ec66716aca96cb25a-690x534-png'
+                  }
+                },
+                tabletImage: {
+                  asset: {
+                    _ref: 'image-b9d84ccb7cca24bb6029f9f4d05a934c639e6d51-602x452-png'
+                  }
+                },
+                mobileImage: {
+                  asset: {
+                    _ref: 'image-b9d84ccb7cca24bb6029f9f4d05a934c639e6d51-602x452-png'
+                  }
+                },
+                alt: 'Alt text is important'
+              }
+            },
+            {
+              label: 'The Endy Sofa: 3 Seats + Ottoman',
+              lifestyleImage: {
+                desktopImage: {
+                  asset: {
+                    _ref: 'image-4d55df4b69f2db717f5d0d6c6921ca98a7be9c99-696x560-png'
+                  }
+                },
+                tabletImage: {
+                  asset: {
+                    _ref: 'image-fdfb17037ffcf89b39d78f36547c461370cde136-590x466-png'
+                  }
+                },
+                mobileImage: {
+                  asset: {
+                    _ref: 'image-fdfb17037ffcf89b39d78f36547c461370cde136-590x466-png'
+                  }
+                },
+                alt: 'Alt text is important'
+              }
+            }
+          ]
+        }
+      ]
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### LifestyleSizingProps
+
+<ArgsTable of={LifestyleSizing} />

@@ -1,0 +1,154 @@
+<!-- TODO: Story was breaking chromatic builds and creating a blocker for deployments. Disabled the story as a quick fix. Further investigation needed to fix chromatic errors.  -->
+
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+
+import { CtaLink } from '../CtaLink'
+import { ProductCardGrid } from './ProductCardGrid'
+
+export const Template = (args) => <ProductCardGrid {...args} />
+
+<Meta title='Modules/Product Card Grid' component={ProductCardGrid} />
+
+# Product Card Grid
+
+## 1 Card w/ Placeholder Image
+
+<Canvas>
+  <Story
+    name='1 Card w/ Placeholder'
+    args={{
+      locale: 'en',
+      oneColumnImage: {
+        desktopImage: {
+          _ref: 'image-67ef70930c5ddb93deec6aa2637998d9a881e533-758x654-webp'
+        },
+        alt: 'Alt text is important'
+      },
+      twoColumnImage: {
+        desktopImage: {
+          _ref: 'image-cc84f976817b9333dd4621719cfd5cd7bd7d6aad-1570x656-webp'
+        },
+        alt: 'Alt text is important'
+      },
+      heading: 'The Mattress',
+      reviews: [
+        {
+          domain_key: '7890',
+          product_score: 4.8765,
+          total_reviews: 12345
+        }
+      ],
+      productCards: [
+        {
+          product: {
+            id: 7890,
+            name: 'The Endy Mattress',
+            shortDescription: 'The perfect combination of comfort and support',
+            priceRange: { minVariantPrice: 675 },
+            slug: '/the-endy-mattress'
+          },
+          review: {
+            domain_key: '7890',
+            product_score: 4.8765,
+            total_reviews: 12345
+          },
+          image: {
+            desktopImage: {
+              asset: {
+                _ref: 'image-6fe11598dab8839c30a82c535b2e555d6e6bc206-1578x824-jpg'
+              }
+            }
+          }
+        }
+      ]
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## 2 Cards with Highlight Image and CTA
+
+<i>Highlight Image is viewable on Tablet and Mobile</i>
+
+<Canvas>
+  <Story
+    name='2 Cards w/ Highlight + CTA'
+    args={{
+      oneColumnImage: {
+        desktopImage: {
+          _ref: 'image-67ef70930c5ddb93deec6aa2637998d9a881e533-758x654-webp'
+        },
+        alt: 'Alt text is important'
+      },
+      twoColumnImage: {
+        desktopImage: {
+          _ref: 'image-cc84f976817b9333dd4621719cfd5cd7bd7d6aad-1570x656-webp'
+        },
+        alt: 'Alt text is important'
+      },
+      highlightImage: {
+        desktopImage: {
+          _ref: 'image-275ea7ac3f171c2793fbb5814253d955fc9e9021-2048x1000-webp'
+        },
+        alt: 'Alt text is important'
+      },
+      cta: (
+        <CtaLink
+          variant='block-line-gravy'
+          url='https://www.endy.ca'
+          label='Compare mattresses'
+        />
+      ),
+      heading: 'The Mattress',
+      locale: 'en',
+      reviews: [
+        {
+          domain_key: '1234',
+          product_score: 4.8765,
+          total_reviews: 12345
+        }
+      ],
+      productCards: [
+        {
+          product: {
+            id: 7890,
+            name: 'The Endy Mattress',
+            shortDescription: 'The perfect combination of comfort and support',
+            priceRange: { minVariantPrice: 675 },
+            slug: '/the-endy-mattress'
+          },
+          image: {
+            desktopImage: {
+              asset: {
+                _ref: 'image-6fe11598dab8839c30a82c535b2e555d6e6bc206-1578x824-jpg'
+              }
+            }
+          }
+        },
+        {
+          product: {
+            id: 1234,
+            name: 'The Endy Mattress',
+            shortDescription: 'The perfect combination of comfort and support',
+            priceRange: { minVariantPrice: 675 },
+            slug: '/the-endy-mattress'
+          },
+          image: {
+            desktopImage: {
+              asset: {
+                _ref: 'image-6fe11598dab8839c30a82c535b2e555d6e6bc206-1578x824-jpg'
+              }
+            }
+          }
+        }
+      ]
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={ProductCardGrid} />

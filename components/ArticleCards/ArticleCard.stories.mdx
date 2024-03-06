@@ -1,0 +1,74 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { ArticleCard } from './ArticleCard'
+import { ArticleCards } from './ArticleCards'
+
+export const Template = (args) => (
+  <div style={{ width: '1200px', height: '590px', margin: '0 auto' }}>
+    <ArticleCards {...args} />
+  </div>
+)
+
+<Meta title='Modules/Article Card' component={ArticleCards} />
+
+# Article Cards
+
+This module allows the author to add cards containing content from our media partners that we'd like to share with customers. v1 currently appears on the showrooms page and v2 will appear on the blog.
+
+## Article Card v1 (3 Card Layout)
+
+<Canvas>
+  <Story
+    name='Article Card v1'
+    args={{
+      heading: 'More on Canada’s Best Mattress',
+      articleCards: [
+        {
+          lifestyleImage: {
+            desktopImage: {
+              asset: {
+                _ref: 'image-f3273349967eb9130d801575b0a04eaa023a7c37-756x488-jpg'
+              }
+            }
+          },
+          heading: 'Canadian Living',
+          subcopy:
+            '"Not only are there no shipping fees when buying, you are free to return your mattress within the 100-day trial period if you’re unhappy with the purchase."',
+          url: 'https://www.canadianliving.com/health/sleep/article/we-tried-it-endy-mattress-in-a-box',
+          urlLabel: 'Read more'
+        },
+        {
+          lifestyleImage: {
+            desktopImage: {
+              asset: {
+                _ref: 'image-0a68df08e82e810c30656a8f17c185555ee43957-756x488-jpg'
+              }
+            }
+          },
+          heading: 'Chatelaine',
+          subcopy:
+            '“Endy boasts ‘perfect firmness,’ which I found entirely accurate.”',
+          url: 'https://www.chatelaine.com/home-decor/casper-endy-mattress-review',
+          urlLabel: 'Read more'
+        },
+        {
+          lifestyleImage: {
+            desktopImage: {
+              asset: {
+                _ref: 'image-fdeb2287a7c885736dbbaf47513c74166c53fef7-756x488-jpg'
+              }
+            }
+          },
+          heading: 'Toronto Star',
+          subcopy:
+            '“I’m a side-sleeper and my wife is a stomach sleeper. We both had our best sleep on the Endy mattress”',
+          url: 'https://www.thestar.com/business/personal_finance/2018/03/12/can-you-rest-easy-buying-a-mattress-in-a-box.html',
+          urlLabel: 'Read more'
+        }
+      ],
+      locale: 'en',
+      bgColor: '#ffffff'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>

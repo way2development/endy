@@ -1,0 +1,96 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+
+import dictionary from '../../dictionary.json'
+
+import { AwardsGrid } from './AwardsGrid'
+
+export const Template = (args) => (
+  <div style={{ maxWidth: '1310px', margin: '0 auto', height: '300px' }}>
+    <AwardsGrid {...args} />
+  </div>
+)
+
+<Meta title='Modules/AwardsGrid' component={AwardsGrid} />
+
+# Awards Grid
+
+## Usage
+
+This module displays badges and accolades that describe the Endy products. This is often used under the mattress landing page hero module.
+
+<Canvas>
+  <Story
+    name='AwardsGrid'
+    args={{
+      awards: [
+        {
+          showOnMobile: true,
+          badgeImage: {
+            alt: 'Alt text is important',
+            image: {
+              asset: {
+                _ref: 'image-5b284afed79298953bb9579ad5ca93186aaea573-193x106-svg'
+              }
+            }
+          }
+        },
+        {
+          showOnMobile: false,
+          tooltipText:
+            '‡Voted most trusted Mattress-in-a-Box brand (in a tie) in 2021 BrandSpark Canadian Shopper Survey.',
+          badgeImage: {
+            alt: 'Alt text is important',
+            image: {
+              asset: {
+                _ref: 'image-69ad228bbcf5af170ce9352b2278bd65e77a673c-193x106-svg'
+              }
+            }
+          }
+        },
+        {
+          showOnMobile: true,
+          tooltipText:
+            '‡4.9 average star rating based 25,000+ customer reviews',
+          badgeImage: {
+            alt: 'Alt text is important',
+            image: {
+              asset: {
+                _ref: 'image-190db76d9228db945359d01ae1c10b776116cf1c-193x106-svg'
+              }
+            }
+          }
+        },
+        {
+          showOnMobile: true,
+          tooltipText:
+            "‡Voted winner Best 'Mattress-in-a-Box' category for Product of the Year by consumers.",
+          badgeImage: {
+            alt: 'Alt text is important',
+            image: {
+              asset: {
+                _ref: 'image-54346c406f8a2c7f12a467631c178998dd9baac5-193x106-svg'
+              }
+            }
+          }
+        },
+        {
+          showOnMobile: false,
+          badgeImage: {
+            alt: 'Alt text is important',
+            image: {
+              asset: {
+                _ref: 'image-f80cb8f354f58a112b4270a745ce4f23be8a0b4d-193x106-svg'
+              }
+            }
+          }
+        }
+      ]
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### AwardsGridProps
+
+<ArgsTable of={AwardsGrid} />

@@ -1,0 +1,348 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { MlpHero } from './MlpHero'
+import { CtaLink } from '../CtaLink'
+import { Button } from '../Button'
+import { PromoPill } from '../PromoPill'
+import { BadgeImage } from '../BadgeImage/BadgeImage'
+import { SaleCountdownTimer } from '../SaleCountdownTimer'
+
+export const Template = (args) => <MlpHero {...args} />
+
+<Meta title='Modules/MLP Hero' component={MlpHero} />
+
+# MLP Hero
+
+This component displays the Mattress Learner Page (MLP)'s hero. The hero can be customized for sale promotions.
+
+## Default
+
+<Canvas>
+  <Story
+    name='MLP Hero - Default'
+    args={{
+      heading: 'Award-winning Sleep Has Arrived',
+      cta: (
+        <CtaLink
+          variant='solid-rubine'
+          url='https://ca.endy.com'
+          label='Upgrade Your Sleep'
+        />
+      ),
+      backgroundImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-070f5a8c7da557010201ec3a972b71e72fc1421b-750x896-jpg-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-3827a792d875c089868e24a25476f2b79ddd9fb6-1536x1360-jpg-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-bab8cae3a1ed70e9c1f623f329dd03199fa86afe-2880x1000-jpg-webp'
+          }
+        }
+      },
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-7ce5c2c3c0855d77da3a48d87c7291a12d2d0ea0-750x440-jpg-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-3a81053489db5a608100962d1257cbd371791cbb-1820x900-jpg-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-3a81053489db5a608100962d1257cbd371791cbb-1820x900-jpg-webp'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Sales
+
+<Canvas>
+  <Story
+    name='MLP Hero - Sale'
+    args={{
+      sales: {
+        isLastChance: false,
+        displayName: 'BFCM',
+        endDate: new Date(
+          'Tue Apr 29 2022 16:27:32 GMT-0400 (Eastern Daylight Time)'
+        ),
+        countdownTimeLabel: `Dont wait`,
+        lastChance: {
+          mlpHero: {
+            pillLabel: 'Last Chance',
+            badgeImage: {
+              alt: '2021 Winner Best Matress in Canada OLM Ottawa Life',
+              image: {
+                asset: {
+                  _ref: 'image-4b17f88ef19857251ae537081a5f88cdb8c14423-129x129-svg'
+                }
+              }
+            }
+          }
+        },
+        heros: {
+          mlpHero: {
+            pillLabel: 'Free Gift Offer',
+            heading: 'Cozy Up With This Free Gift',
+            subcopy:
+              'Get a FREE Weighted Blanket when you order Canadas Best Mattress',
+            microcopy: '*Offer ends 04/19/2022. Terms Apply.',
+            cta: (
+              <CtaLink
+                variant='solid-rubine'
+                url='https://ca.endy.com'
+                label='Shop Mattress'
+              />
+            ),
+            backgroundImage: {
+              mobileImage: {
+                asset: {
+                  _ref: 'image-616c6996ea98038e46a33e76c4e010b0bd158925-750x1130-jpg-webp'
+                }
+              },
+              tabletImage: {
+                asset: {
+                  _ref: 'image-f9f1a345784fc3be31c1de0cb34ef13a1fc4361c-1536x1444-jpg-webp'
+                }
+              },
+              desktopImage: {
+                asset: {
+                  _ref: 'image-5a84c5b9d4d713cde63313badf1a5f1c2d96fa16-2880x1000-jpg-webp'
+                }
+              }
+            },
+            lifestyleImage: {
+              mobileImage: {
+                asset: {
+                  _ref: 'image-4885c2bda2529e12cbe2fcde0678b3b8a85ba5f1-750x440-jpg-webp'
+                }
+              },
+              tabletImage: {
+                asset: {
+                  _ref: 'image-463d0b2a4d2eca2fd3630674828c4dca481c088a-1536x902-jpg-webp'
+                }
+              },
+              desktopImage: {
+                asset: {
+                  _ref: 'image-f912555e6e123059154c06df5b9cf07a7fe5fc42-1810x900-jpg-webp'
+                }
+              }
+            },
+            badgeImage: {
+              image: {
+                asset: {
+                  _ref: 'image-1b58c73e926fe05c39c15e1865764d57081354d3-90x90-svg-webp'
+                }
+              },
+              alt: '2021 Winner Best Matress in Canada OLM Ottawa Life'
+            }
+          }
+        }
+      },
+      heading: 'Award-winning Sleep Has Arrived',
+      cta: (
+        <CtaLink
+          variant='solid-rubine'
+          url='https://ca.endy.com'
+          label='Upgrade Your Sleep'
+        />
+      ),
+      backgroundImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-070f5a8c7da557010201ec3a972b71e72fc1421b-750x896-jpg-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-3827a792d875c089868e24a25476f2b79ddd9fb6-1536x1360-jpg-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-bab8cae3a1ed70e9c1f623f329dd03199fa86afe-2880x1000-jpg-webp'
+          }
+        }
+      },
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-7ce5c2c3c0855d77da3a48d87c7291a12d2d0ea0-750x440-jpg-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-3a81053489db5a608100962d1257cbd371791cbb-1820x900-jpg-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-3a81053489db5a608100962d1257cbd371791cbb-1820x900-jpg-webp'
+          }
+        }
+      },
+      badgeImage: {
+        image: {
+          asset: {
+            _ref: 'image-1b58c73e926fe05c39c15e1865764d57081354d3-90x90-svg-webp'
+          }
+        },
+        alt: '2021 Winner Best Matress in Canada OLM Ottawa Life'
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Last Chance
+
+<Canvas>
+  <Story
+    name='MLP Hero - Last Chance'
+    args={{
+      sales: {
+        isLastChance: true,
+        displayName: 'BFCM',
+        saleEndDate: new Date(
+          'Tue Apr 29 2022 16:27:32 GMT-0400 (Eastern Daylight Time)'
+        ),
+        countdownTimeLabel: `Dont wait`,
+        lastChance: {
+          mlpHero: {
+            pillLabel: 'Last Chance',
+            badgeImage: {
+              alt: '2021 Winner Best Matress in Canada OLM Ottawa Life',
+              image: {
+                asset: {
+                  _ref: 'image-4b17f88ef19857251ae537081a5f88cdb8c14423-129x129-svg'
+                }
+              }
+            }
+          }
+        },
+        heros: {
+          mlpHero: {
+            pillLabel: 'Free Gift Offer',
+            heading: 'Cozy Up With This Free Gift',
+            subcopy:
+              'Get a FREE Weighted Blanket when you order Canadas Best Mattress',
+            microcopy: '*Offer ends 04/19/2022. Terms Apply.',
+            cta: (
+              <CtaLink
+                variant='solid-rubine'
+                url='https://ca.endy.com'
+                label='Shop the Mattress'
+              />
+            ),
+            backgroundImage: {
+              mobileImage: {
+                asset: {
+                  _ref: 'image-f04fbdb3b6bd6669ad8c127ce0a8d2b594bbdd8c-750x1270-jpg-webp'
+                }
+              },
+              tabletImage: {
+                asset: {
+                  _ref: 'image-9b03394ffcff0019cf21c0696e48bc4c7e35f7cc-1534x1576-jpg-webp'
+                }
+              },
+              desktopImage: {
+                asset: {
+                  _ref: 'image-f1bc63294b834f73db748e6d85c67b0b47c1b324-2880x1000-jpg-webp'
+                }
+              }
+            },
+            lifestyleImage: {
+              mobileImage: {
+                asset: {
+                  _ref: 'image-ac75d6a38fa415c6c7201f0937ff0ec54a2ba454-1534x900-jpg-webp'
+                }
+              },
+              tabletImage: {
+                asset: {
+                  _ref: 'image-ac75d6a38fa415c6c7201f0937ff0ec54a2ba454-1534x900-jpg-webp'
+                }
+              },
+              desktopImage: {
+                asset: {
+                  _ref: 'image-66dc54a5dbe9812d794c967207b3a0331c69e1bf-1810x900-jpg-webp'
+                }
+              }
+            }
+          }
+        }
+      },
+      locale: 'en',
+      heading: 'Award-winning Sleep Has Arrived',
+      cta: (
+        <CtaLink
+          variant='solid-rubine'
+          url='https://ca.endy.com'
+          label='Upgrade Your Sleep'
+        />
+      ),
+      backgroundImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-070f5a8c7da557010201ec3a972b71e72fc1421b-750x896-jpg-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-3827a792d875c089868e24a25476f2b79ddd9fb6-1536x1360-jpg-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-bab8cae3a1ed70e9c1f623f329dd03199fa86afe-2880x1000-jpg-webp'
+          }
+        }
+      },
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-7ce5c2c3c0855d77da3a48d87c7291a12d2d0ea0-750x440-jpg-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-3a81053489db5a608100962d1257cbd371791cbb-1820x900-jpg-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-3a81053489db5a608100962d1257cbd371791cbb-1820x900-jpg-webp'
+          }
+        }
+      },
+      badgeImage: {
+        image: {
+          asset: {
+            _ref: 'image-1b58c73e926fe05c39c15e1865764d57081354d3-90x90-svg-webp'
+          }
+        },
+        alt: '2021 Winner Best Matress in Canada OLM Ottawa Life'
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={MlpHero} />

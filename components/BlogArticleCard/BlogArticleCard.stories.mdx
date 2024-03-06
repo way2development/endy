@@ -1,0 +1,39 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { BlogArticleCard } from './BlogArticleCard.tsx'
+
+export const Template = (args) => <BlogArticleCard {...args} />
+
+<Meta title='Modules/Blog Article Card' component={BlogArticleCard} />
+
+# Blog Article Card
+
+Blog Article Card module displays a card for a blog article with an image, heading, subcopy, and a button to read more.
+
+<Canvas>
+  <Story
+    name='Blog Article Card'
+    args={{
+      category: { title: 'Product Features', slug: 'product-features' },
+      heading: '3 Signs It’s Time to Replace Your Pillow',
+      slug: '3-signs-its-time-to-replace-your-pillow',
+      lifestyleImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-f3273349967eb9130d801575b0a04eaa023a7c37-756x488-jpg'
+          }
+        }
+      },
+      subcopy:
+        'How did you sleep? We asked Canadians like you that very question. As World Sleep Day approached this year, we saw it as the perfect opportunity to learn more about your sleep habits.',
+      publishedDate: '2022-02-16',
+      url: '/blog/sleep-wellbeing/how-to-improve-sleep-quality-and-wake-up-feeling-rested',
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={BlogArticleCard} />

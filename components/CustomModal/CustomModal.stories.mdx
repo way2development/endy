@@ -1,0 +1,157 @@
+import { useState } from 'react'
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { CustomModal } from './CustomModal.tsx'
+import { Button } from '../Button/Button.tsx'
+import { PromoPill } from '../PromoPill/PromoPill.tsx'
+import { CtaLink } from '../CtaLink/CtaLink.tsx'
+import { Text } from '../Text'
+import { Modal } from '../Modal'
+import { BadgeTile } from '../BadgeTile'
+
+export const CustomModalViaButton = (args) => {
+  const [showModal, setShowModal] = useState(false)
+  const closeModal = () => setShowModal(false)
+  return (
+    <>
+      <Button
+        label='Learn about financing'
+        variant='solid-rubine'
+        onClick={() => setShowModal(true)}
+      />
+      <Modal showModal={showModal} onClose={closeModal} locale='en'>
+        <CustomModal {...args} onButtonClick={closeModal} />
+      </Modal>
+    </>
+  )
+}
+
+export const CustomModalViaButtonLink = (args) => {
+  const [showModal, setShowModal] = useState(false)
+  const closeModal = () => setShowModal(false)
+  return (
+    <>
+      <Button
+        label='Or $149.17 monthly with financing.'
+        variant='inline'
+        onClick={() => setShowModal(true)}
+      />
+      <Modal showModal={showModal} onClose={closeModal} locale='en'>
+        <CustomModal {...args} onButtonClick={closeModal} />
+      </Modal>
+    </>
+  )
+}
+
+<Meta title='Modules/Custom Modal' component={CustomModal} />
+
+export const customModalArgs = {
+  heading: 'Main heading here',
+  buttonLabel: 'Back to Shop',
+  backgroundImage: {
+    tabletImage: {
+      asset: {
+        _ref: 'image-32ad22c992ca414313a18f99dd5d914a81e70e4f-670x290-jpg-webp'
+      }
+    },
+    desktopImage: {
+      asset: {
+        _ref: 'image-a19cae74b52d710dcbca061216b0ebc1affcb3d9-800x1334-jpg-webp'
+      }
+    }
+  },
+  body: [
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam
+    </p>,
+    <p>HEADING 1</p>,
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo
+      aliquam nulla, a varius nisl pulvinar id. Donec ligula ligula, congue at
+      dapibus ac
+    </p>,
+    <p>HEADING 2</p>,
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt
+      tellus ipsum, in varius ligula semper vel. Donec ut massa ac nibh suscipit
+      feugiat.
+    </p>,
+    <BadgeTile
+      badgeImage={{
+        image: {
+          asset: {
+            _ref: 'image-443111a77c2a339ae1380f1d95d525d3e23a821c-64x64-svg'
+          }
+        }
+      }}
+      heading='HEADING W/ IMAGE 1'
+      subcopy='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt'
+    />,
+    <BadgeTile
+      badgeImage={{
+        image: {
+          asset: {
+            _ref: 'image-443111a77c2a339ae1380f1d95d525d3e23a821c-64x64-svg'
+          }
+        }
+      }}
+      heading='HEADING W/ IMAGE 2'
+      subcopy='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lectus est, posuere vitae'
+    />,
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ',
+    <CtaLink
+      variant='inline'
+      url='https://ca.endy.com/'
+      label='sed do eiusmod tempor incididunt'
+    />
+  ],
+  logo: {
+    alt: 'Affirm',
+    image: {
+      asset: {
+        _ref: 'image-cadb20e2292a5591f3e835dd8908864f2d376cc1-40x16-svg'
+      }
+    }
+  },
+  microcopy:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+  _updatedAt: new Date('2022-05-10'),
+  locale: 'en'
+}
+
+# Custom Modal
+
+Custom modal with a RTE (rich text editor) so CMS users can customize content.
+
+Note: To be used for any content that isn't related to Terms & Condition. For Terms & Conditions, please use the [Text Modal](/docs/modules-text-modal--text-modal-v-1) module.
+
+## Openable via Button
+
+<Canvas>
+  <Story
+    name='Custom Modal v1'
+    args={{
+      ...customModalArgs
+    }}
+  >
+    {CustomModalViaButton.bind()}
+  </Story>
+</Canvas>
+
+## Openable via Button Link
+
+<Canvas>
+  <Story
+    name='Custom Modal v2'
+    args={{
+      ...customModalArgs
+    }}
+  >
+    {CustomModalViaButtonLink.bind()}
+  </Story>
+</Canvas>
+
+### Custom Modal Props
+
+<ArgsTable of={CustomModal} />

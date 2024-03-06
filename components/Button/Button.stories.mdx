@@ -1,0 +1,255 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { Button } from './Button'
+import { Text } from '../Text'
+
+export const Template = (args) => <Button {...args} />
+
+<Meta title='Components/Button' component={Button} />
+
+# Button
+
+There are two types of buttons:
+
+- [Button (Primary/Secondary/Disabled)](#primary)
+- [Text Button](#text-button)
+
+## Usage
+
+Clicking on a button triggers an action (e.g. opens or closes a modal).
+
+Button has three possible states:
+
+- [Primary](#primary)
+- [Secondary](#secondary)
+- [Disabled](#button-v5---disabled)
+
+## Primary
+
+### Button v1 - Solid Rubine
+
+<Canvas>
+  <Story
+    name='Button v1'
+    args={{
+      label: 'Primary Button',
+      variant: 'solid-rubine',
+      onClick: () => {
+        alert('Modal opened, item added to cart, etc.')
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Button v2 - Solid Gravy
+
+<Canvas>
+  <Story
+    name='Button v2'
+    args={{
+      label: 'Primary Button',
+      variant: 'solid-gravy',
+      onClick: () => {
+        alert('Modal opened, item added to cart, etc.')
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Secondary
+
+### Button v3 - Hollow Rubine
+
+<Canvas>
+  <Story
+    name='Button v3'
+    args={{
+      label: 'Secondary Button',
+      variant: 'hollow-rubine',
+      onClick: () => {
+        alert('Modal opened, item added to cart, etc.')
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Button v4 - Hollow Gravy
+
+<Canvas>
+  <Story
+    name='Button v4'
+    args={{
+      label: 'Secondary Button',
+      variant: 'hollow-gravy',
+      onClick: () => {
+        alert('Modal opened, item added to cart, etc.')
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Button v5 - Hollow White
+
+<Canvas>
+  <Story
+    name='Button v5'
+    args={{
+      label: 'Secondary Button',
+      variant: 'hollow-white',
+      onClick: () => {
+        alert('Modal opened, item added to cart, etc.')
+      }
+    }}
+    decorators={[
+      (Story) => (
+        <div style={{ backgroundColor: '#243746', padding: '1rem' }}>
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Disabled
+
+### Button v6 - Disabled
+
+<Canvas>
+  <Story
+    name='Button v6'
+    args={{
+      label: 'Disabled',
+      variant: 'hollow-gravy',
+      isDisabled: true,
+      onClick: () => {
+        alert('Modal opened, item added to cart, etc.')
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+# Text Button
+
+## Usage
+
+- Text buttons look like links, but are actually buttons
+- Clicking on an text button triggers an action (e.g. opens or closes a modal).
+- Text buttons do not have an arrow symbol next to it.
+
+### Text Button v1
+
+<Canvas>
+  <Story
+    name='Text Button v1'
+    args={{
+      label: 'See terms.',
+      variant: 'block-line-gravy',
+      onClick: () => {
+        alert('Modal opened, item added to cart, etc.')
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Text Button v2
+
+<Canvas>
+  <Story
+    name='Text Button v2'
+    args={{
+      label: 'See terms.',
+      variant: 'block-line-white',
+      onClick: () => {
+        alert('Modal opened, item added to cart, etc.')
+      }
+    }}
+    decorators={[
+      (Story) => (
+        <div style={{ backgroundColor: '#243746', padding: '1rem' }}>
+          <Story />
+        </div>
+      )
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+# Inline Button
+
+## Usage
+
+- Inline buttons look like links, but are actually buttons
+- Clicking on an inline button triggers an action (e.g. opens or closes a modal).
+- Inline buttons do not have an arrow symbol next to it.
+- Inline Buttons are meant to be used as a part of a paragraph and will take the font size, font family, and font color of the parent, please use the Block-Inline variants if you are looking for a standalone Button that looks visually the same
+
+### Inline Button v1
+
+export const InlineTemplate = (args) => (
+  <Text variant='largeBody' color='gravy'>
+    *Offer valid until 05/10/2022 at 11:59PM PST <Button {...args} />
+  </Text>
+)
+
+<Canvas>
+  <Story
+    name='Inline Button v1'
+    args={{
+      label: 'See terms.',
+      variant: 'inline',
+      onClick: () => {
+        alert('Modal opened, item added to cart, etc.')
+      }
+    }}
+  >
+    {InlineTemplate.bind()}
+  </Story>
+</Canvas>
+
+### Inline Button v2
+
+export const DarkInlineTemplate = (args) => (
+  <Text variant='micro' color='white'>
+    *Offer valid until 05/10/2022 at 11:59PM PST <Button {...args} />
+  </Text>
+)
+
+<Canvas>
+  <Story
+    name='Inline Button v2'
+    args={{
+      label: 'See terms.',
+      variant: 'inline',
+      onClick: () => {
+        alert('Modal opened, item added to cart, etc.')
+      }
+    }}
+    decorators={[
+      (Story) => (
+        <div style={{ backgroundColor: '#243746', padding: '1rem' }}>
+          {Story()}
+        </div>
+      )
+    ]}
+  >
+    {DarkInlineTemplate.bind()}
+  </Story>
+</Canvas>
+
+### Button Props
+
+<ArgsTable of={Button} />

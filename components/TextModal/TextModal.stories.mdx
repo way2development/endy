@@ -1,0 +1,115 @@
+import { useState } from 'react'
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { TextModal } from './TextModal.tsx'
+import { Button } from '../Button/Button.tsx'
+import { StyledBulletlist } from '../../styles/global.styled'
+import { Modal } from '../Modal/Modal'
+
+export const textModalArgs = {
+  heading: 'Free Gift with Purchase',
+  buttonLabel: 'Back to Shop',
+  subheading: 'Terms & Conditions',
+  pillLabel: 'Limited Time Only',
+  subcopy:
+    'Receive a free Endy Weighted Blanket with the purchase of an Endy Mattress with the promo code FREEWB-0620. Ends 12/06.',
+  body: (
+    <StyledBulletlist>
+      <li>While supplies last. Offer expires 09/07/2021 at 11:59PM PST</li>
+      <li>
+        Applicable with purchase of a mattress at full price between August 21 -
+        September 7
+      </li>
+      <li>
+        Promo code FREEWB-0821 will be auto-applied at checkout if both products
+        are in cart
+      </li>
+      <li>To qualify, all items must be purchased as part of the same order</li>
+      <li>Offer limited to a maximum of ten mattresses per customer</li>
+      <li>Offer not valid on previous purchases or pending orders</li>
+      <li>
+        Previous free gift products may not be exchanged for current offer
+      </li>
+      <li>
+        Offer may not be combined with any other sale, promotion, discount,
+        code, coupon and/or offer; no cash value
+      </li>
+      <li>
+        Returns of any portion of the purchase will require equal forfeiture of
+        offer or amount equal to offer of up to $195 value
+      </li>
+      <li>
+        Offer may not be combined with Affirm financing. If you would like to
+        use financing, please remove any promo code at checkout and review items
+        in your shopping cart
+      </li>
+      <li>
+        Previously purchased mattresses currently under the one hundred (100)
+        night trial cannot be returned to redeem free gift offer
+      </li>
+      <li>Free gift product does not qualify for regular product trial</li>
+      <li>
+        Endy has the right to end any promotion at any time; other restrictions
+        may apply
+      </li>
+    </StyledBulletlist>
+  ),
+  locale: 'en'
+}
+
+<Meta title='Modules/Text Modal' component={TextModal} />
+
+# Text Modal
+
+Text modal with a RTE (rich text editor) so CMS users can customize content.
+
+Note: Only used for Terms & Conditions, for anyting else please use the [Custom Modal](/docs/modules-custom-modal--custom-modal-v-1) module.
+
+## Openable via Button
+
+<Canvas>
+  <Story name='Text Modal v1' args={{ ...textModalArgs }}>
+    {(args) => {
+      const [showModal, setShowModal] = useState(false)
+      const closeModal = () => setShowModal(false)
+      return (
+        <>
+          <Button
+            label='Learn about financing'
+            variant='solid-rubine'
+            onClick={() => setShowModal(true)}
+          />
+          <Modal showModal={showModal} onClose={closeModal} locale='en'>
+            <TextModal {...args} onButtonClick={closeModal} />
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
+
+## Openable via Button Link
+
+<Canvas>
+  <Story name='Text Modal v2' args={{ ...textModalArgs }}>
+    {(args) => {
+      const [showModal, setShowModal] = useState(false)
+      const closeModal = () => setShowModal(false)
+      return (
+        <>
+          <Button
+            label='Terms & conditions'
+            variant='inline'
+            onClick={() => setShowModal(true)}
+          />
+          <Modal showModal={showModal} onClose={closeModal} locale='en'>
+            <TextModal {...args} onButtonClick={closeModal} />
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
+
+### Text Modal Props
+
+<ArgsTable of={TextModal} />

@@ -1,0 +1,118 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+
+import { BlogSellingCard } from './BlogSellingCard.tsx'
+import { CtaLink } from '../CtaLink'
+
+export const Template = (args) => <BlogSellingCard {...args} />
+
+<Meta title='Modules/Blog Selling Card' component={BlogSellingCard} />
+
+# Blog Selling Card
+
+Appears in the Blog Article Page content. Highlights a product or service that is related to the article and links user to associated page.
+
+## Variant 1 - Image Left
+
+<Canvas>
+  <Story
+    name='Blog Selling Card Image Left'
+    args={{
+      variant: 'Left',
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-b05d0382091c6db6c2be28a4968ed454dc797e86-1720x1038-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-b05d0382091c6db6c2be28a4968ed454dc797e86-1720x1038-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-b05d0382091c6db6c2be28a4968ed454dc797e86-1720x1038-webp'
+          }
+        }
+      },
+      backgroundColor: {
+        hex: '#c9ded9'
+      },
+      backgroundImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-ac1d0026933a55ddb3a4bc47d852fb967dc7fc80-680x892-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-ac1d0026933a55ddb3a4bc47d852fb967dc7fc80-680x892-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-ac1d0026933a55ddb3a4bc47d852fb967dc7fc80-680x892-webp'
+          }
+        }
+      },
+      copy: 'Try the Endy Mattress risk-free for 100 nights. Get the best sleep of your life or your money back.'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Variant 2 - Image Right
+
+<Canvas>
+  <Story
+    name='Blog Selling Card Image Right'
+    args={{
+      variant: 'Right',
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-b05d0382091c6db6c2be28a4968ed454dc797e86-1720x1038-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-b05d0382091c6db6c2be28a4968ed454dc797e86-1720x1038-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-b05d0382091c6db6c2be28a4968ed454dc797e86-1720x1038-webp'
+          }
+        }
+      },
+      backgroundImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-ac1d0026933a55ddb3a4bc47d852fb967dc7fc80-680x892-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-ac1d0026933a55ddb3a4bc47d852fb967dc7fc80-680x892-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-ac1d0026933a55ddb3a4bc47d852fb967dc7fc80-680x892-webp'
+          }
+        }
+      },
+      backgroundColor: {
+        hex: '#c9ded9'
+      },
+      copy: 'Try the Endy Mattress risk-free for 100 nights. Get the best sleep of your life or your money back.'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={BlogSellingCard} />

@@ -1,0 +1,389 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { SalesHomepageHero } from './SalesHomepageHero'
+import { CtaLink } from '../CtaLink'
+import { Button } from '../Button'
+import { Image } from '../Image'
+
+export const Template = (args) => {
+  return (
+    <div
+      style={{
+        position: 'relative',
+        height: '100%',
+        padding: '0'
+      }}
+    >
+      <SalesHomepageHero {...args} />
+    </div>
+  )
+}
+
+<Meta title='Modules/Homepage Hero (Sales)' component={SalesHomepageHero} />
+
+# Homepage Hero (Sales)
+
+During active promotions, the homepage hero is customized to promote the current sale offer. This modules displays all relevant sale details and allows the author to customize the homepage hero design. The heading and subcopy can either be text or a lockup image with alt text.
+
+There are currently two sale design layouts:
+
+- Default/Sale Split Screen & Sale/Sale Split Screen
+- One Block & One Block Faded
+
+## Default/Sale Split Screens (v1 & v2)
+
+<Canvas>
+  <Story
+    name='Default/Sale Split Screen v1'
+    args={{
+      variant: 'Default/Sale Split Screen V1',
+      heading: "Canada's Favourite Mattress",
+      pillLabel: 'Free Gift Offer',
+      secondaryHeading: 'Get 2 Free Pillows',
+      cta: (
+        <CtaLink
+          variant='solid-rubine'
+          url='https://ca.endy.com'
+          label='Shop the Endy Mattress'
+        />
+      ),
+      asideCtaLabel: 'Shop Now',
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-19761c52842765365480c36b5c317cf20ea98388-1536x900-jpg-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-eacaf2ce7ddced0deb7749fef643a13ce9616cf3-1440x1290-jpg-webp'
+          }
+        }
+      },
+      backgroundImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-ce885716df650f4547cf40e5837a929a00db29bf-2564x1496-jpg-webp'
+          }
+        }
+      },
+      badgeImage: {
+        alt: '2021 Winner Best Matress in Canada OLM Ottawa Life',
+        image: {
+          asset: {
+            _ref: 'image-1b58c73e926fe05c39c15e1865764d57081354d3-90x90-svg'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name='Default/Sale Split Screen v2'
+    args={{
+      variant: 'Default/Sale Split Screen V2',
+      heading: "Canada's Favourite Mattress",
+      pillLabel: 'Free Gift Offer',
+      secondaryHeading: 'Get 2 Free Pillows',
+      cta: (
+        <CtaLink
+          variant='solid-rubine'
+          url='https://ca.endy.com'
+          label='Shop the Endy Mattress'
+        />
+      ),
+      asideCtaLabel: 'Shop Now',
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-19761c52842765365480c36b5c317cf20ea98388-1536x900-jpg-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-eacaf2ce7ddced0deb7749fef643a13ce9616cf3-1440x1290-jpg-webp'
+          }
+        }
+      },
+      backgroundImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-ce885716df650f4547cf40e5837a929a00db29bf-2564x1496-jpg-webp'
+          }
+        }
+      },
+      badgeImage: {
+        alt: '2021 Winner Best Matress in Canada OLM Ottawa Life',
+        image: {
+          asset: {
+            _ref: 'image-1b58c73e926fe05c39c15e1865764d57081354d3-90x90-svg'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Sale/Sale Split Screen
+
+<Canvas>
+  <Story
+    name='Sale/Sale Split Screen v3'
+    args={{
+      variant: 'Sale/Sale Split Screen',
+      heading: 'Cozy Up With This Free Gift',
+      subcopy:
+        'Get a FREE Weighted Blanket when you order Canadas Best Mattress',
+      microcopy: '*Offer ends 04/19/2022. Terms Apply.',
+      pillLabel: 'Free Gift Offer',
+      cta: (
+        <CtaLink
+          variant='solid-rubine'
+          url='https://ca.endy.com'
+          label='Upgrade Your Sleep'
+        />
+      ),
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-19761c52842765365480c36b5c317cf20ea98388-1536x900-jpg-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-eacaf2ce7ddced0deb7749fef643a13ce9616cf3-1440x1290-jpg-webp'
+          }
+        }
+      },
+      backgroundImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-ce885716df650f4547cf40e5837a929a00db29bf-2564x1496-jpg-webp'
+          }
+        }
+      },
+      badgeImage: {
+        alt: '2021 Winner Best Matress in Canada OLM Ottawa Life',
+        image: {
+          asset: {
+            _ref: 'image-1b58c73e926fe05c39c15e1865764d57081354d3-90x90-svg'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## One Block (Faded)
+
+<Canvas>
+  <Story
+    name='One Block - Faded v4'
+    args={{
+      variant: 'One Block Fade',
+      heading: 'Summer Sleep Savings',
+      subcopy:
+        'Get a FREE Weighted Blanket when you order Canadas Best Mattress',
+      subcopyTextImage: (
+        <Image
+          alt='Alt text is important'
+          desktopImage={{
+            asset: {
+              _ref: 'image-3a46be2936dc596b06ef934aba1e1a61af1004ee-348x90-svg-webp'
+            }
+          }}
+          srcWidths={[768, 1024]}
+        />
+      ),
+      microcopy: '*Offer ends 04/19/2022. Terms Apply.',
+      pillLabel: 'Limited Time Only',
+      cta: (
+        <CtaLink
+          variant='solid-rubine'
+          url='https://ca.endy.com'
+          label='Upgrade Your Sleep'
+        />
+      ),
+      lifestyleImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-e85eed0a64e272275cc2fa7dc59cf9e65356441a-2400x1098-png-webp'
+          }
+        }
+      },
+      backgroundImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-0591e3a675eb903d5377f84de01481fc885a0751-5120x1768-jpg-webp'
+          }
+        }
+      },
+      badgeImage: {
+        alt: '2021 Winner Best Matress in Canada OLM Ottawa Life',
+        image: {
+          asset: {
+            _ref: 'image-1b58c73e926fe05c39c15e1865764d57081354d3-90x90-svg'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## One Block (Solid)
+
+<Canvas>
+  <Story
+    name='One Block - Solid v5'
+    args={{
+      variant: 'One Block',
+      heading: 'Spring Offer: Enjoy Free Gift',
+      subcopy:
+        'Refresh your room with a new mattress and get the mattress protector – FREE.',
+      microcopy: '*Offer ends 04/19/2022. Terms Apply.',
+      pillLabel: 'Until July 12',
+      cta: (
+        <CtaLink
+          variant='solid-rubine'
+          url='https://ca.endy.com'
+          label='Upgrade Your Sleep'
+        />
+      ),
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-8bc763f0b243dbe29f277d7561cd2b8a8b9f11be-750x460-jpg-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-f4b4959343b01165d327589f99aa9442c0722a34-2436x1152-png-webp'
+          }
+        }
+      },
+      backgroundImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-bf22f0e3fc347c9dcfd697435ce468dfbafd6b04-5120x1768-jpg-webp'
+          }
+        }
+      },
+      badgeImage: {
+        alt: '2021 Winner Best Matress in Canada OLM Ottawa Life',
+        image: {
+          asset: {
+            _ref: 'image-1b58c73e926fe05c39c15e1865764d57081354d3-90x90-svg'
+          }
+        }
+      },
+      sales: {
+        isLastChance: false,
+        displayName: 'Free Mattress Protector',
+        content: {
+          displayName: 'Free Mattress Protector'
+        },
+        lastChance: {
+          homepageHero: {
+            pillLabel: 'Last Chance',
+            badgeImage: {
+              alt: '2021 Winner Best Matress in Canada OLM Ottawa Life',
+              image: {
+                asset: {
+                  _ref: 'image-4b17f88ef19857251ae537081a5f88cdb8c14423-129x129-svg'
+                }
+              }
+            }
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Last Chance
+
+<Canvas>
+  <Story
+    name='Last Chance'
+    args={{
+      variant: 'One Block',
+      heading: 'Spring Offer: Enjoy Free Gift',
+      subcopy:
+        'Refresh your room with a new mattress and get the mattress protector – FREE.',
+      microcopy: '*Offer ends 04/19/2022. Terms Apply.',
+      pillLabel: 'Until July 12',
+      cta: (
+        <CtaLink
+          variant='solid-rubine'
+          url='https://ca.endy.com'
+          label='Upgrade Your Sleep'
+        />
+      ),
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-8bc763f0b243dbe29f277d7561cd2b8a8b9f11be-750x460-jpg-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-f4b4959343b01165d327589f99aa9442c0722a34-2436x1152-png-webp'
+          }
+        }
+      },
+      backgroundImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-bf22f0e3fc347c9dcfd697435ce468dfbafd6b04-5120x1768-jpg-webp'
+          }
+        }
+      },
+      badgeImage: {
+        alt: '2021 Winner Best Matress in Canada OLM Ottawa Life',
+        image: {
+          asset: {
+            _ref: 'image-1b58c73e926fe05c39c15e1865764d57081354d3-90x90-svg'
+          }
+        }
+      },
+      sales: {
+        isLastChance: true,
+        displayName: 'Free Mattress Protector',
+        content: {
+          displayName: 'Free Mattress Protector'
+        },
+        lastChance: {
+          homepageHero: {
+            pillLabel: 'Last Chance',
+            badgeImage: {
+              alt: '2021 Winner Best Matress in Canada OLM Ottawa Life',
+              image: {
+                asset: {
+                  _ref: 'image-4b17f88ef19857251ae537081a5f88cdb8c14423-129x129-svg'
+                }
+              }
+            }
+          }
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={SalesHomepageHero} />

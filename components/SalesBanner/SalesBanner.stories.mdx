@@ -1,0 +1,126 @@
+import { useState } from 'react'
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+
+import { SalesBanner } from './SalesBanner'
+import { Modal } from '../Modal/Modal'
+import { PromoPill } from '../PromoPill'
+import { TextModal } from '../TextModal'
+
+export const Template = (args) => <SalesBanner {...args} />
+
+<Meta title='Components/Sales Banner' component={SalesBanner} />
+
+## Sales Banner offers.
+
+This component displays a Sales Banner, which can be used on the Sales Landing Page to highlight our current offer when a sale is active. The author can customize the background, lifestyle image, promo pill, badge, and copy content.
+
+## Sales Banner - On Sale
+
+<Canvas>
+  <Story
+    name='Sales Banner - On Sale'
+    args={{
+      heading: 'Bundle Up To Save Big',
+      subcopy: 'Save up to $500 on a mattress + accessories bundle.',
+      microcopy: 'See Terms',
+      isLastChance: true,
+      pillLabel: 'Limited Time Only',
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-4538da053a8813655a19af9fec66456bfe0ca9d6-2048x1202-jpg'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-4538da053a8813655a19af9fec66456bfe0ca9d6-2048x1202-jpg'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-4538da053a8813655a19af9fec66456bfe0ca9d6-2048x1202-jpg'
+          }
+        }
+      },
+      badgeImage: {
+        alt: 'Sales Badge',
+        image: {
+          asset: {
+            _ref: 'image-fd55fc437f8314f77c66bed86ae5af9591b225eb-127x184-svg'
+          }
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Sales Banner - Bundle Sales
+
+<Canvas>
+  <Story
+    name='Sales Banner - Bundles'
+    args={{
+      heading: 'Bundle Up To Save Big',
+      subcopy: 'Save up to $500 on a mattress + accessories bundle.',
+      subcopyImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-ef53f2c316ffc2150a71bce5be4324e0347d5a99-664x473-png'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-d65272baccaf0de85ba9d43e617b89e8302e59ca-1238x222-png'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-ef53f2c316ffc2150a71bce5be4324e0347d5a99-664x473-png'
+          }
+        }
+      },
+      microcopy: 'See Terms',
+      isLastChance: true,
+      pillLabel: 'Limited Time Only',
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-d355c16e95c6208820b00ffcb2bd7d7d1aa44315-1580x1128-jpg'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-d355c16e95c6208820b00ffcb2bd7d7d1aa44315-1580x1128-jpg'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-d355c16e95c6208820b00ffcb2bd7d7d1aa44315-1580x1128-jpg'
+          }
+        }
+      },
+      badgeImage: {
+        alt: 'Sales Badge',
+        image: {
+          asset: {
+            _ref: 'image-fd55fc437f8314f77c66bed86ae5af9591b225eb-127x184-svg'
+          }
+        }
+      },
+      locale: 'en',
+      saleBundles: {
+        isBundleSale: true,
+        totalBundleValue: 600
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### SalesBanner Feature Props
+
+<ArgsTable of={SalesBanner} />

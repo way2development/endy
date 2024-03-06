@@ -1,0 +1,31 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { SocialShareIcons } from './SocialShareIcons'
+
+export const Template = (args) => (
+  <div style={{ width: '414px', height: '30px', margin: '1rem' }}>
+    <SocialShareIcons {...args} />
+  </div>
+)
+
+<Meta title='Modules/Social Share Icons' component={SocialShareIcons} />
+
+# Social Share Icons
+
+This component displays social sharing icons for Facebook, Twitter and Pinterest. It is currently used on the Endy Blog.
+
+<Canvas>
+  <Story
+    name='Social Share Icons'
+    args={{
+      slug: '/products/endy-mattress?size=Full',
+      title: 'The Endy Mattress',
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={SocialShareIcons} />

@@ -1,0 +1,342 @@
+import { useState } from 'react'
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+
+import { CollectionsHero } from './CollectionsHero'
+import { Modal } from '../Modal/Modal'
+import { PromoPill } from '../PromoPill'
+import { TextModal } from '../TextModal'
+
+export const Template = (args) => <CollectionsHero {...args} />
+
+<Meta title='Modules/Collections Hero' component={CollectionsHero} />
+
+# Collections Hero
+
+This component displays a collections' hero which can be used on any page that highlights a product collection including comparison, product collections or sale collections pages. The author is also able to customize the hero to showcase the active sale promotion.
+
+## Collections - Default
+
+<Canvas>
+  <Story
+    name='Collections - Default'
+    args={{
+      heading: 'The Endy Collections',
+      subcopy: 'Dreamy sleep essentials engineered for maximum comfort',
+      backgroundImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-7a70f5feceae0cd1048562d90a5806bb875d2472-1534x1400-jpg-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-93e2a1094e81b6bbf0c2447ab9c52887ac0d0692-2048x1332-jpg-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-bbf421a0f506e1830641b5665ed4771e39e01459-3840x1066-jpg-webp'
+          }
+        }
+      },
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-3f814266bb758d1194b8deb6761de821fc3f28ce-1534x1022-png-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-2118b7fb174b4a9b04889b1449d9fb40e58ec3ec-2048x800-png-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-9ef946dcad5b02ef3231d7d8d66f889b72f53005-1920x1066-png-webp'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Collections - On Sale
+
+<Canvas>
+  <Story
+    name='Collections - On Sale'
+    args={{
+      sales: {
+        isLastChance: false,
+        lastChance: {
+          collections: {
+            heroPillLabel: 'Last Chance'
+          }
+        },
+        heros: {
+          collectionsHero: {
+            pillLabel: 'Limited Time Only',
+            microcopy:
+              '*Offer valid until 11/08/2021 at 11:59PM PST. Excludes bedframes, headboard, sofa/ottoman & rug.',
+            backgroundImage: {
+              mobileImage: {
+                asset: {
+                  _ref: 'image-7a70f5feceae0cd1048562d90a5806bb875d2472-1534x1400-jpg-webp'
+                }
+              },
+              tabletImage: {
+                asset: {
+                  _ref: 'image-93e2a1094e81b6bbf0c2447ab9c52887ac0d0692-2048x1332-jpg-webp'
+                }
+              },
+              desktopImage: {
+                asset: {
+                  _ref: 'image-bbf421a0f506e1830641b5665ed4771e39e01459-3840x1066-jpg-webp'
+                }
+              }
+            },
+            lifestyleImage: {
+              mobileImage: {
+                asset: {
+                  _ref: 'image-3f814266bb758d1194b8deb6761de821fc3f28ce-1534x1022-png-webp'
+                }
+              },
+              tabletImage: {
+                asset: {
+                  _ref: 'image-2118b7fb174b4a9b04889b1449d9fb40e58ec3ec-2048x800-png-webp'
+                }
+              },
+              desktopImage: {
+                asset: {
+                  _ref: 'image-9ef946dcad5b02ef3231d7d8d66f889b72f53005-1920x1066-png-webp'
+                }
+              }
+            }
+          }
+        }
+      },
+      heading: 'Bundle Up To Save Big',
+      subcopy: 'Save up to $100 when you shop the Endy Sleep Collection*',
+      backgroundImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-7a70f5feceae0cd1048562d90a5806bb875d2472-1534x1400-jpg-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-93e2a1094e81b6bbf0c2447ab9c52887ac0d0692-2048x1332-jpg-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-bbf421a0f506e1830641b5665ed4771e39e01459-3840x1066-jpg-webp'
+          }
+        }
+      },
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-b8e5127d5543bc78ac260c2923b8f31885bb3d2a-1534x1022-png-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-5da41eaedca2d655cb506de4a0bfcb13750adf30-2048x800-png-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-14352a47534375fbbc63699a6015d07767d57332-1918x1066-png-webp'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Collections - Last Chance
+
+<Canvas>
+  <Story
+    name='Collections - Last Chance'
+    args={{
+      sales: {
+        isLastChance: true,
+        lastChance: {
+          collections: {
+            heroPillLabel: 'Last Chance'
+          }
+        },
+        heros: {
+          collectionsHero: {
+            pillLabel: 'Limited Time Only',
+            microcopy:
+              '*Offer valid until 11/08/2021 at 11:59PM PST. Excludes bedframes, headboard, sofa/ottoman & rug.',
+            backgroundImage: {
+              mobileImage: {
+                asset: {
+                  _ref: 'image-7a70f5feceae0cd1048562d90a5806bb875d2472-1534x1400-jpg-webp'
+                }
+              },
+              tabletImage: {
+                asset: {
+                  _ref: 'image-93e2a1094e81b6bbf0c2447ab9c52887ac0d0692-2048x1332-jpg-webp'
+                }
+              },
+              desktopImage: {
+                asset: {
+                  _ref: 'image-bbf421a0f506e1830641b5665ed4771e39e01459-3840x1066-jpg-webp'
+                }
+              }
+            },
+            lifestyleImage: {
+              mobileImage: {
+                asset: {
+                  _ref: 'image-3f814266bb758d1194b8deb6761de821fc3f28ce-1534x1022-png-webp'
+                }
+              },
+              tabletImage: {
+                asset: {
+                  _ref: 'image-2118b7fb174b4a9b04889b1449d9fb40e58ec3ec-2048x800-png-webp'
+                }
+              },
+              desktopImage: {
+                asset: {
+                  _ref: 'image-9ef946dcad5b02ef3231d7d8d66f889b72f53005-1920x1066-png-webp'
+                }
+              }
+            }
+          }
+        }
+      },
+      heading: 'Bundle Up To Save Big',
+      subcopy: 'Save up to $100 when you shop the Endy Sleep Collection*',
+      backgroundImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-7a70f5feceae0cd1048562d90a5806bb875d2472-1534x1400-jpg-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-93e2a1094e81b6bbf0c2447ab9c52887ac0d0692-2048x1332-jpg-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-bbf421a0f506e1830641b5665ed4771e39e01459-3840x1066-jpg-webp'
+          }
+        }
+      },
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-b8e5127d5543bc78ac260c2923b8f31885bb3d2a-1534x1022-png-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-5da41eaedca2d655cb506de4a0bfcb13750adf30-2048x800-png-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-14352a47534375fbbc63699a6015d07767d57332-1918x1066-png-webp'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Collection Comparison
+
+<Canvas>
+  <Story
+    name='Comparison'
+    args={{
+      heading: 'Compare the Endy Pillows',
+      subcopy:
+        'Explore our pillow selection and get the rest you deserve. Total comfort awaits',
+      comparisonBadges: [
+        {
+          badgeImage: {
+            image: {
+              asset: {
+                _ref: 'image-75f8a2859cdba03388f6ada44edf8aa6de8787f9-64x64-svg'
+              }
+            }
+          },
+          heading: '60-Night Trial'
+        },
+        {
+          badgeImage: {
+            image: {
+              asset: {
+                _ref: 'image-d6b4e87941e78fc16f84e9b213e0e6582c5981df-64x64-svg'
+              }
+            }
+          },
+          heading: '3-Year Warranty'
+        },
+        {
+          badgeImage: {
+            image: {
+              asset: {
+                _ref: 'image-1de44c3c9546ecc99cbf87a058f1a46a0325cbf5-64x64-svg'
+              }
+            }
+          },
+          heading: 'Free Shipping†'
+        }
+      ],
+      backgroundImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-7a70f5feceae0cd1048562d90a5806bb875d2472-1534x1400-jpg-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-93e2a1094e81b6bbf0c2447ab9c52887ac0d0692-2048x1332-jpg-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-bbf421a0f506e1830641b5665ed4771e39e01459-3840x1066-jpg-webp'
+          }
+        }
+      },
+      lifestyleImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-b8e5127d5543bc78ac260c2923b8f31885bb3d2a-1534x1022-png-webp'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-5da41eaedca2d655cb506de4a0bfcb13750adf30-2048x800-png-webp'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-14352a47534375fbbc63699a6015d07767d57332-1918x1066-png-webp'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={CollectionsHero} />

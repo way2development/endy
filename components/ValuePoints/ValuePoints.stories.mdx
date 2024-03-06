@@ -1,0 +1,261 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { ValuePoints } from './ValuePoints'
+import { ValueColumn } from './ValueColumn'
+import { CtaLink } from '../CtaLink'
+
+export const Template = (args) => <ValuePoints {...args} />
+
+<Meta title='Modules/Value Points' component={ValuePoints} />
+
+# ValuePoints
+
+## ValuePoints v1
+
+Example of variant with all possible options.
+
+- [x] Background image/color
+- [x] Heading
+- [x] Icon
+- [x] Title
+- [x] Description
+- [x] Disclaimer
+- [x] Button CTA
+- [x] Tooltip
+
+<Canvas>
+  <Story
+    name='ValuePoints v1'
+    args={{
+      valueColumns: [
+        <ValueColumn
+          badgeImage={{
+            image: {
+              asset: {
+                _ref: 'image-da4e4ed80ca745f8fe6634c94be8d93f17a58ba3-95x102-svg'
+              }
+            }
+          }}
+          heading='Durable Design'
+          subcopy='This bed frame is built to last with solid, kiln-dried wood to increase longevity.'
+        />,
+        <ValueColumn
+          badgeImage={{
+            image: {
+              asset: {
+                _ref: 'image-f9e9c8d7dabf4ccf274471538e4e2558db425d1b-107x95-svg'
+              }
+            }
+          }}
+          heading='Contemporary Comfort'
+          subcopy='Chic upholstery and a modern frame create the perfect balance between comfortable and stylish.'
+          tooltip='*Disclaimers can display in this tooltip.'
+        />,
+        <ValueColumn
+          badgeImage={{
+            image: {
+              asset: {
+                _ref: 'image-9e66a06be4650c748ed9d86c5c6069e4554d0d71-95x108-svg'
+              }
+            }
+          }}
+          heading='Sustainably Sourced'
+          subcopy='The 100% rubberwood frame is eco-friendly so you can sleep easy.'
+        />
+      ],
+      cta: (
+        <CtaLink
+          variant='solid-rubine'
+          url='https://ca.endy.com/pages/endy-mattresses-design'
+          label='Primary Button'
+        />
+      ),
+      heading:
+        'A Canadian Made Mattress With Perfect Firmness, Shipped to Your Door',
+      microcopy: '†Available for the Endy Mattress'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## ValuePoints v2
+
+Example of variant used for product pages.
+
+- [x] Background image/color
+- [ ] Heading
+- [x] Icon
+- [x] Title
+- [x] Description
+- [ ] Disclaimer
+- [ ] Button CTA
+
+<Canvas>
+  <Story
+    name='ValuePoints v2'
+    args={{
+      valueColumns: [
+        <ValueColumn
+          badgeImage={{
+            image: {
+              asset: {
+                _ref: 'image-da4e4ed80ca745f8fe6634c94be8d93f17a58ba3-95x102-svg'
+              }
+            }
+          }}
+          heading='Durable Design'
+          subcopy='This bed frame is built to last with solid, kiln-dried wood to increase longevity.'
+        />,
+        <ValueColumn
+          badgeImage={{
+            image: {
+              asset: {
+                _ref: 'image-f9e9c8d7dabf4ccf274471538e4e2558db425d1b-107x95-svg'
+              }
+            }
+          }}
+          heading='Contemporary Comfort'
+          subcopy='Chic upholstery and a modern frame create the perfect balance between comfortable and stylish.'
+        />,
+        <ValueColumn
+          badgeImage={{
+            image: {
+              asset: {
+                _ref: 'image-9e66a06be4650c748ed9d86c5c6069e4554d0d71-95x108-svg'
+              }
+            }
+          }}
+          heading='Sustainably Sourced'
+          subcopy='The 100% rubberwood frame is eco-friendly so you can sleep easy.'
+        />
+      ],
+      backgroundImage: {
+        desktopImage: {
+          asset: {
+            _ref: 'image-56bc190337c7bb9e0ebe308224feb98c29c18d33-3840x2560-jpg'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## ValuePoints v3
+
+Example of variant used for homepage or mattress learner page.
+
+- [x] Background image/color
+- [x] Heading
+- [x] Icon
+- [x] Title
+- [ ] Description
+- [x] Disclaimer
+- [ ] Button CTA
+
+<Canvas>
+  <Story
+    name='ValuePoints v3'
+    args={{
+      valueColumns: [
+        <ValueColumn
+          badgeImage={{
+            image: {
+              asset: {
+                _ref: 'image-da4e4ed80ca745f8fe6634c94be8d93f17a58ba3-95x102-svg'
+              }
+            }
+          }}
+          heading='A true 100 night at home trial†'
+        />,
+        <ValueColumn
+          badgeImage={{
+            image: {
+              asset: {
+                _ref: 'image-f9e9c8d7dabf4ccf274471538e4e2558db425d1b-107x95-svg'
+              }
+            }
+          }}
+          heading='A warranty to help you sleep soundly†'
+        />,
+        <ValueColumn
+          badgeImage={{
+            image: {
+              asset: {
+                _ref: 'image-9e66a06be4650c748ed9d86c5c6069e4554d0d71-95x108-svg'
+              }
+            }
+          }}
+          heading='Fast and easy shipping'
+        />
+      ],
+      heading: "We've Got You Covered",
+      microcopy: '†Available for the Endy Mattress'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## ValuePoints v4
+
+Example of variant used for homepage or mattress learner page.
+
+- [x] Background image/color
+- [x] Heading
+- [x] Icon
+- [x] Title
+- [ ] Description
+- [x] Disclaimer
+- [ ] Button CTA
+- [x] Tooltip
+
+<Canvas>
+  <Story
+    name='ValuePoints v4'
+    args={{
+      valueColumns: [
+        <ValueColumn
+          badgeImage={{
+            image: {
+              asset: {
+                _ref: 'image-da4e4ed80ca745f8fe6634c94be8d93f17a58ba3-95x102-svg'
+              }
+            }
+          }}
+          heading='A true 100 night at home trial†'
+        />,
+        <ValueColumn
+          badgeImage={{
+            image: {
+              asset: {
+                _ref: 'image-66c20db8e60e9cb066c58755ff668ba50f9bae01-64x64-svg'
+              }
+            }
+          }}
+          heading='A warranty to help you sleep soundly†'
+          tooltip='*Qualify for a 15-year warranty when you register as an Endy VIP in your post-purchase email—default warranty is 10 years.'
+        />,
+        <ValueColumn
+          badgeImage={{
+            image: {
+              asset: {
+                _ref: 'image-9e66a06be4650c748ed9d86c5c6069e4554d0d71-95x108-svg'
+              }
+            }
+          }}
+          heading='Fast and easy shipping'
+        />
+      ],
+      heading: "We've Got You Covered",
+      microcopy: '†Available for the Endy Mattress'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### ValuePoints Props
+
+<ArgsTable of={ValuePoints} />

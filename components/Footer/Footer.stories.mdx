@@ -1,0 +1,206 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { Footer } from './Footer'
+
+export const Template = (args) => <Footer {...args} />
+
+<Meta title='Modules/Footer' component={Footer} />
+
+# Footer
+
+<Canvas>
+  <Story
+    name='Footer'
+    args={{
+      locale: 'en',
+      logo: {
+        alt: 'Endy',
+        image: {
+          asset: {
+            _ref: 'image-d405eb5750b7e592a45e0c7b03c0dd4ae28a52b2-200x48-webp'
+          }
+        }
+      },
+      languages: [
+        {
+          label: 'English',
+          url: 'https://ca.endy.com'
+        },
+        {
+          label: 'Français',
+          url: 'https://qc.endy.com'
+        }
+      ],
+      menuHeading1: 'Shop',
+      menuList1: [
+        {
+          label: 'The Endy Mattress',
+          url: 'https://ca.endy.com/products/mattresses'
+        },
+        {
+          label: 'Pillow',
+          url: '/products/the-customizable-pillow'
+        },
+        {
+          label: 'Solid Wood Bed',
+          url: '/products/the-solid-wood-bed'
+        },
+        {
+          label: 'Mattress Protector',
+          url: '/products/the-endy-mattress-protector'
+        },
+        {
+          label: 'The Collection',
+          url: '/collections'
+        },
+        {
+          label: 'Showrooms',
+          url: '/pages/showroom-locations'
+        }
+      ],
+      menuHeading2: 'About',
+      menuList2: [
+        {
+          label: 'Reviews',
+          url: '/pages/mattress-reviews'
+        },
+        {
+          label: 'Refer A Friend',
+          url: '/pages/referral-program'
+        },
+        {
+          label: 'Our Story',
+          url: '/pages/about'
+        },
+        {
+          label: 'Careers',
+          url: 'https://ca.endy.com/pages/careers'
+        },
+        {
+          label: 'Donations',
+          url: 'https://ca.endy.com/pages/donations'
+        },
+        {
+          label: 'Media',
+          url: 'https://ca.endy.com/pages/news'
+        },
+        {
+          label: 'Blog',
+          url: '/blogs/the-endy-blog'
+        }
+      ],
+      menuHeading3: 'Support',
+      menuList3: [
+        {
+          label: 'Contact Us',
+          url: 'https://answers.endy.com/hc/en-ca/#contact-us'
+        },
+        {
+          label: 'FAQ',
+          url: 'https://answers.endy.com'
+        },
+        {
+          label: 'Our Story',
+          url: '/pages/about'
+        },
+        {
+          label: 'Shipping & Unboxing',
+          url: 'https://answers.endy.com/hc/en-ca/categories/360000515431-Shipping-Unboxing'
+        },
+        {
+          label: 'Returns',
+          url: 'https://answers.endy.com/hc/en-ca/categories/360000618912-Trials-Returns'
+        },
+        {
+          label: 'Trial',
+          url: 'https://ca.endy.com/pages/endy-mattress-trial'
+        },
+        {
+          label: 'Warranty',
+          url: 'https://ca.endy.com/pages/endy-10-year-warranty'
+        }
+      ],
+      socialIcons: [
+        {
+          icon: {
+            image: {
+              asset: {
+                _ref: 'image-4e6b5d4b61fc52ab55119cb163ec09c5145e804d-12x21-svg'
+              }
+            }
+          },
+          url: 'https://www.facebook.com/endy',
+          ariaLabel: 'Follow us on Facebook.',
+          title: 'Endy on Facebook',
+          fallbackText: 'Facebook'
+        },
+        {
+          icon: {
+            image: {
+              asset: {
+                _ref: 'image-ff4311b4c502b09cea9fef5c08e57a42c3231c16-21x21-svg'
+              }
+            }
+          },
+          url: 'https://www.instagram.com/endy',
+          ariaLabel: 'Follow us on Instagram.',
+          title: 'Endy on Instagram',
+          fallbackText: 'Instagram'
+        },
+        {
+          icon: {
+            image: {
+              asset: {
+                _ref: 'image-c2030659ee82b0d2805a88eefe0fa0816fe6ec3d-18x21-svg'
+              }
+            }
+          },
+          url: 'https://www.pinterest.com/endycanada/',
+          ariaLabel: 'Follow us on Pinterest.',
+          title: 'Endy on Pinterest',
+          fallbackText: 'Pinterest'
+        },
+        {
+          icon: {
+            image: {
+              asset: {
+                _ref: 'image-c0afa1d010153ed2ec3cff22dfaef3096025c5ad-19x17-svg'
+              }
+            }
+          },
+          url: 'https://twitter.com/Endy',
+          ariaLabel: 'Follow us on Twitter.',
+          title: 'Endy on Twitter',
+          fallbackText: 'Twitter'
+        }
+      ],
+      digiCertImg: {
+        alt: 'DigiCert Secure Seal.',
+        image: {
+          asset: {
+            _ref: 'image-9ac5c164963702a5754d9fd1668204ff5228d6e4-104x76-webp'
+          }
+        }
+      },
+      subfooterLinks: [
+        {
+          label: 'Accessibility',
+          url: 'https://ca.endy.com/pages/accessibility'
+        },
+        {
+          label: 'Terms & Conditions',
+          url: 'https://ca.endy.com/pages/terms-conditions'
+        },
+        {
+          label: 'Privacy Policy',
+          url: 'https://ca.endy.com/pages/privacy-policy'
+        }
+      ]
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Footer Props
+
+<ArgsTable of={Footer} />

@@ -1,0 +1,143 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+
+import dictionary from '../../dictionary.json'
+
+import { FurnitureSizing } from './FurnitureSizing'
+
+export const Template = (args) => <FurnitureSizing {...args} />
+
+<Meta title='Modules/Furniture Sizing' component={FurnitureSizing} />
+
+# Furniture Sizing
+
+## Usage
+
+<Canvas>
+  <Story
+    parameters={{
+      query: {
+        size: 'QueenId'
+      }
+    }}
+    name='Furniture Sizing'
+    args={{
+      locale: 'en',
+      heading: 'Sizing Guide',
+      backgroundImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-7a9f00b3bc2606c3f9d172414d7a436a52e64282-1538x1336-jpg'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-6fe965894d681371281bbab0f72caa164e1cb21e-3840x930-jpg'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-31db86971ffbdb9ed84691ae711f4c7ceae34994-2052x1336-jpg'
+          }
+        }
+      },
+      sizes: [
+        {
+          sizeId: 'FullId',
+          name: 'Full',
+          dimensions: [
+            {
+              label: 'Overall',
+              value: '80" L x 57" W x 32.5" H'
+            },
+            {
+              label: 'Frame',
+              value: '80" L x 57" W x 8" H'
+            },
+            {
+              label: 'Headboard',
+              value: '54.25" L x 24" H x 2.25" D'
+            },
+            { label: 'Clearance', value: '6" H' }
+          ],
+          lifestyleImage: {
+            desktopImage: {
+              _ref: 'image-b018c167edeae5517a7a6dc700d4b1300b1d8e06-1224x694-png'
+            },
+            alt: 'Alt text is important'
+          }
+        },
+        {
+          sizeId: 'QueenId',
+          name: 'Queen',
+          dimensions: [
+            { label: 'Overall', value: '86" L x 64" W x 32.5" H' },
+            { label: 'Frame', value: '86" L x 64" W x 8" H' },
+            { label: 'Headboard', value: '61.5" L x 24" H x 2.25" D' },
+            { label: 'Clearance', value: '6" H' }
+          ],
+          lifestyleImage: {
+            desktopImage: {
+              _ref: 'image-d9ba043e933b8cd9f782532990d04788c03a4bb1-1290x694-png'
+            },
+            alt: 'Alt text is important'
+          }
+        },
+        {
+          sizeId: 'KingId',
+          name: 'King',
+          dimensions: [
+            {
+              label: 'Overall',
+              value: '86" L x 80" W x 32.5" H'
+            },
+            { label: 'Frame', value: '86" L x 80" W x 8" H' },
+            { label: 'Headboard', value: '77.5" L x 24" H x 2.25" D' },
+            { label: 'Clearance', value: '6" H' }
+          ],
+          lifestyleImage: {
+            desktopImage: {
+              _ref: 'image-4853aa3af17179849a9445370fa27ebd30be8587-1380x694-png'
+            },
+            alt: 'Alt text is important'
+          }
+        },
+        {
+          sizeId: 'Cal KingId',
+          name: 'Cal King',
+          dimensions: [
+            { label: 'Overall', value: '90" L x 76" W x 32.5" H' },
+            { label: 'Frame', value: '90" L x 76" W x 8" H' },
+            { label: 'Headboard', value: '73.5" L x 24" H x 2.25" D' },
+            { label: 'Clearance', value: '6" H' }
+          ],
+          lifestyleImage: {
+            desktopImage: {
+              _ref: 'image-e2115a58ef902a2c33b39695203a0d9c5ab71dad-1376x694-png'
+            },
+            alt: 'Alt text is important'
+          }
+        }
+      ]
+    }}
+    decorators={[
+      (Story) => {
+        const setQueryParams = (params) => {
+          const searchParams = new URLSearchParams(params)
+          window.history.replaceState(
+            {},
+            '',
+            `${window.location.pathname}?${searchParams}`
+          )
+        }
+        setQueryParams({ version: '2.0' })
+        return <Story />
+      }
+    ]}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### FurnitureSizingProps
+
+<ArgsTable of={FurnitureSizing} />

@@ -1,0 +1,32 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { NewsletterCard } from './NewsletterCard'
+
+export const Template = (args) => (
+  <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+    <NewsletterCard {...args} />
+  </div>
+)
+
+<Meta title='Components/NewsletterCard' component={NewsletterCard} />
+
+# Newsletter Card
+
+This component displays a card for newsletter subscription with a heading, a subheading, an input field for email address and a CTA button to subscribe.
+
+## Default
+
+<Canvas>
+  <Story
+    name='Default'
+    args={{
+      locale: 'en',
+      isMobile: false
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={NewsletterCard} />

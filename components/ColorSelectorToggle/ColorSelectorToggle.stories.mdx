@@ -1,0 +1,47 @@
+import { useState } from 'react'
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+
+import { Button } from '../Button/Button.tsx'
+import { Text } from '../Text'
+
+import { arrowDownIcon, arrowUpIcon } from '../Dropdown/utils'
+import { StyledToggleButton, ColorSelectorToggle } from './ColorSelectorToggle'
+
+export const Template = (args) => (
+  <div style={{ height: '175px' }}>
+    <ColorSelectorToggle {...args} />
+  </div>
+)
+
+<Meta
+  title='Components/Color Selector/Toggle'
+  component={ColorSelectorToggle}
+/>
+
+# Color Selector Dropdown
+
+This atom component is used to toggle the color selector dropdown which is currently being used on the shop module for add-on products.
+
+This atom is used in conjunction with the Color Selector Dropdown component. These two components are used together to create the Color Selector component. They live as separate atoms so that they can be used in other components freely.
+
+export const ToggleButton = (args) => {
+  const [isExpanded, setIsExpanded] = useState(false)
+  return (
+    <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+      <ColorSelectorToggle
+        setIsExpanded={setIsExpanded}
+        selectedColor={'Alphine White'}
+        isExpanded={isExpanded}
+        locale={'en'}
+      />
+    </div>
+  )
+}
+
+<Canvas>
+  <Story name='Color Selector Toggle'>{ToggleButton.bind()}</Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={ColorSelectorToggle} />

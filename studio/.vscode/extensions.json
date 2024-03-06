@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "silvenon.mdx",
+    "wayou.vscode-todo-highlight",
+    "formulahendry.auto-rename-tag",
+    "CoenraadS.bracket-pair-colorizer",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode"
+  ]
+}

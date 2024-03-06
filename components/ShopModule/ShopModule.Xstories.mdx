@@ -1,0 +1,485 @@
+<!-- REMOVING SHOP MODULE FROM STORYBOOK UNTIL DATA STRUCTURES ARE FINALIZED -->
+<!-- To return the Shop Module to Storybook, adjust the story's props to mirror finalized data shapes -->
+
+import { useState } from 'react'
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { ShopModule } from './ShopModule'
+import { CustomModal } from '../CustomModal'
+import { StyledBulletlist } from '../../styles/global.styled'
+import { CtaLink } from '../CtaLink/CtaLink.tsx'
+
+export const Template = (args) => {
+  return (
+    <div style={{ marginBottom: '150px' }}>
+      <ShopModule {...args} />
+    </div>
+  )
+}
+
+export const [sizeSelection, setSizeSelection] = useState()
+export const [colorSelection, setColorSelection] = useState()
+
+export const handleSelect = (sizeSelection, colorSelection) => {
+  setSizeSelection(sizeSelection)
+  setColorSelection(colorSelection)
+}
+
+export const addToCartAlert = () => alert('Product added to cart!')
+
+<Meta title='Modules/Shop Module' component={ShopModule} />
+
+export const shopModuleArgs = {
+  // handleSelect: handleSelect,
+  selectedSize: 'Queen',
+  selectedColor: 'Alpine White',
+  atcButtonLabel: 'Add to cart',
+  oosButtonLabel: 'Notify me when available',
+  reviews: {
+    link: '#product-reviews',
+    firstReviewMicrocopy: 'You beat everyone to it! Write the first review →',
+    microcopy: '26,943 customer reviews',
+    tooltipIcon:
+      '//cdn.shopify.com/s/files/1/0764/8025/t/275/assets/information-circle-gravy-16x16.svg?v=2345049493488783100',
+    tooltipCopy: '4.9 average star rating based on 26,943 customer reviews',
+    rating: 4.9,
+    totalReviews: 26920
+  },
+  shipping: {
+    microcopy: '†Free Shipping & Returns',
+    tooltipIcon:
+      '//cdn.shopify.com/s/files/1/0764/8025/t/275/assets/information-circle-filled-gravy-16x16.svg?v=5704817364598642869',
+    tooltipCopy:
+      'Orders placed before 1pm ET Monday-Friday are expected to ship out same business day. Orders placed after 1pm EST are expected to ship out next business day. Delivery times times are not guaranteed.'
+  },
+  productBadges: [
+    {
+      badgeImage: {
+        image: {
+          asset: {
+            _ref: 'image-75f8a2859cdba03388f6ada44edf8aa6de8787f9-64x64-svg'
+          }
+        }
+      },
+      heading: '60-Night Trial',
+      key: '1'
+    },
+    {
+      badgeImage: {
+        image: {
+          asset: {
+            _ref: 'image-d6b4e87941e78fc16f84e9b213e0e6582c5981df-64x64-svg'
+          }
+        }
+      },
+      heading: '3-Year Warranty',
+      key: '2'
+    },
+    {
+      badgeImage: {
+        image: {
+          asset: {
+            _ref: 'image-1de44c3c9546ecc99cbf87a058f1a46a0325cbf5-64x64-svg'
+          }
+        }
+      },
+      heading: 'Free Shipping†',
+      key: '3'
+    }
+  ],
+  locale: 'en',
+  addItemToCart: addToCartAlert,
+  affirmModal: (
+    <CustomModal
+      heading='Affirm Modal'
+      buttonLabel='Back to shopping'
+      body='Modal Content'
+      locale='en'
+    />
+  ),
+  featuredReviews: {
+    heading: 'Customer Reviews',
+    reviews: [
+      {
+        heading: "It's just like sleeping on a cloud, and I am a big guy!",
+        subcopy:
+          'The Endy mattress is excellent, well beyond our expectations. Setting it up was quite interesting as it slowly expanded into its original dimensions. My wife and I sleep better now than we have in years! Cudos to Endy for developing such a unique and quality product. I highly recommend purchasing an Endy Mattress.',
+        name: 'Barry H.',
+        location: 'Sydney, NS'
+      },
+      {
+        heading: '100% Happy with our Endy.',
+        subcopy:
+          "We have had our Endy for a month and so far are 100% satisfied. It is firm enough with enough give and support for a great sleep. That and we don't feel it when each other rolls over. Everything from ordering to delivery to set up was a breeze.",
+        name: 'Jay H.',
+        location: 'Whitby, ON'
+      },
+      {
+        heading: 'Amazing!',
+        subcopy:
+          'Coming from an Ikea mattress, this is another world of sleep. Supreme comfort and the perfect amount of firmness/softness. Money well spent !',
+        name: 'Christian O.',
+        location: 'Kanata, ON'
+      }
+    ],
+    ctaLink: (
+      <CtaLink
+        url='#product-reviews'
+        label='Read more reviews'
+        variant='hollow-gravy'
+      />
+    )
+  }
+}
+
+export const productArgs = {
+  id: 420850864,
+  name: 'The Endy Mattress',
+  shortDescription: 'The perfect combination of comfort and support',
+  longDescription: (
+    <StyledBulletlist>
+      <li>
+        Proudly made in Canada and provides optimal comfort, firmness, and
+        support
+      </li>
+      <li>
+        Designed with breathable open-cell foam that allows for better air flow
+        than traditional memory foam, so you get a cooler night’s sleep
+      </li>
+      <li>Engineered to eliminate motion transfer in real time</li>
+    </StyledBulletlist>
+  ),
+  images: {
+    carouselImage: [
+      {
+        desktopImage: {
+          asset: {
+            _ref: 'image-7d85c7a9e02025874ffdb98be0d1326d118d344e-1720x1038-jpg'
+          }
+        },
+        alt: 'Man and woman chillin like villians on an Endy Mattress.'
+      },
+      {
+        desktopImage: {
+          asset: {
+            _ref: 'image-211e63e15bb6854646cd120a7d14c97803b3b755-1720x1038-jpg'
+          }
+        },
+        alt: 'Up close & personal with THE Endy Mattress.'
+      },
+      {
+        desktopImage: {
+          asset: {
+            _ref: 'image-1b24f70a3183a1b14c11dd11096874b9751c5c13-1720x1038-jpg'
+          }
+        },
+        alt: 'A hand brushing against an Endy Mattress. So soft & comfy.'
+      },
+      {
+        desktopImage: {
+          asset: {
+            _ref: 'image-e8cf7d8a1d80f126faf93fc4635380f2ef903c50-1720x1038-jpg'
+          }
+        },
+        alt: 'Endy Mattress box on top of an Endy Mattress.'
+      },
+      {
+        desktopImage: {
+          asset: {
+            _ref: 'image-0246dc4602bc1b4d9b72a3a783064a936bfaa471-1720x1038-jpg'
+          }
+        },
+        alt: 'A different close-up angle of The Endy Mattress.'
+      }
+    ]
+  }
+}
+
+export const offSaleArgs = {
+  themeColor: '',
+  saleType: '',
+  microcopyFlag: ''
+}
+
+# Shop Module
+
+This module displays on all product pages and provides customers with product reviews, highlight features, financing options, and shipping information.
+
+In this module, a customer can select a specific variant, see it's price and add it to their cart. When a product is sold out, a 'Notify me' button replaces the add to cart. The notify button launches an e-mail form modal, where customers can sign up to find out when the product is back in stock.
+
+## In Stock
+
+<Canvas>
+  <Story
+    name='In Stock'
+    args={{
+      product: {
+        ...productArgs,
+        colorVariants: [
+          {
+            color: '#ffffff',
+            id: 'Alpine White',
+            label: 'Alpine White'
+          },
+          {
+            color: '#a19ea1',
+            id: 'Storm Grey',
+            label: 'Storm Grey'
+          }
+        ],
+        sizeVariants: [
+          {
+            id: 'Queen',
+            label: 'Queen',
+            mattressSize: ['Queen']
+          },
+          {
+            id: 'King/Cal King',
+            label: 'King/Cal King',
+            mattressSize: ['King', 'Cal King']
+          }
+        ],
+        variants: [
+          {
+            color: 'Storm Grey',
+            id: 31612675751984,
+            isAvailable: true,
+            price: 125,
+            size: 'Queen'
+          },
+          {
+            color: 'Alpine White',
+            id: 31612675686448,
+            isAvailable: true,
+            price: 125,
+            size: 'Queen'
+          },
+          {
+            color: 'Storm Grey',
+            id: 31612675850288,
+            isAvailable: true,
+            price: 140,
+            size: 'King/Cal King'
+          },
+          {
+            color: 'Alpine White',
+            id: 31612675784752,
+            isAvailable: true,
+            price: 140,
+            size: 'King/Cal King'
+          }
+        ]
+      },
+      sales: {
+        ...offSaleArgs
+      },
+      ...shopModuleArgs
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Out of Stock
+
+<Canvas>
+  <Story
+    name='Out of Stock'
+    args={{
+      product: {
+        ...productArgs,
+        colorVariants: [
+          {
+            color: '#ffffff',
+            id: 'Alpine White',
+            label: 'Alpine White'
+          },
+          {
+            color: '#a19ea1',
+            id: 'Storm Grey',
+            label: 'Storm Grey'
+          }
+        ],
+        sizeVariants: [
+          {
+            id: 'Queen',
+            label: 'Queen',
+            mattressSize: ['Queen']
+          },
+          {
+            id: 'King/Cal King',
+            label: 'King/Cal King',
+            mattressSize: ['King', 'Cal King']
+          }
+        ],
+        variants: [
+          {
+            color: 'Storm Grey',
+            id: 31612675751984,
+            isAvailable: false,
+            price: 125,
+            size: 'Queen'
+          },
+          {
+            color: 'Alpine White',
+            id: 31612675686448,
+            isAvailable: true,
+            price: 125,
+            size: 'Queen'
+          },
+          {
+            color: 'Storm Grey',
+            id: 31612675850288,
+            isAvailable: false,
+            price: 140,
+            size: 'King/Cal King'
+          },
+          {
+            color: 'Alpine White',
+            id: 31612675784752,
+            isAvailable: true,
+            price: 140,
+            size: 'King/Cal King'
+          }
+        ]
+      },
+      sales: {
+        ...offSaleArgs
+      },
+      ...shopModuleArgs
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<!-- ## Variant Specific Images
+
+If images are available for a specific variant, the product carousel will always feature variant images over default product images.
+
+<Canvas>
+  <Story
+    name='Variant Images'
+    args={{
+      product: {
+        ...productArgs,
+        colorVariants: [
+          {
+            color: '#ffffff',
+            id: 'Alpine White',
+            label: 'Alpine White'
+          },
+          {
+            color: '#a19ea1',
+            id: 'Storm Grey',
+            label: 'Storm Grey'
+          }
+        ],
+        sizeVariants: [
+          {
+            id: 'Queen',
+            label: 'Queen',
+            mattressSize: ['Queen']
+          },
+          {
+            id: 'King/Cal King',
+            label: 'King/Cal King',
+            mattressSize: ['King', 'Cal King']
+          }
+        ],
+        variants: [
+          {
+            id: 1154319700,
+            name: 'Queen',
+            price: 895,
+            isAvailable: true,
+            images: {
+              carouselImage: [
+                {
+                  desktopImage: {
+                    asset: {
+                      _ref: 'image-89dc6a6c275923bce7132c5936842561409c4293-1536x1000-jpg'
+                    }
+                  },
+                  alt: 'Man and woman chillin like villians on an Endy Mattress.'
+                },
+                {
+                  desktopImage: {
+                    asset: {
+                      _ref: 'image-211e63e15bb6854646cd120a7d14c97803b3b755-1720x1038-jpg'
+                    }
+                  },
+                  alt: 'Up close & personal with THE Endy Mattress.'
+                },
+                {
+                  desktopImage: {
+                    asset: {
+                      _ref: 'image-1b24f70a3183a1b14c11dd11096874b9751c5c13-1720x1038-jpg'
+                    }
+                  },
+                  alt: 'A hand brushing against an Endy Mattress. So soft & comfy.'
+                },
+                {
+                  desktopImage: {
+                    asset: {
+                      _ref: 'image-e8cf7d8a1d80f126faf93fc4635380f2ef903c50-1720x1038-jpg'
+                    }
+                  },
+                  alt: 'Endy Mattress box on top of an Endy Mattress.'
+                },
+                {
+                  desktopImage: {
+                    asset: {
+                      _ref: 'image-0246dc4602bc1b4d9b72a3a783064a936bfaa471-1720x1038-jpg'
+                    }
+                  },
+                  alt: 'A different close-up angle of The Endy Mattress.'
+                }
+              ]
+            }
+          }
+        ]
+      },
+      sales: {
+        ...offSaleArgs
+      },
+      ...shopModuleArgs
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas> -->
+
+## On Sale
+
+<Canvas>
+  <Story
+    name='On Sale'
+    args={{
+      product: {
+        ...productArgs,
+        variants: [
+          {
+            id: 1154319700,
+            name: 'Queen',
+            price: 895,
+            isAvailable: true
+          }
+        ]
+      },
+      sales: {
+        themeColor: '#c9ded9',
+        saleType: 'Percentage',
+        discountPercentage: 10,
+        shopModulePillLabel: 'Sale: 10% off Sitewide',
+        discountPercentageProducts: [420850864, 6695078821936]
+      },
+      ...shopModuleArgs
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Shop Module Props
+
+<ArgsTable of={ShopModule} />

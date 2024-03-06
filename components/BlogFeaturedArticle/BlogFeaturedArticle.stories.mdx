@@ -1,0 +1,54 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+
+import { BlogFeaturedArticle } from './BlogFeaturedArticle.tsx'
+import { CtaLink } from '../CtaLink'
+
+export const Template = (args) => <BlogFeaturedArticle {...args} />
+
+<Meta title='Modules/Blog Featured Article' component={BlogFeaturedArticle} />
+
+# Blog Featured Article
+
+Appears in the Blog Article Page content
+
+## Blog featured Article
+
+<Canvas>
+  <Story
+    name='Blog Featured Article'
+    args={{
+      backgroundImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-0bdbe929d3fbe1267becf82fc667dc8dddaa691e-2400x1028-jpg'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-0bdbe929d3fbe1267becf82fc667dc8dddaa691e-2400x1028-jpg'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-0bdbe929d3fbe1267becf82fc667dc8dddaa691e-2400x1028-jpg'
+          }
+        }
+      },
+      backgroundColor: {
+        hex: '#c9ded9'
+      },
+      heading: '5 Things to Consider When Buying a Mattress Online',
+      subcopy:
+        'Need to find the perfect mattress? Use this mattress buying guide for mattress shopping tips and recommendations.',
+      primaryBtnLabel: 'Read the article',
+      primaryMobileBtnLabel: 'Read More',
+      url: 'https://www.endy.com/blog'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={BlogFeaturedArticle} />

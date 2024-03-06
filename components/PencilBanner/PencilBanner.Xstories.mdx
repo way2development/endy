@@ -1,0 +1,112 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { PencilBanner } from './PencilBanner'
+
+export const Template = (args) => (
+  <div>
+    <PencilBanner {...args} />
+  </div>
+)
+
+<Meta title='Modules/Pencil Banner' component={PencilBanner} />
+
+# Pencil Banner
+
+This component displays a global announcement banner at the top of all published pages.
+
+## Default
+
+<Canvas>
+  <Story
+    name='Default'
+    args={{
+      messages: [
+        {
+          _key: '1',
+          heading:
+            'Best sleep of your life or your money back. Try the Endy Mattress for 100 nights, risk-free!'
+        }
+      ],
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Sales
+
+<Canvas>
+  <Story
+    name='Sales'
+    args={{
+      messages: [
+        {
+          _key: '3',
+          heading:
+            'Best sleep of your life or your money back. Try the Endy Mattress for 100 nights, risk-free!',
+          url: 'https://ca.endy.com/'
+        }
+      ],
+      sales: {
+        isLastChance: false,
+        lastChance: {
+          pencilBannerMessage: {
+            _key: '2',
+            heading:
+              'Last Chance: Get a FREE weighted blanket with your mattress.',
+            url: 'https://ca.endy.com/'
+          }
+        },
+        pencilBannerMessage: {
+          _key: '1',
+          heading:
+            'Summer Sleep Sale: Save up to $130 on the award-winning Endy Mattress*'
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Last Chance
+
+<Canvas>
+  <Story
+    name='Last Chance'
+    args={{
+      messages: [
+        {
+          _key: '3',
+          heading:
+            'Delivery Update: Orders are shipping on time with no significant delays impacting our deliveries across Canada',
+          url: 'https://ca.endy.com/'
+        }
+      ],
+      sales: {
+        isLastChance: true,
+        lastChance: {
+          pencilBannerMessage: {
+            _key: '2',
+            heading:
+              'Last Chance: Get a FREE weighted blanket with your mattress.',
+            url: 'https://ca.endy.com/'
+          }
+        },
+        pencilBannerMessage: {
+          _key: '1',
+          heading:
+            'Summer Sleep Sale: Save up to $130 on the award-winning Endy Mattress*'
+        }
+      },
+      locale: 'en'
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={PencilBanner} />

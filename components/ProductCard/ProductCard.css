@@ -1,0 +1,360 @@
+.collections-grid-item {
+  flex: 0 0 33.33%;
+  width: 100%;
+}
+
+.collections-grid-item:first-child,
+.collections-grid-item:nth-child(4n) {
+  padding-left: 0;
+}
+
+.collections-grid-item:nth-child(3n),
+.collections-grid-item:last-child {
+  padding-right: 0;
+}
+
+.copy-fixed-width {
+  width: 100%;
+}
+
+.product-card-price-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.collections-product-card {
+  /* flex: 0 0 calc((100% / 3) - 30px); */
+  /* margin: 0 30px 30px 0; */
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.collections-product-card:focus {
+  border: 2px;
+  border-radius: 2px;
+  border-color: var(--gravy-20);
+  opacity: 1;
+}
+
+.collections-product-card-body-name h3 {
+  padding-right: 10px;
+}
+
+.collections-product-card-body-name {
+  min-height: auto;
+}
+
+.collections-product-card.sale-tag:before {
+  content: '10% OFF';
+  position: absolute;
+  top: 3px;
+  right: 12px;
+  z-index: 1;
+  letter-spacing: 1px;
+  color: var(--gravy);
+  font-family: var(--calibre-semibold);
+  font-weight: var(--font-weight-semibold);
+  font-size: 1rem;
+}
+
+.collections-product-card.sale-tag:after {
+  position: absolute;
+  content: '';
+  background-color: var(--sale-color);
+  right: 0px;
+  width: 80px;
+  height: 30px;
+  border-radius: 0px 2px 0px 10px;
+  top: 0px;
+  box-shadow: -1px 1px 3px rgba(36, 55, 70, 0.29);
+}
+
+.strike-through {
+  position: relative;
+  letter-spacing: 0;
+}
+
+.strike-through::after {
+  content: '';
+  position: absolute;
+  width: 110%;
+  height: 1px;
+  background-color: #9f9f9f;
+  transform: rotate(-15deg);
+  top: 14px;
+  left: 0px;
+}
+
+.collections-product-card {
+  box-shadow: 0 2px 5px rgb(36 55 70 / 29%);
+}
+
+.collections-product-card {
+  border-radius: 2px;
+}
+
+.collections-product-card-header img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.collections-product-card-body {
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.collections-product-card-body > *:not(:last-child) {
+  padding-bottom: 8px;
+}
+
+.collection-product-price {
+  padding: 0 5px;
+}
+
+.collection-product-price-sale {
+  color: var(--rubine);
+}
+
+.collection-product-price.wb-bogo-0720[data-handle='endy-weighted-blanket'] {
+  padding-left: 0;
+}
+
+.rating-phrase {
+  margin-left: 5px;
+}
+
+.landing-products-stars svg {
+  max-width: 72px;
+  max-height: 14px;
+}
+
+.rating {
+  fill: #ffd258;
+  width: 72px;
+}
+
+.sale-card-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  padding-left: 65px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#collections-rv-icon {
+  -webkit-filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+#mattress-accolade,
+#collections-rv-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 75px;
+}
+
+#collections-gift-idea {
+  transform: rotate(-14deg);
+  height: 87px;
+  width: 87px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  -webkit-filter: drop-shadow(0px 2px 4px rgb(0 0 0 / 50%));
+  filter: drop-shadow(0px 2px 4px rgb(0 0 0 / 50%));
+}
+
+.free-shipping-icon {
+  padding-right: 3px;
+  height: 15px;
+  margin-top: 2px;
+}
+
+.collections-product-card:hover {
+  opacity: 1;
+}
+
+.collections-product-card:hover .product-card-title {
+  color: var(--rubine);
+  transition: color 0.5s ease;
+}
+
+.collections-category--last .collections-container {
+  margin-bottom: 0;
+}
+
+.collections-category--last .product-item,
+.collections-category--last .collections-grid-item--lifestyle {
+  padding-bottom: 0;
+}
+
+.collections-category--last .product-item:nth-child(n + 4) {
+  padding-top: 20px;
+}
+
+@media (max-width: 1242px) {
+  .collections-product-card-body-name h3 {
+    padding-right: 0;
+  }
+
+  .collections-product-card-body-name {
+    flex-direction: column;
+  }
+
+  .product-card-price-container {
+    justify-content: flex-start;
+  }
+
+  .copy-fixed-width {
+    width: 100%;
+  }
+
+  .collections-product-card-header img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 1145px) {
+  .collections-grid-item {
+    flex: 0 0 50%;
+  }
+
+  .collections-grid-item:nth-child(odd) {
+    padding-left: 0;
+  }
+
+  .collections-grid-item:nth-child(even),
+  .collections-grid-item:nth-child(3n):last-child {
+    padding-right: 0;
+  }
+
+  .collections-grid-item--lifestyle {
+    flex-grow: 1;
+  }
+
+  .collections-product-card-body-name {
+    flex-direction: row;
+  }
+
+  .collections-product-card-body-name h3 {
+    padding-right: 10px;
+  }
+
+  .product-card-price-container {
+    justify-content: flex-end;
+  }
+
+  .copy-fixed-width {
+    width: auto;
+  }
+
+  .collections-product-card-header img {
+    height: 200px;
+  }
+
+  .collections-product-card-body-name,
+  .sale-min-height {
+    min-height: auto !important;
+  }
+}
+
+@media (max-width: 942px) {
+  .collections-product-card-body-name h3 {
+    width: 59%;
+  }
+}
+
+@media (max-width: 900px) {
+  .sale-card-content {
+    position: initial;
+    top: 2rem;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transform: none;
+    padding: 0 45px;
+  }
+}
+
+@media (max-width: 865px) {
+  .collections-product-card-header img {
+    height: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  #collections-gift-idea {
+    height: 75px;
+    width: 75px;
+  }
+
+  .collections-grid-item {
+    flex: 100%;
+    padding: 0;
+  }
+
+  .collections-grid-item:nth-child(3n),
+  .collections-grid-item:nth-child(4n),
+  .collections-grid-item:nth-child(odd),
+  .collections-grid-item:nth-child(even) {
+    padding: 0;
+  }
+
+  .collections-product-card-body-name h3 {
+    width: auto;
+  }
+
+  .collections-product-card-header img {
+    height: auto;
+  }
+
+  .grid-container > .product-item {
+    margin-bottom: 32px;
+  }
+
+  .collections-category--last .product-item--last {
+    margin-bottom: 0;
+  }
+
+  .collections-product-card:before {
+    top: 4px;
+    right: 11px;
+  }
+
+  .new-product-badge {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .collections-product-card-body .endy-tooltip-text {
+    width: 150px;
+    right: 0;
+  }
+}
+
+@media (max-width: 351px) {
+  .sale-card-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.top-promo-pill {
+  position: absolute;
+  right: 10px;
+  text-transform: uppercase;
+  top: 10px;
+  z-index: 10;
+}

@@ -1,0 +1,119 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+
+import { AccordionList } from './AccordionList'
+import { ProductBadges } from '../ProductBadges'
+
+export const Template = (args) => (
+  <div style={{ maxWidth: '1310px', margin: '0 auto' }}>
+    <ProductBadges productBadges={productBadges} />
+    <div style={{ margin: '100px auto 1500px auto' }}>
+      <AccordionList {...args} />
+    </div>
+  </div>
+)
+
+{/* @TODO: Change badge images and headings to match with accordion FAQ content */}
+
+
+export const productBadges = [
+  {
+    anchorUrl: 'referring-friends',
+    badgeImage: {
+      image: {
+        asset: {
+          _ref: 'image-75f8a2859cdba03388f6ada44edf8aa6de8787f9-64x64-svg'
+        }
+      }
+    },
+    heading: '60-Night Trial',
+    key: '1'
+  },
+  {
+    anchorUrl: 'kind-of-gift-card',
+    badgeImage: {
+      image: {
+        asset: {
+          _ref: 'image-d6b4e87941e78fc16f84e9b213e0e6582c5981df-64x64-svg'
+        }
+      }
+    },
+    heading: '3-Year Warranty',
+    key: '2'
+  },
+  {
+    anchorUrl: 'refer-one-person',
+    badgeImage: {
+      image: {
+        asset: {
+          _ref: 'image-1de44c3c9546ecc99cbf87a058f1a46a0325cbf5-64x64-svg'
+        }
+      }
+    },
+    heading: 'Free Shipping†',
+    key: '3'
+  }
+]
+
+<Meta title='Modules/AccordionList' component={AccordionList} />
+
+# AccordionList
+
+## Usage
+
+This module displays a list of accordions and is often used on product pages in areas like "Details & Specs" and "FAQ."
+
+<Canvas>
+  <Story
+    name='AccordionList'
+    args={{
+      heading: 'Frequently Asked Questions',
+      removeMargins: false,
+      accordionItems: [
+        {
+          anchorUrl: 'referring-friends',
+          heading: 'Can I always get $55 for referring friends?',
+          showItem: false,
+          index: 0,
+          content: (
+            <p>
+              As long as you are a customer, and the person you refer has not
+              purchased an Endy mattress previously, you will earn a $55 gift
+              card.
+            </p>
+          )
+        },
+        {
+          anchorUrl: 'kind-of-gift-card',
+          heading: 'What kind of gift card do I get?',
+          showItem: false,
+          index: 1,
+          content: (
+            <p>
+              You will earn $55 toward one gift card of your choice from a
+              selection of 30+ companies, including Prepaid virtual Visa, Amazon
+              Canada, Cineplex Odeon, Air Canada, and more.
+            </p>
+          )
+        },
+        {
+          anchorUrl: 'refer-one-person',
+          heading: 'Can I only refer one person?',
+          showItem: false,
+          index: 2,
+          content: (
+            <p>
+              You will receive a $55 gift card for each successful referral, and
+              can refer up to 20 customers per calendar year.
+            </p>
+          )
+        }
+      ]
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### AccordionProps
+
+<ArgsTable of={AccordionList} />

@@ -1,0 +1,82 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { LocationModule } from './LocationModule'
+import { CtaLink } from '../CtaLink'
+
+
+export const Template = (args) => (
+    <LocationModule {...args} />
+)
+
+<Meta title='Modules/Location Module' component={LocationModule} />
+
+# Location Module
+
+This component allows an author to add a image to accompany a heading and subcopy, with a CTA button. The image can be aligned to the right or the left.
+
+export const storyProps = {
+      lifestyleImage: {
+        srcHeights: [834, 834, 880],
+        mobileImage: {
+            asset: {
+            _ref: 'image-b1a722e7b05af7c4d595f921d2ad9907bc9c5625-1534x818-jpg'
+            }
+        },
+        tabletImage: {
+            asset: {
+            _ref: 'image-016664dbf59de8dc6ce536a1b45591d3408610d4-2048x780-jpg'
+            }
+        },
+        desktopImage: {
+            asset: {
+            _ref: 'image-2953d78e752f4faf2be1c7175f4444ecac5b3306-1582x1000-jpg'
+            },
+             alt: 'Alt text is important'
+        },
+      },
+      heading: 'Endy Store',
+      address: 'CF Sherway Gardens 25 The West Mall, Etobicoke, ON M9C 1B8, Canada',
+      storeHours: `Store hours 
+      Mon - Sat 10:00 AM-09:00 PM
+      Sun 10:00 AM-06:00 PM`,
+      email: 'sherway@endy.com',
+      telephone: '+1 866 305 3639 (Customer Care)',
+      cta: (
+        <CtaLink
+          variant='hollow-gravy'
+          url='https://www.google.com/maps/place/CF+Sherway+Gardens/@43.6108284,-79.560875,17z/data=!3m1!4b1!4m6!3m5!1s0x882b4806de464d0d:0x231db41dd5d2cc91!8m2!3d43.6108284!4d-79.5583001!16zL20vMDg1Y2Zt?entry=ttu'
+          label='Get Directions'
+        />
+      ),
+}
+
+### Image on the Left
+
+<Canvas>
+  <Story
+    name='Image v1'
+    args={{
+        ...storyProps,
+        variant: 'Media Left',
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### Image on the Right
+
+<Canvas>
+  <Story
+    name='Image v2'
+    args={{
+        ...storyProps,
+        variant: 'Media Right',
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+### LocationModuleProps
+
+<ArgsTable of={LocationModule} />

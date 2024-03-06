@@ -1,0 +1,65 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { VersusCompetitor } from './VersusCompetitor'
+
+export const Template = (args) => (
+  <div>
+    <VersusCompetitor {...args} />
+  </div>
+)
+
+<Meta title='Modules/Versus Competitor ' component={VersusCompetitor} />
+
+# Versus Competitor
+
+<Canvas>
+  <Story
+    name='Versus Competitor'
+    args={{
+      heading: `Why don't we compare?`,
+      columnOne: {
+        heading: 'Endy Foam',
+        video: {
+          src: 'https://res.cloudinary.com/rangle/video/upload/v1647524935/rangle.io/msdhfptzvj22eak2njxy.mp4'
+        },
+        features: [
+          {
+            heading: 'Endy Foam - Feature 1',
+            subcopy: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.`
+          },
+          {
+            heading: 'Endy Foam - Feature 2',
+            subcopy: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.`
+          },
+          {
+            heading: 'Endy Foam - Feature 3',
+            subcopy: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.`
+          }
+        ]
+      },
+      columnTwo: {
+        heading: 'Memory Foam',
+        video: {
+          src: 'https://res.cloudinary.com/rangle/video/upload/v1647524935/rangle.io/msdhfptzvj22eak2njxy.mp4'
+        },
+        features: [
+          {
+            heading: 'Memory Foam - Feature 1',
+            subcopy: `Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud.`
+          },
+          {
+            heading: 'Memory Foam - Feature 2',
+            subcopy: `Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud.`
+          },
+          {
+            heading: 'Memory Foam - Feature 3',
+            subcopy: `Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud.`
+          }
+        ]
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable of={VersusCompetitor} />

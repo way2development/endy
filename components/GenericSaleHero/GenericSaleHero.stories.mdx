@@ -1,0 +1,87 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+
+import { GenericSaleHero } from './GenericSaleHero'
+import { BadgeImage } from '../BadgeImage/BadgeImage'
+import {SaleCountdownTimer} from '../SaleCountdownTimer/SaleCountdownTimer'
+
+export const Template = (args) => <GenericSaleHero {...args} />
+
+<Meta title='Modules/Generic Sale Hero' component={GenericSaleHero} />
+
+# Generic Sale Hero
+
+This component displays a generic sale hero which can be used on any page to highlight brand content independent from any sale treatment/schedule. The author is able to customize copy fields, and background, lifestyle and graphic images assets.
+
+## Generic Hero v1 - default
+
+<Canvas>
+  <Story
+    name='Generic Sale Hero'
+    args={{
+      heading: "Don't Miss Out On Our Sleep Sales!",
+      subcopy: "Try Endy at home for 100 nights with our risk-free trial, See what other Canadians are saying.",
+      backgroundImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-dfc5a3c61e9ada02f285c684947674359446f18c-3840x1190-jpg'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-dfc5a3c61e9ada02f285c684947674359446f18c-3840x1190-jpg'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-dfc5a3c61e9ada02f285c684947674359446f18c-3840x1190-jpg'
+          }
+        }
+      },
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Generic Hero v2 - Active sale - with timer component
+
+<Canvas>
+  <Story
+    name='Generic Hero - v2'
+    args={{
+      heading: 'Endy Mattress Reviews',
+      countdownHeader :'Timer ends soon',
+      showCountdownTimer: true,
+      heading: "Don't Wait",
+      sales: {
+        endDate: '2023-06-09'
+      },
+      locale: 'en',
+      subcopy:
+        'Don’t just take our word for it! See what other Canadians are saying.',
+      backgroundImage: {
+        mobileImage: {
+          asset: {
+            _ref: 'image-dfc5a3c61e9ada02f285c684947674359446f18c-3840x1190-jpg'
+          }
+        },
+        tabletImage: {
+          asset: {
+            _ref: 'image-dfc5a3c61e9ada02f285c684947674359446f18c-3840x1190-jpg'
+          }
+        },
+        desktopImage: {
+          asset: {
+            _ref: 'image-dfc5a3c61e9ada02f285c684947674359446f18c-3840x1190-jpg'
+          }
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={GenericSaleHero} />

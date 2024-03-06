@@ -1,0 +1,112 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { HomepageHero } from './HomepageHero'
+import { CtaLink } from '../CtaLink'
+
+export const homepageHeroArgs = {
+  heading: 'Award Winning Sleep Has Arrived',
+  lifestyleImage: {
+    desktopImage: {
+      asset: {
+        _ref: 'image-61a924e7d8a47f0a90a8f22c99cc09c671483d57-1010x1290-jpg-webp'
+      }
+    }
+  },
+  backgroundImage: {
+    mobileImage: {
+      asset: {
+        _ref: 'image-5a7a83b6e99f4357f59f94ab0081e5aed1f8792a-1534x896-jpg-webp'
+      }
+    },
+    tabletImage: {
+      asset: {
+        _ref: 'image-d273c99465ac861fa51954f06d4a25153dc97c49-2046x1198-jpg-webp'
+      }
+    },
+    desktopImage: {
+      asset: {
+        _ref: 'image-e4778c34ce539fce2a7fca7defeb2e7d142cb796-1866x1292-jpg-webp'
+      }
+    }
+  },
+  cta: (
+    <CtaLink
+      variant='solid-rubine'
+      url='https://ca.endy.com'
+      label='Upgrade your sleep'
+    />
+  ),
+  asideLink: {
+    url: 'https://ca.endy.com/products/mattresses',
+    label: 'Shop The Mattress'
+  }
+}
+
+export const Template = (args) => {
+  return (
+    <div
+      style={{
+        position: 'relative',
+        height: '100%',
+        padding: '0'
+      }}
+    >
+      <HomepageHero {...args} />
+    </div>
+  )
+}
+
+<Meta title='Modules/Homepage Hero (Default)' component={HomepageHero} />
+
+# Homepage Hero (Default)
+
+The default homepage hero displays during off-promotion times. It features a main background image, title, and a CTA button linking to any internal page on the store. On desktop, it also displays an aside column that can be setup to show a background image, a badge image, and a secondary link. The entire aside column acts as the linked element.
+
+- [x] Background image
+- [x] Heading/Title
+- [x] Button CTA
+- [x] Aside image (also a background image)
+- [x] Aside link
+- [x] Badge image (optional)
+
+<Canvas>
+  <Story
+    name='Split Screen'
+    args={{
+      ...homepageHeroArgs,
+      badgeImage: {
+        image: {
+          asset: {
+            _ref: 'image-51b956326a9994b95b5d415063f1ce7d99b9defb-226x113-svg'
+          }
+        },
+        alt: 'Alt text is important'
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## No Badge
+
+- [x] Background image
+- [x] Heading/Title
+- [x] Button CTA
+- [x] Aside image (also a background image)
+- [x] Aside link
+- [ ] Badge image (optional)
+
+<Canvas>
+  <Story
+    name='No Badge'
+    args={{
+      ...homepageHeroArgs
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={HomepageHero} />

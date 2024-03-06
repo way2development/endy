@@ -1,0 +1,97 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs'
+import { Image } from './Image'
+
+export const Template = (args) => (
+  <div style={{ maxWidth: '1310px', margin: '0 auto' }}>
+    <Image {...args} />
+  </div>
+)
+
+<Meta title='Components/Image' component={Image} />
+
+# Image
+
+This component displays an HTML image with an optional alt text rendered with 3 different sourcesets at mobile: 0 - 767, tablet: 768 - 1024, desktop: 1025+. This is commonly used to display lifestyle images.
+
+## Default
+
+srcWidths prop is always required and it is unique for every image. It is used to dictate the width of the image we need to source from Sanity at each of the 2 breakpoints (excluding the largest breakpoint as it will take the width of the uploaded image). The srcWidths values can be found in the mockup by inspecting the width of the image at each of the breakpoints.
+
+<Canvas>
+  <Story
+    name='Default'
+    args={{
+      alt: 'Alt text is important',
+      srcWidths: [767, 1024],
+      desktopImage: {
+        asset: {
+          _ref: 'image-275ea7ac3f171c2793fbb5814253d955fc9e9021-2048x1000-webp'
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Image with mobile asset
+
+Mobile and tablet assets are optional. If no tablet asset is provided desktop asset is used instead. If no mobile asset is provided tablet asset is used instead.
+
+<Canvas>
+  <Story
+    name='Mobile Image'
+    args={{
+      alt: 'Alt text is important',
+      srcWidths: [767, 1024],
+      mobileImage: {
+        asset: {
+          _ref: 'image-cc26b053f173b609423a1c3766cbab1b46f21167-2882x1280-webp'
+        }
+      },
+      tabletImage: {
+        asset: {
+          _ref: 'image-cc26b053f173b609423a1c3766cbab1b46f21167-2882x1280-webp'
+        }
+      },
+      desktopImage: {
+        asset: {
+          _ref: 'image-275ea7ac3f171c2793fbb5814253d955fc9e9021-2048x1000-webp'
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Image with hotspot
+
+Hotspot is an optional feature.
+
+<Canvas>
+  <Story
+    name='Hotspot'
+    args={{
+      alt: 'Alt text is important',
+      srcWidths: [767, 1024],
+      desktopImage: {
+        asset: {
+          _ref: 'image-275ea7ac3f171c2793fbb5814253d955fc9e9021-2048x1000-webp'
+        },
+        hotspot: {
+          height: 0.6991854868567196,
+          width: 0.2945205479452053,
+          x: 0.29623287671232856,
+          y: 0.484573614710601
+        }
+      }
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Image} />
