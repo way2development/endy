@@ -1,0 +1,7 @@
+@import 'normalize.css/normalize.css';
+
+@import './_fonts.css';
+@import './_variables.css';
+@import './to-deprecate/index.css';
+
+@import './_global-styles.css';

@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "silvenon.mdx",
+    "wayou.vscode-todo-highlight",
+    "formulahendry.auto-rename-tag",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode"
+  ]
+}

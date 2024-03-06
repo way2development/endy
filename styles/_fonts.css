@@ -1,0 +1,98 @@
+/* WULKAN */
+@font-face {
+  font-family: 'Wulkan';
+  src: url('./fonts/WulkanDisplay-SemiBold.eot') format('embedded-opentype'),
+    url('./fonts/WulkanDisplay-SemiBold.woff') format('woff'),
+    url('./fonts/WulkanDisplay-SemiBold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: 'Wulkan';
+  src: url('./fonts/WulkanDisplay-SemiBoldItalic.eot')
+      format('embedded-opentype'),
+    url('./fonts/WulkanDisplay-SemiBoldItalic.woff') format('woff'),
+    url('./fonts/WulkanDisplay-SemiBoldItalic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: 'Wulkan';
+  src: url('./fonts/WulkanDisplay-Bold.eot') format('embedded-opentype'),
+    url('./fonts/WulkanDisplay-Bold.woff') format('woff'),
+    url('./fonts/WulkanDisplay-Bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: 'Wulkan';
+  src: url('./fonts/WulkanDisplay-BoldItalic.eot') format('embedded-opentype'),
+    url('./fonts/WulkanDisplay-BoldItalic.woff') format('woff'),
+    url('./fonts/WulkanDisplay-BoldItalic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+}
+
+/* CALIBRE */
+@font-face {
+  font-family: 'Calibre';
+  src: url('./fonts/CalibreWeb-Regular.eot') format('embedded-opentype'),
+    url('./fonts/CalibreWeb-Regular.woff') format('woff'),
+    url('./fonts/CalibreWeb-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url('./fonts/CalibreWeb-RegularItalic.eot') format('embedded-opentype'),
+    url('./fonts/CalibreWeb-RegularItalic.woff') format('woff'),
+    url('./fonts/CalibreWeb-RegularItalic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url('./fonts/CalibreWeb-Semibold.eot') format('embedded-opentype'),
+    url('./fonts/CalibreWeb-Semibold.woff') format('woff'),
+    url('./fonts/CalibreWeb-Semibold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url('./fonts/CalibreWeb-SemiboldItalic.eot') format('embedded-opentype'),
+    url('./fonts/CalibreWeb-SemiboldItalic.woff') format('woff'),
+    url('./fonts/CalibreWeb-SemiboldItalic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+}

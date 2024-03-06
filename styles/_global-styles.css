@@ -1,0 +1,24 @@
+html {
+  scroll-behavior: smooth;
+  /* Offset the header and sticky nav */
+  scroll-padding-top: 140px;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* TODO: Remove usePrefersReducedMotion hook since the below now takes care of it in just a few lines of code */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-play-state: paused !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
